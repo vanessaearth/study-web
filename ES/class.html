@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 面向对象
+        // ES5通过构造函数模拟类
+        function Person(name) {
+            //私有属性，外部访问不到
+            let _weight = '130kg'
+            this.name = name
+            this.height = '180cm'
+            this.age = 20
+        }
+        Person.num = 10
+        Person.prototype.fn = function () {
+            console.log('ES5 fn()...', this._weight);
+        }
+        let zhangsan = new Person('张三')
+        console.log('张三:', zhangsan);
+        console.log(zhangsan.fn());
+        console.log(zhangsan.num);//错误的，访问不到
+        console.log(Person.num);//在类 原型上
+        // ES6 class语法糖，语义化更强,本质还是函数
+        class Person2 {
+            // ES2020私有属性,加#
+            #weight = 120
+            height = '180cm'
+
+            constructor(name) {
+                this._name = name
+                // this.height = '180cm'
+                this.age = 20
+            }
+            // 静态属性
+            static num = 10
+            // 存取器get,set
+            get name() {
+                return this._name
+            }
+            set name(newVal) {
+                this._name = newVal
+                return newVal
+            }
+
+            fn() {
+                console.log('ES6 fn()...', this.#weight);
+            }
+        }
+        console.log(typeof Person2); //function
+        let lisi = new Person2('李四')
+        // 私有属性能在类上看见，但是直接访问获取不到，可以写在类的公有方法中获取私有属性
+        // console.log('李四:',lisi.#weight);
+        console.log('李四:', lisi, lisi.num);
+        console.log(Person2.num);
+        console.log(lisi.name = 'zzz', lisi);
+
+        // ES6继承
+        class Dad {
+            constructor(name) {
+                this.name = name
+            }
+            fn() {
+                console.log('dad fn...');
+            }
+        }
+        class Son extends Dad {
+            constructor(name) {
+                // super只能存在子类中，不能单独使用，必须在子类属性前
+                super(name)
+            }
+            fnSon() {
+                console.log('son fn...');
+                // 调用父类的方法
+                super.fn()
+
+            }
+        }
+        let wangwu = new Son('王五')
+        console.log(wangwu);
+        console.log(wangwu.fnSon());
+
+        // 类抽象基类（抽象基类），不允许被实例化
+        class AbstractPerson {
+            constructor() {
+                // console.log(new.target);
+                if (new.target === AbstractPerson) {
+                    throw new Error('AbstractPerson是抽象基类不能被实例化')
+                }
+                this.age=20
+            }
+        }
+        // let p=new AbstractPerson()
+        class Person3 extends AbstractPerson {
+            constructor(name) {
+                super()
+                this.name = name
+            }
+        }
+        let zhaoliu = new Person3('zhaoliu')
+        console.log(zhaoliu);
+        // 小贤每天见了主人会叫一声wow,小忙是个疯狗，每隔半秒会叫一声
+        class Dog{
+            wow(){
+                console.log('wow');
+            }
+            yeld(){
+                this.wow()
+            }
+        }
+        class MadDog extends Dog{
+            yeld(){
+              let timer =  setInterval(()=>{
+                    this.wow()
+                },500)
+                //叫5秒后停止执行
+                setTimeout(()=>{
+                    clearInterval(timer)
+                },5000)
+            }
+        }
+        let xiaomang=new MadDog()
+        xiaomang.yeld()
+        // 链式调用
+        class Person4{
+            fn(){
+                console.log('链式调用fn...');
+                return this
+            }
+        }
+        let zz=new Person4()
+        zz.fn().fn().fn().fn().fn()
+
+        // __proto__和prototype的区别
+        function Person(name){
+            this.name=name
+        }
+        Person.prototype
+        console.log(Person.__proto__);
+        let obj={}
+        obj.__proto__.name='tom'//不规范
+        Object.setPrototypeOf(obj,{name:'tom'})
+        /**
+         * 原型prototype(类型：Object,属性，方法)this
+         * 构造函数：constructor(属性，方法，this) 通过new实例化
+         * 对象(属性，方法)原型（__proto__）
+        */
+
+
+    </script>
+</body>
+
+</html>
