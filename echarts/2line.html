@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        height:600px;
+    }
+</style>
+<body>
+    <div id="main">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script>
+    <script>
+        let main=document.getElementById('main')
+        let chart=echarts.init(main)
+        let option={
+            title:'则线条',
+            xAxis:{
+                data:['html','css','js']
+            },
+            yAxis:[],
+            series:{
+                type:'bar',
+                data:[1,2,3]
+            }
+        }
+        chart.setOption(option)
+    </script>
+</body>
+</html>

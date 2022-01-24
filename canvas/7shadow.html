@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            background: moccasin;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+        ctx.shadowColor="#000"
+        ctx.shadowOffsetX=30
+        ctx.shadowOffsetY=30
+        ctx.shadowBlur=30
+
+        ctx.save()
+        ctx.lineWidth = 10
+        ctx.strokeStyle = '#fff'
+        ctx.arc(300,200,100,0,Math.PI*2)
+        ctx.fillStyle='#93abff'
+        ctx.fill()
+       
+
+    </script>
+</body>
+
+</html>

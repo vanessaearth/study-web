@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 600px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <!-- <script src="./js/echarts.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script> -->
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const data = [
+            {
+                name: '关羽',
+                value: [80, 90, 80, 70, 70]
+            },
+            {
+                name: '鲁班',
+                value: [35, 70, 75, 95, 80]
+            }
+        ]
+        let option = {
+            title: {
+                text: '英雄实力对比'
+            },
+            xAxis: {
+            },
+            yAxis: {},
+            tooltip: {},
+            radar: {
+                indicator: [
+                    { name: '生命', min: 0, max: 100, color: 'green' },
+                    { name: '攻击', min: 0, max: 100, color: 'red' },
+                    { name: '暴击', min: 0, max: 100, color: 'orange' },
+                    { name: '防御', min: 0, max: 100, color: 'black' },
+                    { name: '速度', min: 0, max: 100, color: 'blue' }
+                ],
+                // shape:'polygon', //默认多边形
+                shape: 'circle',
+                splitArea: {
+                    areaStyle: {
+                        color: [
+                            'rgba(0,163,236,0)',
+                            'rgba(0,163,236,0.1)',
+                            'rgba(0,163,236,0.2)',
+                            'rgba(0,163,236,0.3)',
+                            'rgba(0,163,236,0.4)',
+                        ]
+                    }
+                },
+                axisLine:{
+                    lineStyle:{
+                        color:'#fff'
+                    }
+                },
+                splitLine:{
+                    lineStyle:{
+                        color:'#fff'
+                    }
+                },
+                radius:'50%'
+            },
+            series: {
+                type: 'radar',
+                data,
+
+            },
+
+        }
+        chart.setOption(option)
+    </script>
+</body>
+
+</html>

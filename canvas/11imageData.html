@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            background: moccasin;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+        let ctx = canvas.getContext('2d')
+        
+        // 获取图片imageData数据
+        // const [width, height] = [400, 200]
+        // const imgData = new ImageData(width, height)
+        // console.log('imgData:', imgData);
+        // imgData.data.forEach((v, i) => {
+        //     imgData.data[i] = 255
+        // })
+        // ctx.putImageData(imgData, 0, 0)
+        // // 获取从0，0位置开始，到wdith=1,height=1的数据
+        // const imgData2 = ctx.getImageData(0, 0, 1, 1)
+        // console.log('imgData2:', imgData2);
+
+        //截图图片右下角
+        const img = new Image()
+        img.src = './img/dog.jpg'
+        img.onload = function () {
+            const { width, height } = img
+            ctx.drawImage(img, 0, 0, width, height)
+            //起始位置，宽高
+            const imgData = ctx.getImageData(0, 0, width, height)
+            console.log(width, height, imgData);
+            // 整个图
+            ctx.putImageData(
+                imgData,
+                width, 0
+            )
+            // 右下角
+            ctx.putImageData(
+                imgData,
+                width * 2, 0,//起始位置
+                width / 2, height / 2, width / 2, height / 2//起始位置，截图的宽高
+            )
+
+        }
+    </script>
+</body>
+
+</html>

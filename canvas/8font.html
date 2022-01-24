@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            background: moccasin;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+        ctx.strokeStyle = 'red'
+        ctx.lineWidth = 1;
+        ctx.beginPath()
+        ctx.moveTo(300, 0)
+        ctx.lineTo(300, 150)
+        ctx.moveTo(0, 150)
+        ctx.lineTo(600, 150)
+        ctx.stroke()
+        ctx.font = 'bold 20px serif'
+        // 文字对齐方式left左边 start起始位置 right end center
+        // 对应从右边往左边写的文档，start和left不一样
+        ctx.textAlign = 'left'
+        ctx.fillText('好好学习', 300, 50)
+
+        ctx.textAlign = 'start'
+        ctx.fillText('好好学习', 300, 70)
+
+        ctx.textAlign = 'right'
+        ctx.fillText('好好学习', 300, 90)
+
+        ctx.textAlign = 'end'
+        ctx.fillText('好好学习', 300, 110)
+
+        ctx.textAlign = 'center'
+        ctx.fillText('好好学习', 300, 130)
+      /**
+       * textBaseLine，
+        top上对齐，
+        middle垂直对齐，
+        bottom下对其 
+        hanging悬挂基线对齐，
+        alphabetic标准字母极限对齐，默认，
+        ideigraphic表易文字基线
+      */
+        ctx.textAlign = 'left'
+
+        ctx.textBaseline = 'top'
+        ctx.fillText('top', 50, 150)
+        ctx.textBaseline = 'middle'
+        ctx.fillText('middle', 100, 150)
+        ctx.textBaseline = 'bottom'
+        ctx.fillText('bottom', 160, 150)
+        ctx.textBaseline = 'alphabetic'
+        ctx.fillText('hanging', 240, 150)
+        ctx.textBaseline = 'hanging'
+        ctx.fillText('alphabetic', 350, 150)
+        ctx.textBaseline = 'ideigraphic'
+        ctx.fillText('ideigraphic', 500, 150) 
+
+        const text='好好学习'
+        ctx.fillText(text, 50, 200, 80)
+        let measure=ctx.measureText(text)
+console.log(measure);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 600px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script src="./js/echarts.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script> -->
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const data = [
+            {
+                name: '关羽',
+                value: [80, 90, 80, 70, 70]
+            },
+            {
+                name: '鲁班',
+                value: [35, 70, 75, 95, 80]
+            }
+        ]
+        let option = {
+
+            series: {
+                type: 'gauge',
+                detail: {
+                    formatter: '{value}%',
+                },
+                data: [
+                    { name: '速度', value: 80 }
+                ],
+                // startAngle:225,//左手侧是180度
+                // endAngle:-45 //右手侧平的是0度
+                startAngle: 210,//左手侧是180度
+                endAngle: -30, //右手侧平的是0度
+                min: -200,
+                max: 200
+
+
+            },
+
+        }
+        chart.setOption(option)
+        setInterval(() => {
+            option.series.data[0].value = Math.round(Math.random() * 400)
+            chart.setOption(option)
+        }, 1000)
+    </script>
+</body>
+
+</html>

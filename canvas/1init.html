@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            background: moccasin;
+        }
+    </style>
+</head>
+
+<body>
+    <div>canvas兼容IE9以上</div>
+    <div>
+        1. canvas尺寸不用使用css设置
+        2.canvas尺寸不要过大，4000以内
+    </div>
+    <ul>
+        <li>填充矩形，fillRect(x,y,w,h)</li>
+        <li>描边矩形，strokeRect(x,y,w,h)</li>
+        <li>清理矩形，clearRect(x,y,w,h)</li>
+    </ul>
+    <div>绘制路径：</div>
+    <ul>
+        <li>1.开始建立路径,beginPath()</li>
+        <li>2.向路径集合中添加子路径,moveTo(x,y),closePath()可选</li>
+        <li>3.向路径集合中添加子路径,moveTo(x,y),closePath()可选</li>
+        <li>4.显示路径，填充fill(),描边stroke()</li>
+
+    </ul>
+    <div>子路径的形状</div>
+    <ul>
+        <li>直线：lineTo(x,y)</li>
+        <li>圆弧：arc(x,y,半径，开始弧度，结束弧度，方向)</li>
+        <li>切线圆弧：arcTo(x1,y1,x2,y2,半径)</li>
+        <li>二次贝塞尔曲线：quadraticCurveTo(cpx1,cpy1,x,y)</li>
+        <li>三次贝塞尔曲线：bezierCurveTo(cpx1,cpy1,cpx2,cpy2,x,y)</li>
+        <li>矩形：rect(x,y,w,h)</li>
+    </ul>
+    <canvas id="canvas" width="1000px" height="600px"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas')
+        const ctx = canvas.getContext('2d')
+        // ctx.fillStyle='red'
+        // 描边颜色
+        ctx.strokeStyle = 'red';
+        // 描边加粗
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+
+        // ctx.fillRect(50, 100, 400, 200)
+        // ctx.strokeRect(50, 100, 400, 200)
+        // ctx.clearRect(50, 100, 400, 200)
+        // ctx.moveTo(100, 100)
+        // // 直线
+        // ctx.lineTo(300, 100)
+        // ctx.lineTo(300, 200)
+        // ctx.stroke() //描边
+        // // ctx.fill() //填充
+        // // 圆弧
+        // ctx.arc(100, 100, 50, 0, Math.PI)
+        // ctx.moveTo(150, 300)
+        // ctx.arc(100, 300, 50, 0, 2 * Math.PI)
+        // ctx.stroke()
+
+        // ctx.moveTo(100,100)
+        // ctx.lineTo(400,100)
+        // ctx.lineTo(400,400)
+        // 切线圆弧
+        // ctx.arcTo(
+        //     400,100,
+        //     400,400,
+        //     100
+        // )
+        // 矩形
+        // ctx.rect(100,100,50,50)
+        ctx.moveTo(100, 100)
+        // 二次贝塞尔曲线，
+        // ctx.quadraticCurveTo(
+        //     400, 100, //控制点
+        //     400, 400);//结束点
+        // 三次贝塞尔曲线
+        ctx.bezierCurveTo(
+            400, 100, //第一个控制点
+            400, 400,//第2个控制点
+            700, 400); //结束点
+
+        ctx.stroke()
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

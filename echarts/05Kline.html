@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 600px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <!-- <script src="./js/echarts.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script> -->
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        let option = {
+            xAxis: {
+                data: ['one', 'two', 'three', 'four']
+            },
+            yAxis: {},
+            series: {
+                type: 'candlestick',
+                data: [
+                    // open,colse,lowest,highest]
+                    [30, 20, 10, 40],
+                    [30, 50, 10, 70]
+                ],
+                barWidth: '20%',
+                itemStyle: {
+                    color: 'orange',
+                    borderColor: 'orange',
+                    color0: '#00acec',
+                    borderColor0: '#00acec',
+                }
+
+            },
+
+        }
+        chart.setOption(option)
+    </script>
+</body>
+
+</html>

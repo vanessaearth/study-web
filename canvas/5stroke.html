@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            background: moccasin;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000" height="600"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas')
+        let ctx = canvas.getContext('2d')
+
+        // 描边样式
+        // strokeStyle 描边颜色
+        // lineWidth 描边宽度
+        // lineCap 描边端点样式
+        // lineJoin 描边角度类型:miter尖角，round圆角，bevel切角
+        // miterLimit 拐角最大厚度,只适用于lineJoin=miter的情况
+        // setLineDash(segments) 描边虚线
+        // lineDashOffset 描边偏移量
+        
+        ctx.lineWidth=20;
+        ctx.strokeStyle='red';
+
+        ctx.lineJoin='miter'
+        // ctx.miterLimit=3
+        ctx.beginPath();
+        ctx.moveTo(50,50);
+        ctx.lineTo(400,50);
+        ctx.lineTo(200,150);
+        ctx.stroke()
+        ctx.restore();
+
+        ctx.lineJoin='round'
+        ctx.beginPath();
+        ctx.moveTo(50,250);
+        ctx.lineTo(400,250);
+        ctx.lineTo(200,350);
+        ctx.stroke()
+        ctx.restore();
+        
+        ctx.lineJoin='bevel'        
+        ctx.beginPath();
+        ctx.moveTo(50,450);
+        ctx.lineTo(400,450);
+        ctx.lineTo(200,550);
+        ctx.stroke()
+        ctx.restore();
+
+        ctx.lineWidth=5;
+        ctx.save()
+        ctx.setLineDash([30]);
+        ctx.beginPath()
+        ctx.moveTo(450,50);
+        ctx.lineTo(950,50);
+        ctx.stroke()
+        ctx.restore();
+
+        ctx.save()
+        ctx.setLineDash([30,60]);
+        ctx.beginPath()
+        ctx.moveTo(450,150);
+        ctx.lineTo(950,150);
+        ctx.stroke()
+        ctx.restore();
+
+        ctx.save()
+        ctx.lineDashOffset=30 //设置虚线偏移量
+        ctx.setLineDash([30,60,90]);
+        ctx.beginPath()
+        ctx.moveTo(450,250);
+        ctx.lineTo(950,250);
+        ctx.stroke()
+        ctx.restore();
+    </script>
+</body>
+
+</html>
