@@ -22,18 +22,10 @@
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script>
 
     <script>
+        echarts.registerMap('china',data)
         let main = document.getElementById('main')
         let chart = echarts.init(main)
-        const data = [
-            {
-                name: '关羽',
-                value: [80, 90, 80, 70, 70]
-            },
-            {
-                name: '鲁班',
-                value: [35, 70, 75, 95, 80]
-            }
-        ]
+    
         let option = {
 
             series: {

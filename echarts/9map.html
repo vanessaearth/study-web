@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 600px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <!-- <script src="./js/echarts.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script>
+    <script src="./china.js"></script>
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        console.log(chinaMap);
+        echarts.registerMap('china', chinaMap)
+
+        let option = {
+            title: {
+                text: '中国地图',
+                left: 'center',
+                color:'#000'
+            },
+            series: {
+                type: 'map',
+                map: 'china',
+                roam: 'move',
+                roam: 'scale',
+                roam: true, //缩放移动
+                // center: [115.97, 29.71],//中心的
+                zoom: 1,
+                itemStyle: {
+                    areaColor: '#00acec',
+                    borderColor: 'blue'
+                },
+                emphasis: {
+                    itemStyle: {
+                        areaColor: 'rgba(0,163,236,0.5)',
+                        borderColor: '#fff'
+                    },
+                    label:{
+                        color:'blue'
+                    }
+                }
+
+            }
+
+
+        }
+        chart.setOption(option)
+
+    </script>
+</body>
+
+</html>

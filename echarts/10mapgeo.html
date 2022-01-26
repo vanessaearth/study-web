@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 600px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <!-- <script src="./js/echarts.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+    <script src="./china.js"></script>
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        console.log(chinaMap);
+        echarts.registerMap('china', chinaMap)
+
+        let option = {
+            color:['red'],
+            title: {
+                text: '中国地图',
+                left: 'center',
+                color:'#000'
+            },
+            geo:{
+                map: 'china',
+                roam: true, //缩放移动 roam: 'move',  roam: 'scale',
+                // center: [115.97, 29.71],//中心的
+                zoom: 1,
+                itemStyle: {
+                    areaColor: '#004981',
+                    borderColor: '#029fd4'
+                },
+                emphasis: {
+                    itemStyle: {
+                        areaColor: '#029fd4',
+                        borderColor: '#fff'
+                    },
+                    label:{
+                        color:'blue'
+                    }
+                }
+            },
+            series: {
+                type: 'scatter',
+                coordinateSystem:'geo',
+                data:[
+                    {name:'海口',value:[121.25,31.89,9]},
+                    {name:'海口',value:[91.25,35.89,18]}
+                ],
+                symbolSize:function(val){
+                    return val[2]
+                }
+               
+
+            }
+
+
+        }
+        chart.setOption(option)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 400px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <!-- <script src="./js/echarts.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        let xData = ['3.3', '3.4', '3.5', '3.6', '3.7', '3.8', '3.9']
+        const qzData = [200, 170, 90, 80, 30, 40, 10]
+        const zyData = [10, 20, 40, 70, 120, 140, 150]
+        let option = {
+            color: ['red'],
+            title: {
+                text: '西红柿 新增确诊/治愈趋势',
+                subText: '单位：例',
+                textStyle: {
+                    fontSize: 16
+                },
+                left: 'center',
+                color: '#000'
+            },
+            tooltip: {
+                trigger: 'axis',
+                backgroundColor: '#fff',
+                textStyle: {
+                    color: '#333'
+                },
+                borderWidth:1,
+                borderColor:'#ddd'
+
+            },
+            legend: {
+                icon: 'circle',
+                left: 'right',
+                top: 32,
+                itemHeight: 7,
+                textStyle: {
+                    padding: [0, 0, 0, -9]
+                }
+
+            },
+            xAxis: {
+                data: xData,
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false
+                },
+                boundaryGap: false
+
+            },
+            yAxis: {},
+            grid: {
+                left: 50,
+                right: 100,
+                top: 70
+            },
+            series: [
+                {
+                    name: '确诊',
+                    type: 'line',
+                    data: qzData,
+                    smooth: true,
+                    lineStyle: {
+                        color: 'crimson'
+                    },
+                    showSymbol: false
+                },
+                {
+                    name: '治愈',
+                    type: 'line',
+                    data: zyData,
+                    smooth: true,
+                    // lineStyle:{
+                    //     color:'lightseagreen'
+                    // },
+                    itemStyle: {
+                        color: 'lightseagreen'
+                    },
+                    symbol: 'none'
+                }
+            ]
+
+
+        }
+        chart.setOption(option)
+
+    </script>
+</body>
+
+</html>
