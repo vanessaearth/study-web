@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #main {
+      width: 600px;
+      height: 400px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script>
+  <script>
+    const main = document.getElementById('main')
+    const chart = echarts.init(main)
+    const option = {
+      // 标题
+      title: {
+        // show: false,
+        text: '柱状图',
+        subtext: 'web前端',
+        left: 'center',
+        textStyle: {
+          color: 'red',
+          fontSize: 24
+        },
+        subtextStyle: {
+          color: 'red',
+          fontSize: 18
+        }
+      },
+      // 提示框
+      tooltip: {
+        // trigger: 'item' //默认的
+        // trigger: 'axis'
+        trigger: 'none'
+
+      },
+      // 图例
+      legend: {
+        left: 'right',
+        top: '50'
+
+      },
+      // 工具栏
+      toolbox: {
+        feature: {
+          saveAsImage: { type: 'jpg' },
+          dataView: {
+
+          },
+          restore: {},
+          dataZoom: {},
+          magicType: {
+            type: ['line', 'bar', 'stack']
+          }
+        }
+      },
+      // x轴
+      xAxis: {
+        name: '前端分类',
+        data: ['html', 'js', 'css']
+      },
+      yAxis: {
+        name: '人数',
+        // splitNumber: 10,
+        // interval:3,
+        minInterval: 2,
+        minInterval: 10
+
+      },
+      series: [
+        {
+          name: '学习人数',
+          type: 'bar',
+          data: [30, 80, 40, 40, 60],
+          markPoint: {
+            data: [
+              { type: 'max' },
+              { type: 'min' },
+              { type: 'average' },
+              {
+                coord: [0, 45],//0是x轴索引，30是y轴的值
+                value: '标点'
+              }
+            ]
+          },
+          markLine: {
+            data: [
+              { type: 'min' },
+              { type: 'max' },
+              { type: 'average' },
+              [
+                {
+                  coord: [0, 35],
+                },
+                {
+                  coord: [2, 65],
+                  value: 'end'
+                }
+              ]
+
+            ]
+
+          }
+        }, {
+          name: '就业人数',
+          type: 'bar',
+          data: [40, 30, 20]
+        }
+      ],
+      grid: {
+        top: 100
+      }
+
+    }
+    chart.setOption(option)
+  </script>
+</body>
+
+</html>

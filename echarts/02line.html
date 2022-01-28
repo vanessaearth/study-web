@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #main {
+      width: 600px;
+      height: 400px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main"></div>
+
+  <script src="./js/echarts.js"></script>
+  <script>
+    const main = document.getElementById('main')
+    const chart = echarts.init(main)
+    const option = {
+
+      // x轴
+      xAxis: {
+        name: '前端分类',
+        data: ['html', 'js', 'css','ts'],
+        boundaryGap: 0,// 边界留白
+        axisLabel: {
+          margin: 20, //标签距离x轴距离
+          rotate: 20 //标签距离
+        }
+      },
+      yAxis: {
+        axisLabel: {
+          margin: 20 //标签距离
+        }
+
+      },
+      series: [
+        {
+          name: '学习人数',
+          type: 'line',
+          smooth: true,//平滑，有时候会有误差
+          itemStyle: {
+            color: '#00acec'
+          },
+          areaStyle: {
+            color: '#00acec',
+            opacity: 0.3
+          },
+          symbolSize:20,//标记点大小
+          //圆，矩形。圆角矩形，菱形，三角，标记点，箭头，无
+          // 标记图形['emptyCircle','circle','rect','roundRect','triangle','diamond','pin','arrow','none']
+          // symbol:'emptyRect',
+          // 图片
+          // symbol:'image://./img/cat.jpeg',
+          // svg图
+          symbol:'path://M30.9,53.2C16.8,53.2,5.3,41.7,5.3,27.6S16.8,2,30.9,2C45,2,56.4,13.5,56.4,27.6S45,53.2,30.9,53.2z M30.9,3.5C17.6,3.5,6.8,14.4,6.8,27.6c0,13.3,10.8,24.1,24.101,24.1C44.2,51.7,55,40.9,55,27.6C54.9,14.4,44.1,3.5,30.9,3.5z M36.9,35.8c0,0.601-0.4,1-0.9,1h-1.3c-0.5,0-0.9-0.399-0.9-1V19.5c0-0.6,0.4-1,0.9-1H36c0.5,0,0.9,0.4,0.9,1V35.8z M27.8,35.8 c0,0.601-0.4,1-0.9,1h-1.3c-0.5,0-0.9-0.399-0.9-1V19.5c0-0.6,0.4-1,0.9-1H27c0.5,0,0.9,0.4,0.9,1L27.8,35.8L27.8,35.8z',
+          data: [30, 80, 40, 40, 60],
+
+        },{
+          name:'就业人数',
+          type:'line',
+          data:[30,40,50,150],
+          areaStyle:{
+            opacity:0.2
+          },
+          smooth:true
+        }
+      ],
+      grid: {
+        top: 100
+      }
+
+    }
+    chart.setOption(option)
+  </script>
+</body>
+
+</html>

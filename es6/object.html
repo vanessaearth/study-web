@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>创建对象的三种方式:</div>
+  <ol>
+    <li>字面量方式</li>
+    <li>构造函数方式</li>
+    <li>Object.create(),属性放在原型上</li>
+  </ol>
+  <script>
+    // 创建对象的三种方式
+    //1.字面量方式
+    let obj1 = {
+      name: 'zhangsan',
+      age: 1
+    }
+    // 2.构造函数方式
+    let obj2 = new Object()
+    obj2.name = 'lisi'
+    obj2.age = 2
+    // 3.Object.create(),属性放在原型上
+    let obj3 = Object.create({
+      name: 'wangwu',
+      age: 3
+    })
+    console.log('obj1', obj1);
+    console.log('obj2', obj2);
+    console.log('obj3', obj3);
+    // 对象的调用： .后面是字符串属性,[]括号中允许事变量
+    let str = 'name'
+    console.log(obj1.name)
+    console.log(obj1[str])
+
+    //  工厂模式：是我们最常用的实例化对象模式了，是用工厂方法代替new操作的一种模式
+    function Person(name, age, hobby) {
+      let obj = {}
+      obj.name = name
+      obj.age = age
+      obj.hobby = function () {
+        console.log(hobby);
+      }
+      // 加工原料，出厂
+      return obj;
+    }
+    let zhangsan = Person('章三', 20, '喜欢吃饭')
+    let lisi = Person('里斯', 23, '喜欢睡觉')
+    // new运算符,把工厂模式改写的更简单
+    // 构造函数：1.首字母大写，2.this指向实例化对象自
+
+    function Person(name, age, hobby) {
+      // let obj={}//添加原料===this
+      this.name = name
+      this.age = age
+      this.hobby = function () {
+        console.log(hobby);
+      }
+      // 加工原料，出厂
+      // return obj;
+    }
+    // new的过程就是实例化对象，
+    // 静态属性，静态成员,属于类
+    Person.num = 0
+    Person.fn = function () {
+      console.log('fn...');
+    }
+    Person.prototype.age=1
+    Person.prototype.hobby=function(){
+      console.log('爱好');
+    }
+    let zhangsan1 = new Person('章三', 20, '喜欢吃饭')
+    Person.num++
+    let lisi1 = new Person('里斯', 23, '喜欢睡觉')
+    Person.num++
+    console.log('实例化的次数：',Person.num);
+   console.log(zhangsan1);
+    console.log(zhangsan1.hobby===lisi1.hobby);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #canvas {
+    background: lightgoldenrodyellow;
+  }
+</style>
+
+<body>
+
+  <canvas id="canvas" width="600" height="600"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas')
+    let ctx = canvas.getContext('2d')
+    // 图像变灰
+    const img = new Image()
+    img.src = './img/cat.jpeg'
+ 
+
+    img.onload = render2
+    function render1() {
+      const { width, height } = img
+    ctx.drawImage(img, 0, 0)
+    let imgData = ctx.getImageData(0, 0, width, height)
+    console.log(imgData);
+    const data = imgData.data
+      // 逐像素遍历,每个像素点有4个值，分别是rgba
+      for (let i = 0; i < data.length; i += 4) {
+        const [r, g, b] = [data[i], data[i + 1], data[i + 2]]
+        // 灰度算法
+        const grayColor = 0.299 * r + 0.587 * g + 0.114 * b
+        data[i] = grayColor
+        data[i + 1] = grayColor
+        data[i + 2] = grayColor
+
+      }
+      ctx.putImageData(imgData, 0, height)
+    }
+    // 图像打马赛克
+    // 逐行列遍历
+    function render2() {
+      const { width, height } = img
+    ctx.drawImage(img, 0, 0)
+    let imgData = ctx.getImageData(0, 0, width, height)
+    console.log(imgData);
+    const data = imgData.data
+      let size = 10
+      for (let y = 0; y < height; y += size) {
+        for (let x = 0; x < width; x += size) {
+          const i = (y * width + x) * 4
+          const [r, g, b] = [data[i], data[i + 1], data[i + 2]]
+          ctx.fillStyle=`rgb(${r},${g},${b})`
+          ctx.fillRect(x,y,size,size)
+        }
+      }
+
+    }
+  </script>
+</body>
+
+</html>
