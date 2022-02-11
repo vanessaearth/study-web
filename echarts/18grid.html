@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 400px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const data = [[10, 10], [20, 20], [40, 40]]
+        const symbolSize = 30
+        let baseOption = {
+
+            xAxis: [{
+                gridIndex: 0,
+                min: 0,
+                max: 50,
+            },
+            {
+                gridIndex: 1,
+                min: 0,
+                max: 50,
+            }],
+            yAxis: [{
+                gridIndex: 0,
+                min: 0,
+                max: 50,
+            },
+            {
+                gridIndex: 1,
+                min: 0,
+                max: 50,
+            }],
+
+        }
+        const media = [
+            {
+                option: {
+                    grid: [{
+                        left: '10%',
+                        right: '55%',
+                        top: '10%',
+                        bottom: '10%',
+                    },
+                    {
+                        left: '55%',
+                        right: '10%',
+                        top: '10%',
+                        bottom: '10%',
+                    }],
+                }
+            },
+            {
+                query:{
+                    maxWidth:768 //调整浏览器窗口后需要刷新
+                },
+                option: {
+                    grid: [{
+                        left: '10%',
+                        right: '10%',
+                        top: '10%',
+                        bottom: '55%',
+                    },
+                    {
+                        left: '10%',
+                        right: '10%',
+                        top: '55%',
+                        bottom: '10%',
+                    }],
+                }
+            }
+        ]
+        chart.setOption({ baseOption, media })
+        window.addEventListener('resize',()=>{
+            chart.resize()
+        })
+
+    </script>
+</body>
+
+</html>
