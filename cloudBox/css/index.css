@@ -1,0 +1,99 @@
+
+*{
+  padding:0;
+  margin:0;
+  border:0;
+}
+body{
+  display: flex;
+}
+.right{
+  flex:1
+  
+}
+.right-top{
+  text-align: right;
+}
+li{
+  list-style: none;
+  line-height: 30px;
+}
+#tree-menu{
+width:200px;
+margin-right: 20px;
+border-right: 1px solid #ccc;
+}
+#tree-menu p{
+  padding-left: 20px;
+}
+.active{
+  color: lightcoral;
+}
+.open{
+  /* background-color: lightgreen; */
+}
+.bread-nav{
+  padding:10px 0;
+  font-weight: 700;
+  margin-left: -20px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ccc;
+
+}
+#folders{
+
+}
+.folder-item{
+  display: inline-block;
+  position: relative;
+  margin:10px;
+  padding:10px;
+  width:100px;
+  height: 100px;
+  background: lightgray;
+}
+.floder-img{
+  width:80%;
+  height: 40px;
+  display: block;
+}
+.folder-name,.editor{
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+}
+.editor{
+  width: inherit;
+  background-color:lightgray ;
+}
+.folder-name{
+  z-index: 1;
+}
+.checked{
+  position: absolute;
+  top:5px;
+  left: 10px;
+}
+.alert{
+  background-color: lightgreen;
+  border-radius: 4px;
+  width: 100px;
+  padding: 5px 10px;
+  position: absolute;
+  top:40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: none;
+}
+.alert-success{
+  background-color: lightgreen;
+}
+.alert-warning{
+  background-color: lightcoral;
+
+}
+.alert-show{
+  display: block;
+}

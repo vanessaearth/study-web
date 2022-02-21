@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="menu-content flex" id="content_box">
+    <div class="menu-tree" id="article_left">asjkkjlasdkjlkjlas控制XKJ就看撒</div>
+    <div id="middle">
+    
+    </div>
+    <div id="article_right">爱神的箭卡刷点卡健身卡觉得撒打卡萨丁看见了撒旦刻录机撒旦艰苦是</div>
+  </div>
+  <script>
+    // 实现拖拽改变宽度
+    window.onload = function () {
+      var resize = document.getElementById("middle");
+      var left = document.getElementById("article_left");
+      var right = document.getElementById("article_right");
+      var box = document.getElementById("content_box");
+      resize.onmousedown = function (e) {
+
+        var startX = e.clientX;
+        resize.left = resize.offsetLeft;
+
+        document.onmousemove = function (e) {
+          var endX = e.clientX;
+
+          var moveLen = resize.left + (endX - startX);
+          var maxT = box.clientWidth - resize.offsetWidth;
+          if (moveLen < 59) moveLen = 59;
+          if (moveLen > maxT - 200) moveLen = maxT - 200;
+
+          resize.style.left = moveLen;
+          left.style.width = moveLen + "px";
+          // right.style.width = (box.clientWidth - moveLen - 5) + "px";
+        }
+        document.onmouseup = function (evt) {
+          evt.stopPropagation()
+          document.onmousemove = null;
+          document.onmouseup = null;
+          resize.releaseCapture && resize.releaseCapture();
+        }
+        resize.setCapture && resize.setCapture();
+        return false;
+      };
+    };
+
+  </script>
+    <style>
+      .flex {
+        display: flex;
+      }
+  
+      #middle {
+        width: 20px;
+        cursor: col-resize;
+        min-height: 767px;
+        position: relative;
+      }
+  
+      #middle button {
+        cursor: col-resize;
+        position: fixed;
+        top: 50%;
+        color: #9999;
+      }
+  
+      #article_left {
+        width: 150px;
+        background-color: aquamarine;
+      }
+  
+      #article_right {
+        flex: 1;
+        width: 80%;
+        position: relative;
+        background-color: blanchedalmond;
+      }
+    </style>
+</body>
+
+</html>

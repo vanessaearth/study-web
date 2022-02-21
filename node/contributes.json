@@ -1,0 +1,17 @@
+{
+    "contributes": [
+        {
+            "keywords": ["function", "=>", "func ", "def "],
+            "voices":[
+                "function_01.mp3",
+                "function_02.mp3",
+                "function_03.mp3"
+            ],
+            "texts":[
+                "哇哦，你的回调函数写的好棒棒呀！",
+                "这个函数的命名用我的名字怎么样呀？",
+                "再厉害的函数，也执行不出我对你的喜欢！"
+            ]
+        }
+      ]
+}

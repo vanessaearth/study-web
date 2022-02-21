@@ -1,0 +1,66 @@
+<!--
+ * @Autor: yangjin
+ * @Date: 2021-11-03 09:51:39
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-11-05 09:38:56
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var data = ['我的文件', '新建文件夹', '新建文件夹（4）', '新建文件夹（6）']
+    document.onclick = function () {
+      let names = data.filter(item => {
+        if (item === '新建文件夹') {
+          return true
+        }
+        if (item.substring(0, 6) === '新建文件夹（' &&
+          Number(item.substring(6, item.length - 1)) >= 2 &&
+          item[item.length - 1] === '）') {
+          return true
+        }
+        return false
+      })
+      // 排序
+      names.sort((n1, n2) => {
+        n1 = n1.substring(6, n1.length - 1)
+        n2 = n2.substring(6, n2.length - 1)
+        n1 = isNaN(n1) ? 0 : n1
+        n2 = isNaN(n2) ? 0 : n2
+        return n1 - n2
+      })
+      //补位问题
+      if (names[0] !== '新建文件夹') {
+        data.push('新建文件夹')
+        return
+      }
+      console.log('names', names);
+
+      for (let i = 1; i < names.length; i++) {
+        if (Number(names[i].substring(6, names[i].length - 1)) !== i + 1) {
+          console.log(i + 1, 'aaaa');
+          data.push(`新建文件夹（${i + 1}）`)
+          return
+        }
+      }
+      // if (names.length < 1) {
+      //   data.push('新建文件夹')
+      // } else {
+      //   data.push(`新建文件夹（${names.length + 1}）`)
+      // }
+      console.log(data);
+
+    }
+  </script>
+</body>
+
+</html>

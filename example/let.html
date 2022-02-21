@@ -1,0 +1,61 @@
+<!--
+ * @Autor: yangjin
+ * @Date: 2021-10-08 09:38:53
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-10-11 10:12:03
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <ul id="list">
+      <li>test</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+
+
+  </div>
+  <script>
+    // let li=document.querySelectorAll('li')
+    // for(let i=0;i<li.length;i++){
+    //   li[i].onclick=function(){
+    //     console.log(i);
+    //   }
+    // }
+    // let set=new Set([1,2,3,4,'a',5])
+    // console.log('clear',set.clear());
+    // console.log('size',set.size);
+    // console.log('delete a',set.delete('a'));
+    // console.log('add b',set.add('b'));
+    // console.log('get b',set.delete('b'));
+    // console.log('has a',set.has('a'));
+
+    // let map=new Map([['a',1],['b',2],['c',3]])
+    // console.log('clear',map.clear());
+    // console.log('set d=4',map.set('d',4));
+    // console.log('delete a',map.delete('a'));
+    // console.log('get a',map.get('a'));
+    // console.log('get b',map.get('b'));
+    // console.log('has b',map.has('b'));
+    
+    // Array.from把类数组的对象，转化为数组
+    let list = document.querySelectorAll('#list li')
+    let arr = []
+    list = Array.from(list)
+    list.map(v => {
+      return v
+    })
+  </script>
+</body>
+
+</html>

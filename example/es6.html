@@ -1,0 +1,88 @@
+<!--
+ * @Autor: yangjin
+ * @Date: 2021-10-18 09:45:02
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-10-20 09:58:11
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <p>
+    今年
+    小明，
+    就要
+    18
+    岁了
+    ，终于升入初中了
+
+  </p>
+  <div>babel script 标签中加type="text/babel",引入bable的压缩文件babel.min.js</div>
+  <script type="text/babel">
+  //   let str = "hello world! "
+  //   // startWith,第二个参数开始位置
+  //   console.log(str.startsWith('ll', 2));
+  //   console.log(str.endsWith('world'));
+  //   // endswith第二个参数，只看前几个
+  //   console.log(str.endsWith('world', 6));
+  //   console.log(str.repeat(3));
+  //   //``模板字符串
+  //   let age = 18
+  //   let longStr = `小明今年就要${age}岁了`
+  //   console.log(longStr);
+   
+  //   let a = 0, b = 1
+  //   let obj = {
+  //     a: a,
+  //     b: b
+  //   }
+  //   let name='tom'
+  //   //对象的简洁表示法,属性名也能赋值，[]
+  //   let obj2 = {
+  //     a,
+  //     b, 
+  //     c(){
+  //       console.log('c');
+  //     },
+  //     [name]:'111'
+  //   }
+  //   console.log(obj2);
+
+  //    // 把后面的对象合并到 前面的对象
+  //   let  obj33={...obj,...obj2}
+  //   let obj3={a:1,b:2}
+  //   let obj4={c:4,d:3}
+  //   console.log('before',obj3,obj4);
+  //   Object.assign(obj3, obj4)
+  //  let  obj5= Object.assign({},obj3, obj4)
+  //   console.log('after',obj3,obj4);
+  //   console.log('obj5',obj5);
+  //   // // 判断2个对象是否相等，强类型的
+  //   Object.is(obj5, obj2)
+    
+  //   console.log('object.is +0 -0',Object.is(+0,-0));
+  //   console.log('object.is NaN,NaN',Object.is(NaN,NaN));
+
+
+    // babel
+    let a=1,b=2
+    let obj7={
+      a,b,c(){console.log('c')}
+    }
+    let obj8={
+      c:'c',
+      ...obj7
+    }
+  </script>
+</body>
+
+</html>

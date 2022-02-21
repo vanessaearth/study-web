@@ -1,0 +1,51 @@
+<!--
+ * @Autor: yangjin
+ * @Date: 2021-10-14 09:44:09
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-10-14 09:54:50
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  箭头函数的this指向，始终指向调用他的地方的父级的this
+  原来的a=a||10,当a=0的时候会和预期不一样
+
+  函数默认值可以解决0的情况，
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    let fn;
+    let fn2 = function () {
+      console.log(this);
+      fn = () => {
+        console.log(this);
+      }
+    }
+    fn2 = fn2.bind(document.body)
+    // fn2()
+    // fn()
+    let li = document.querySelectorAll('ul li')
+    let arr = []
+    li = Array.from(li, function(item, index)  {
+      console.log(item, index, this);
+      return index
+    }, arr)
+    console.log(li);
+    console.log(arr);
+  </script>
+
+</body>
+
+</html>

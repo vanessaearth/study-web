@@ -10,3 +10,5 @@ $ npm init -y
 
 
 执行 npm install chalk figlet commander clear inquirer download-git-repo ora 安装这些库。
+
+
