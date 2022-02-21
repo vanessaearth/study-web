@@ -32,3 +32,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+vue2
+"vue": "^2.6.11"
+vue3
+"vue": "^3.0.0"
+安装
+npm install vue@next
+npm install -g @vue/cli
+vue upgrade --next
+ Vue CLI v4.5 可以选择vue3

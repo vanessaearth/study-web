@@ -2,7 +2,7 @@
  * @Autor: yangjin
  * @Date: 2021-09-07 11:35:06
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-02-11 19:01:27
+ * @LastEditTime: 2022-02-11 19:20:18
  * @Description:拖拽
 -->
 <template>
@@ -51,7 +51,8 @@
         <div>
           组员;
           <vuedraggable
-            @start="start"
+             @add='add'
+            @update='update'
             :list="item.member"
             :sort="false"
             :group="{ name: 'child', pull: isPull  }"
@@ -149,7 +150,7 @@ export default {
   }
 }
 // https://github.com/SortableJS/Vue.Draggable/blob/master/example/components/clone-on-control.vue
-
+// https://www.cnblogs.com/hsnotebook/p/10656002.html
 </script>
 
 <style scoped>
