@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        height: 100%
+    }
+
+    body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+    }
+
+    #main {
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const circle = {
+            id: 1,
+            type: 'circle',
+            x: 100,//偏移量
+            y: 100,
+            shape: {
+                r: 200
+            },
+            scaleX: 0.5,
+            scaleY: 0.5,
+            style: {
+                fill: '#00acec',
+                stroke: '#000',
+                lineWidth: 5
+            },
+            draggable: true,
+            onmouseover: () => {
+                chart.setOption({
+                    graphic: {
+                        id: 1,
+                        style: {
+                            fill: 'green'
+                        }
+                    }
+                })
+            },
+            onmouseout: () => {
+                chart.setOption({
+                    graphic: {
+                        id: 1,
+                        style: {
+                            fill: '#00acec'
+                        }
+                    }
+
+                })
+            }
+
+        }
+        const img = {
+            type: 'image',
+            x: 200,
+            y: 100,
+            rotation: 0.5,
+            style: {
+                image: './img/cat.jpeg'
+            }
+        }
+        const text = {
+            type: 'text',
+            style: {
+                text: '好好学习 天天向上！\n好好学习 天天向上！',
+                font: 'italic bolder 32px cursive',
+                textAlign: 'center',
+                textVerticalAlign: 'middle',
+                fill: 'rgba(0,0,0,0)',
+                stroke: '#000',
+                lineWidth: 2
+            }
+        }
+        const rect = {
+            type: 'rect',
+            shape: {
+                width: 100,
+                height: 200,
+                x: 10,
+                y: 200
+            },
+            style: {
+                fill: '#00acec',
+                stroke: '#000',
+                lineWidth: 10
+            }
+        }
+        // 圆环
+        const ring = {
+            type: 'ring',
+            x: 600,
+            y: 100,
+            shape: {
+                r0: 50,
+                r: 100
+            }
+        }
+        // 扇形
+        const sector = {
+            type: 'sector',
+            x: 800,
+            y: 100,
+            shape: {
+                r0: 50,
+                r: 100,
+                startAngle: -Math.PI / 6,
+                endAngle: -Math.PI * 5 / 6,
+                clockwise: false
+            }
+        }
+        // 圆弧
+        const arc = {
+            type: 'arc',
+            x: 1000,
+            y: 100,
+            shape: {
+                r: 100,
+                startAngle: -Math.PI / 6,
+                endAngle: -Math.PI * 5 / 6,
+            }
+        }
+        // 多边形
+        const polygon = {
+            type: 'polygon',
+            x: 1200,
+            y: 0,
+            shape: {
+                points: [
+                    [0, 0],
+                    [-100, 100],
+                    [100, 100]
+                ]
+            }
+        }
+        //多边形描边
+        const polyline = {
+            type: 'polyline',
+            x: 1400,
+            y: 0,
+            shape: {
+                points: [
+                    [0, 0],
+                    [-100, 100],
+                    [100, 100]
+                ],
+                smooth: 1//范围0～1
+            }
+        }
+        //线
+        const line = {
+            type: 'line',
+            x: 200,
+            y: 200,
+            shape: {
+                x0: 0,
+                y0: 0,
+                x1: 200,
+                y1: 0
+            }
+        }
+        //贝塞尔曲线
+        const bezierCurve = {
+            type: 'bezierCurve',
+            x: 500,
+            y: 300,
+            shape: {
+                x1: 0,
+                y1: 0,
+                cpx1: 100,
+                cpy1: 0,
+                cpx2: 200,
+                cpy2: 100,
+                x2: 200,
+                y2: 300
+            }
+        }
+        const option = {
+            graphic: [circle, img, text, rect, ring, sector, arc, polygon, polyline, line, bezierCurve]
+        }
+        chart.setOption(option)
+    </script>
+</body>
+
+</html>

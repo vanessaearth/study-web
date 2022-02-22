@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        height: 100%
+    }
+
+    body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+    }
+
+    #main {
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const symbolSize = 30
+        const data = [[0, 0], [20, 20], [40, 40]]
+        const option = {
+            xAxis: {
+                min: 0,
+                max: 50
+            },
+            yAxis: {
+                min: 0,
+                max: 50
+            },
+            tooltip: {},
+            series: {
+                id: 1,
+                type: 'line',
+                data,
+                symbolSize: symbolSize
+            }
+        }
+        chart.setOption(option)
+        const circle = data.map(v => {
+            const [x, y] = chart.converToPixel('grid', v)
+            return {
+                type: 'circle',
+                x, y,
+                shape: {
+                    r: symbolSize / 2
+                }
+            }
+        })
+        chart.setOption({
+            graphic:circle
+        })
+    </script>
+</body>
+
+</html>

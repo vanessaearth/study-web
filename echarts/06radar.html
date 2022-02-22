@@ -27,13 +27,28 @@
         const data = [
             {
                 name: '关羽',
-                value: [80, 90, 80, 70, 70]
+                value: [80, 90, 80, 70, 70],
+                img: './img/guanyu.jpeg'
             },
             {
                 name: '鲁班',
-                value: [35, 70, 75, 95, 80]
+                value: [35, 70, 75, 95, 80],
+                img: './img/luban.jpeg'
             }
         ]
+        const item = data[0]
+        item.label = {
+            formatter: '{img|}',
+            rich: {
+                img: {
+                    width: 60,
+                    height: 60,
+                    backgroundColor: {
+                        image: item.img
+                    }
+                }
+            },
+        }
         let option = {
             title: {
                 text: '英雄实力对比'
@@ -63,21 +78,25 @@
                         ]
                     }
                 },
-                axisLine:{
-                    lineStyle:{
-                        color:'#fff'
+                axisLine: {
+                    lineStyle: {
+                        color: '#fff'
                     }
                 },
-                splitLine:{
-                    lineStyle:{
-                        color:'#fff'
+                splitLine: {
+                    lineStyle: {
+                        color: '#fff'
                     }
                 },
-                radius:'50%'
+                radius: '50%'
             },
             series: {
                 type: 'radar',
                 data,
+                label: {
+                    show: true
+                }
+
 
             },
 

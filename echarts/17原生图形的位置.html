@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        height: 100%
+    }
+
+    body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+    }
+
+    #main {
+        height: 100%;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const option = {
+            xAxis:{
+                min:0,
+                max:50
+            },
+            yAxis:{
+                min:0,
+                max:50
+            },
+            series:{
+                id:1,
+                type:'scatter',
+                data:[[40,40]],
+                symbolSize:30
+            }
+        }
+        chart.setOption(option)
+        const circle={
+            id:1,
+            type:'circle',
+            shape:{
+                r:5
+            },
+            x:200,
+            y:200
+        }
+        chart.setOption({
+            graphic:[circle]
+        })
+        // 图表位转像素位
+        const [x,y]=chart.convertToPixel('grid',[20,20])
+        chart.setOption({
+            graphic:[{
+                id:1,
+                x,y
+            }]
+        })
+        // 像素位转图表位
+        const pos=chart.convertFromPixel('grid',[200,200])
+        chart.setOption({
+            series:[{
+                id:1,
+                data:[pos]
+            }]
+        })
+    </script>
+</body>
+
+</html>

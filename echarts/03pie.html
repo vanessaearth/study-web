@@ -22,47 +22,112 @@
   <script>
     const main = document.getElementById('main')
     const chart = echarts.init(main)
+    const data = [
+      {
+        name: 'html',
+        value: '15',
+        img: './img/guanyu.jpeg',
+      },
+      { name: 'css', value: '55', img: './img/luban.jpeg' },
+      { name: 'js', value: '25' },
+      { name: 'ts', value: '65' }
+    ]
+    let item = data[0]
+    item.label = {
+      formatter: '{img|}\n{name|' + item.name + '}\n{val|战力:'+item.value+'}',
+      rich: {
+        img: {
+          width: 60,
+          height: 60,
+          backgroundColor: {
+            image: item.img
+          }
+        },
+        name: {
+          fontSize: 18,
+          lineHeight: 32
+        },
+        val:{
+          fontSize:14
+        }
+      }
+    }
     const option = {
-
+      tooltip: {},
       series: [
         {
           name: '学习人数',
           type: 'pie',
-         data: [
-           {name:'html',value:'15'},
-           {name:'css',value:'55'},
-           {name:'js',value:'25'},
-           {name:'ts',value:'65'}
-         ],
-         roseType:'radius',
-        //  roseType:'area',
-         radius:'70%',
-         radius:['40%','70%'],//内部半径，外部半径
-         itemStyle:{
-           color:'#00acec'
-         },
-         label:{
-           position:'inside',
-           formatter:'{b}-{c}\n{d}%',
-           lineHeight:22,
-           fontSize:14,
-           fontWeight:'bold'
-         }
+          emphasis: {
+            itemStyle: {
+              shadowColor: 'rgba(0,0,0,0.5)',
+              shadowOffsetY: 10,
+              shadowBlur: 10
+            }
+          },
+          data,
+          // roseType: 'radius',
+          //  roseType:'area',
+          // radius: '70%',
+          // radius: ['40%', '70%'],//内部半径，外部半径
+          itemStyle: {
+            color: '#00acec'
+          },
+          // label: {
+          //   position: 'inside',
+          //   formatter: '{b}-{c}\n{d}%',
+          //   lineHeight: 22,
+          //   fontSize: 14,
+          //   fontWeight: 'bold'
+          // }
         }
       ],
-      visualMap:{
-        min:0,
-        max:100,
-        inRange:{
-          colorLightness:[0,1]
+      visualMap: {
+        min: 0,
+        max: 100,
+        inRange: {
+          colorLightness: [0, 1]
         }
       },
       grid: {
         top: 100
       }
-
     }
+
     chart.setOption(option)
+    let curDataIndex = 0
+    let length = option.series[0].data.length
+    setInterval(() => {
+
+
+
+      chart.dispatchAction({
+        type: 'downplay', //取消高亮扇形
+        seriesIndex: 0,
+        dataIndex: curDataIndex
+      })
+      chart.dispatchAction({
+        type: 'hideTip',//取消tooltip
+        seriesIndex: 0,
+        dataIndex: curDataIndex
+      })
+      curDataIndex++
+      if (curDataIndex === length) {
+        curDataIndex = 0
+      }
+      chart.dispatchAction({
+        type: 'highlight', //高亮扇形
+        seriesIndex: 0,
+        dataIndex: curDataIndex
+      })
+      chart.dispatchAction({
+        type: 'showTip',//option中需要设置tooltip
+        seriesIndex: 0,
+        dataIndex: curDataIndex
+      })
+
+    }, 1000)
+
   </script>
 </body>
 

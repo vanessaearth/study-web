@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #canvas {
+    background: lightgoldenrodyellow;
+  }
+</style>
+
+<body>
+
+  <canvas id="canvas" width="600" height="600"></canvas>
+  <script>
+    const canvas = document.getElementById('canvas')
+    let ctx = canvas.getContext('2d')
+
+    let r = 50 //圆弧半径
+    let x = 50//起始点坐标x
+    let y = 20 //起始点坐标y
+    let height = 300 //矩形高
+    let width = 200 //矩形宽
+    ctx.beginPath()
+    ctx.fillStyle = 'red'
+    ctx.fillRect(x, y, width, height)
+
+    //左上三角
+    ctx.beginPath()
+    ctx.fillStyle = 'green'
+    //移动到顺时针画圆弧的点
+    ctx.moveTo(x, y + r)
+    // 顺时针画1/4圆弧
+    ctx.arc(x + r, y + r, r, Math.PI, 1.5 * Math.PI)
+    //圆弧结束点画线到直角点
+    ctx.lineTo(x, y)
+    //直角点画线到圆弧起点
+    ctx.lineTo(x, y + r)
+    ctx.fill()
+    //左下三角
+    ctx.beginPath()
+    ctx.fillStyle = 'green'
+    ctx.moveTo(x + r, y + height)
+    ctx.arc(x + r, y + height - r, r, 0.5 * Math.PI, Math.PI)
+    ctx.lineTo(x, y + height)
+    ctx.lineTo(x + r, y + height)
+
+    ctx.fill()
+
+    //右上三角
+    ctx.beginPath()
+    ctx.fillStyle = 'green'
+    ctx.moveTo(width - r, y)
+    ctx.arc(x + width - r, y + r, r, 1.5 * Math.PI, 2 * Math.PI)
+    ctx.lineTo(x + width, y)
+    ctx.lineTo(width - r, y)
+    ctx.fill()
+
+    //右下三角
+    ctx.beginPath()
+    ctx.fillStyle = 'green'
+    ctx.moveTo(x + width, y + height - r)
+    ctx.arc(x + width - r, y + height - r, r, 0, 0.5 * Math.PI)
+    ctx.lineTo(x + width, y + height)
+    ctx.lineTo(x + width, y + height - r)
+    ctx.fill()
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: digitFont;
+        src: url(./font/DS-Digital/DS-DIGI-1.ttf);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 1920px;
+        height: 1080px;
+        background: #000d4a;
+    }
+
+    #header {
+        height: 99px;
+        font-size: 42px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        padding-top: 12px;
+        background-image: url("../img/head_bg.png");
+    }
+
+    #cont {
+        height: 981px;
+        display: flex;
+    }
+
+    .cont-edge {
+        width: 576px;
+    }
+
+    .box {
+        height: 360px;
+        overflow: hidden;
+    }
+
+    .cont-edge:first-child {
+        padding-left: 14px;
+    }
+
+    .cont-edge:last-child {
+        padding-right: 14px;
+    }
+
+    .cont-center {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .centerImg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .img1 {
+        animation: img1 20s linear infinite;
+    }
+
+    @keyframes img1 {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(360deg)
+        }
+
+    }
+
+    .img2 {
+        animation: img2 5s linear infinite;
+    }
+
+    @keyframes img2 {
+        0% {
+            transform: rotate(360deg)
+        }
+
+        100% {
+            transform: rotate(0deg)
+        }
+    }
+
+    .center-cont {
+        position: relative;
+        height: 600px;
+    }
+
+    #chartC {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .center-row {
+        display: flex;
+    }
+
+    .center-row>div {
+        flex: 1;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+
+    }
+
+
+    .center-row:first-child {
+        height: 75px;
+        background-image: url('./img/center_tit_bg.png');
+    }
+
+    .center-row .center-num {
+        line-height: 75px;
+        color: #ffed7b;
+        font-size: 64px;
+        font-family: digitFont;
+        margin-left: 20px;
+    }
+
+    .center-row .center-text {
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.75);
+        margin-top: 5px;
+    }
+
+    .anchorBL {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="cont">
+        <div class="cont-edge">
+            <div id="chartL1" class="box"></div>
+            <div id="chartL2" class="box"></div>
+            <div id="chartL3" class="box"></div>
+        </div>
+        <div class="cont-center">
+            <div class="center-tit">
+                <div class="center-row">
+                    <div class="center-num">12345678</div>
+                    <div class="center-num">12345678</div>
+                </div>
+                <div class="center-row">
+                    <div class="center-text">2021年总收入情况</div>
+                    <div class="center-text">2021年总支出情况</div>
+                </div>
+            </div>
+            <div class="center-cont">
+                <div class="centerImg">
+                    <img src="" alt="" class="img1">
+                </div>
+                <div class="centerImg">
+                    <img src="" alt="" class="img2">
+                </div>
+                <div id="chartC"></div>
+            </div>
+
+        </div>
+        <div class="cont-edge">
+            <div id="chartR1" class="box"></div>
+            <div id="chartR2" class="box"></div>
+            <div id="chartR3" class="box"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+    <!-- 自定义主题 -->
+    <script src="./js/walden.js"></script>
+    <!-- bmap -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/extension/bmap.js"></script>
+    <!-- 百度地图api，3.0支持个性化地图颜色 -->
+    <script src="https://api.map.baidu.com/api?v=3.0&ak=LNWI2X1KYTuDGwVncrghEnftx0znxupa"></script>
+    <script src="./js/pm.js"></script>
+    <script src="./js/china.js"></script>
+
+    <script>
+        let main = document.getElementById('chartL1')
+        let chart = echarts.init(main, 'walden')
+        // 第一列类目轴，第二列第一个系列，第三列第二个系列
+        const source = [
+            ['年', '2016', '2017', '2018', '2019', '2020', '2021'],
+            ['收入', 30, 40, 70, 50, 10, 80],
+            ['支出', 50, 20, 40, 60, 20, 50],
+        ]
+
+        let option = {
+            title: {
+                text: '收入情况'
+            },
+            dataset: {
+                source: source,
+            },
+            legend: {},
+            tooltip: {},
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    type: 'line',
+                    seriesLayoutBy: 'row'
+                },
+                {
+                    type: 'line',
+                    seriesLayoutBy: 'row'
+
+                }
+            ]
+        }
+        chart.setOption(option)
+        //左2
+        {
+            let main = document.getElementById('chartL2')
+            let chart = echarts.init(main, 'walden')
+            const source = [
+                { name: '旅游', value: 5000 },
+                { name: '饮食', value: 4500 },
+                { name: '服装', value: 6000 },
+                { name: '电影', value: 3500 },
+                { name: '其他', value: 1500 },
+            ]
+            let option = {
+                title: {
+                    text: '衣食住行支出比',
+                    left: 'center'
+                },
+                dataset: {
+                    source: source,
+                },
+                tooltip: {
+                    formatter: ({ percent }) => {
+                        return Math.round(percent) + '%'
+                    }
+                },
+                series: [
+                    {
+                        type: 'pie',
+                        center: ['50%', '60%'],
+                        roseType: 'radius',
+                        radius: ['40%', '70%']
+                    }
+                ]
+            }
+            chart.setOption(option)
+        }
+        // 左3
+        {
+            let main = document.getElementById('chartL3')
+            let chart = echarts.init(main, 'walden')
+            const source = [
+                [815, 34.05, 351014, 'Australia', 1800],
+                [1314, 39, 645526, 'Canada', 1800],
+                [985, 32, 321675013, 'Canada', 1800],
+            ]
+            const dimensions = ['收入', '年龄', '人口', '住址', '时间']
+            let option = {
+                title: {
+                    text: '收入和年龄关系',
+                    left: 'center'
+                },
+                dataset: {
+                    dimensions,
+                    source: source,
+                },
+                tooltip: {},
+                xAxis: {
+                    type: 'value',
+                    name: '年龄'
+                },
+                yAxis: {
+                    type: 'value',
+                    name: '收入'
+                },
+                series: [
+                    {
+                        type: 'scatter',
+                        encode: {
+                            x: 1,
+                            y: 0
+                        },
+                        symbolSize: 3,
+                        itemStyle: {
+                            opacity: 0.3
+                        }
+                    }
+                ]
+            }
+            chart.setOption(option)
+        }
+        // 右1
+        {
+            let main = document.getElementById('chartR1')
+            let chart = echarts.init(main, 'walden')
+            const data = [
+                {
+                    name: '预算分配',
+                    value: [43000, 45000, 42000, 45000, 40000, 49000]
+                },
+                {
+                    name: '实际开销',
+                    value: [30000, 34000, 55000, 35000, 32000, 31000]
+                }
+            ]
+            const indicator = [
+                { name: '销售', min: 0, max: 60000 },
+                { name: '管理', min: 0, max: 60000 },
+                { name: '信息技术', min: 0, max: 60000 },
+                { name: '客服', min: 0, max: 60000 },
+                { name: '研发', min: 0, max: 60000 },
+                { name: '市场', min: 0, max: 60000 }
+            ]
+            let option = {
+                title: {
+                    text: '财务开销',
+                },
+                tooltip: {},
+                legend: {
+                    left: 'left',
+                    top: 40,
+                    orient: 'vertical',
+                    data: ['预算分配', '实际开销']
+                },
+                radar: {
+                    indicator
+                },
+                series: [
+                    {
+                        type: 'radar',
+                        data
+                    }
+                ]
+            }
+            chart.setOption(option)
+        }
+        // 右2
+        {
+            let main = document.getElementById('chartR2')
+            let chart = echarts.init(main, 'walden')
+            const source = [
+                ['时间', '小麦', '玉米', '高粱'],
+                ['2017', '1000', '800', '900'],
+                ['2018', '500', '650', '800'],
+                ['2019', '800', '500', '1200'],
+            ]
+            let option = {
+                title: {
+                    text: '农作物收成',
+                    left: 'center'
+                },
+                dataset: {
+                    source: source,
+                },
+                tooltip: {},
+                legend: {
+                    top: 30
+
+                },
+                xAxis: {
+                    type: 'category'
+                },
+                yAxis: {
+                    type: 'value',
+                },
+                series: [
+                    {
+                        id: 'xm',
+                        type: 'bar',
+
+                    },
+                    {
+                        id: 'ym',
+                        type: 'bar',
+
+                    },
+                    {
+                        id: 'gl',
+                        type: 'bar',
+
+                    }
+                ]
+            }
+            chart.setOption(option)
+            const imgXm = new Image()
+            imgXm.src = './img/xiaomai.jpeg'
+            const imgYm = new Image()
+            imgYm.src = './img/yumi.jpeg'
+            const imgGl = new Image()
+            imgGl.src = './img/gaoliang.jpeg'
+
+
+            Promise.all([imgPro(imgXm), imgPro(imgYm), imgPro(imgGl)]).then(() => {
+                chart.setOption({
+                    series: [
+                        {
+                            id: 'xm',
+                            color: {
+                                image: imgXm
+                            }
+                        },
+                        {
+                            id: 'ym',
+                            color: {
+                                image: imgYm
+                            }
+                        },
+                        {
+                            id: 'gl',
+                            color: {
+                                image: imgGl
+                            }
+                        }
+                    ]
+                })
+
+            })
+
+            function imgPro(img) {
+                return new Promise(resolve => {
+                    img.onload = function () {
+                        resolve(img)
+                    }
+                })
+            }
+        }
+        //右3
+        {
+            let main = document.getElementById('chartR3')
+            let chart = echarts.init(main, 'walden')
+            echarts.registerMap('china', chinaMap)
+            const option = {
+                title: {
+                    text: '空气质量',
+                    left: 'center',
+                    top: 12
+                },
+                bmap: {
+                    center: [121.48, 31.22],
+                    zoom: 6,
+                    // roam: true, //缩放和拖拽
+                    mapStyleV2: {
+                        styleId: '5f67fce0a8ac6e678ce41f47701847b5'
+                    }
+                },
+                series: [
+                    {
+                        id: 1,
+                        type: 'scatter',
+                        coordinateSystem: 'bmap',
+                        symbolSize: data => {
+                            return data[2] / 10
+                        }
+                    },
+                    {
+                        id: 2,//特效散点
+                        type: 'effectScatter',
+                        coordinateSystem: 'bmap',
+                        symbolSize: data => {
+                            return data[2] / 10
+                        }
+                    }
+                ]
+            }
+            chart.setOption(option)
+            let ret = convertData(data)
+            let len = ret.length
+            let ret2 = ret.splice(len - 5, len)
+            chart.setOption({
+                series: [{
+                    id: 1, //基于id更新数据
+                    data: ret
+                }, {
+                    id: 2, //基于id更新数据
+                    data: ret2
+                }]
+            })
+            // 获取地图实例
+            const map = chart.getModel().getComponent('bmap').getBMap()
+            // map.addControl(new BMap.NavigationControl())
+
+        }
+        //中间geo地图
+        {
+            let main = document.getElementById('chartC')
+            let chart = echarts.init(main, 'walden')
+            const option = {
+                title: {
+                    text: '收入',
+                    left: 'center',
+                    top: 12
+                },
+                tooltip:{},
+                geo: {
+                    map: 'china',
+                    zoom: 1,
+                    itemStyle: {
+                        areaColor: 'rgba(0,29,132,0.8)',
+                        borderColor: '#02c0ff'
+                    },
+                    emphasis: {
+                        itemStyle: {
+                            shadowColor: '#000',
+                            shadowOffsetY: 30,
+                            shadowBlur: 30
+                        }
+                    }
+                },
+                series: [
+                    {
+                        id: 1,
+                        type: 'scatter',
+                        coordinateSystem: 'geo',
+                        symbolSize: data => {
+                            return data[2] / 15
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: 'yellow'
+                            }
+                        }
+                    }
+                ]
+            }
+            chart.setOption(option)
+            let ret = convertData(data)
+            let dataLen = ret.length
+            chart.setOption({
+                series: [{
+                    id: 1, //基于id更新数据
+                    data: ret
+                }]
+            })
+            setInterval(timer, 1000)
+            let curId = 0;
+            function timer() {
+                chart.dispatchAction({
+                    type: 'downplay',
+                    seriesIndex: 0,
+                    dataIndex: curId
+                })
+                curId = (curId + 1) % dataLen
+                chart.dispatchAction({
+                    type: 'highlight',
+                    seriesIndex: 0,
+                    dataIndex: curId
+                })
+                chart.dispatchAction({
+                    type: 'showTip',
+                    seriesIndex: 0,
+                    dataIndex: curId
+                })
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -70,18 +70,24 @@
         name: '前端分类',
         data: ['html', 'js', 'css']
       },
-      yAxis: {
-        name: '人数',
-        // splitNumber: 10,
-        // interval:3,
-        minInterval: 2,
-        minInterval: 10
+      yAxis: [
+        {
+          name: '人数',
+          // splitNumber: 10,
+          // interval:3,
+          minInterval: 2,
+          minInterval: 10,
+          min: 0, max: 50
+        },
+        //设置最小值，最大值可以使2个坐标线刻度在一个水平线，最大值需要整除
 
-      },
+        { name: '就业人数', min: 0, max: 1000 }
+      ],
       series: [
         {
           name: '学习人数',
           type: 'bar',
+          yAxisIndex: 0,
           data: [30, 80, 40, 40, 60],
           markPoint: {
             data: [
@@ -115,7 +121,8 @@
         }, {
           name: '就业人数',
           type: 'bar',
-          data: [40, 30, 20]
+          yAxisIndex: 1,
+          data: [340, 530, 620]
         }
       ],
       grid: {
@@ -124,6 +131,13 @@
 
     }
     chart.setOption(option)
+    chart.on('click', function (params) {
+      console.log(params);
+    })
+    //图例切换
+    chart.on('legendselectchanged', function (params) {
+      console.log(params);
+    })
   </script>
 </body>
 

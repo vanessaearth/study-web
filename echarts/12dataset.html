@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 400px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <!-- <script src="./js/echarts.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        // 第一列类目轴，第二列第一个系列，第三列第二个系列
+        const source = [
+            ['大前端', '学习人数', '就业人数'],
+            ['html', 30, 40],
+            ['css', 50, 20],
+            ['js', 40, 40],
+        ]
+        const source2 = [
+            { '大前端': 'html', '学习人数': 30, '就业人数': 40 },
+            { '大前端': 'css', '学习人数': 50, '就业人数': 20 },
+            { '大前端': 'js', '学习人数': 60, '就业人数': 80 }
+        ]
+        const source3 = [
+            { '人数': '学习人数', 'html': 10, 'css': 20, 'js': 40 },
+            { '人数': '就业人数', 'html': 10, 'css': 20, 'js': 40 },
+        ]
+        const dimension=['大前端','上课人数','就业人数']
+        const source4 = [
+            ['html', 30, 40],
+            ['css', 50, 20],
+            ['js', 40, 40],
+        ]
+        let option = {
+            dataset: {
+                source: source,
+                // source: source2,
+                // source: source3,
+                // source: source,
+                // seriesLayoutBy: 'row',//只能是2维数据的时候，以第一个索引值为x轴坐标
+                // source: source4,
+                // dimension: dimension
+            },
+            tooltip: {},
+            xAxis: {
+                type: 'category'
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    type: 'bar',
+                    encode:{//编码映射
+                        x:0, //x轴索引
+                        y:2,//y轴索引
+                        // seriesName:2,
+                        tooltip:[0,1,2]
+                    }
+                }, {
+                    type: 'bar'
+                }
+
+            ]
+        }
+        chart.setOption(option)
+
+    </script>
+</body>
+
+</html>

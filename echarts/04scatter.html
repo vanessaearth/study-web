@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,43 +8,84 @@
     <title>Document</title>
 </head>
 <style>
-    #main{
-        height:600px;
+    #main {
+        height: 600px;
     }
 </style>
+
 <body>
     <div id="main">
-
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
 
     <script>
-        let main=document.getElementById('main')
-        let chart=echarts.init(main)
-        const data=[
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const data = [
             // x y z
-            [0,0,20],
-            [10,10,40],
-            [20,20,60],
-            [30,10,30]
+            [0, 0, 10],
+            [10, 10, 40],
+            [20, 20, 60],
+            [30, 30, 60],
+            [40, 40, 100]
         ]
-        let option={
-            xAxis:{},
-            yAxis:{},
-            series:{
+        let option = {
+            dataset: {
+                source: data
+            },
+            toolbox: {
+                feature: {
+                    //框选型缩放
+                    dataZoom: {}
+                }
+            },
+            // // 拖拽形缩放,滑动鼠标滚轮
+            // dataZoom: [
+            //     {
+            //         type: 'inside',
+            //         start: 50,//开始位置是最大值的50%
+            //         end: 100 //结束位置是最大值的100%
+            //     }, {
+            //         type: 'slider'//x轴外置缩放条
+            //     }, {
+            //         type: 'slider',
+            //         yAxisIndex: 0//y轴外置缩放条
+            //     }
+            // ],
+            tooltip: {},
+            xAxis: {},
+            yAxis: {},
+            visualMap: {
+                type: 'continuous',//连续型
+                type: 'piecewise',//分段型
+                min: 0,
+                max: 100,
+                calculable: true,//可拖拽滑块
+                range: [0, 50],//数据显示的范围
+                inRange: {
+                    symbolSize: [0, 50],
+                    color: ['#00acec', 'yellow', 'red']
+                }
+            },
+            series: {
+                name: '映射',
                 type: 'scatter',
-                data,
+                // data,
+                encode: {
+                    tooltip: [0, 1, 2]//option必须设置tooltip对象
+                },
                 // symbolSize:10,
-                symbolSize:function(data){
+                symbolSize: function (data) {
                     return data[2]
                 },
-                label:{
-                    show:true,
-                    fontSize:14,
-                    fontWeight:'bold',
-                    position:'top',
-                    distance:10,
-                    formatter:function(data){
+                label: {
+                    show: true,
+                    fontSize: 14,
+                    fontWeight: 'bold',
+                    position: 'top',
+                    distance: 10,
+                    formatter: function (data) {
                         console.log(data);
                         return data.value[2]
                     }
@@ -51,6 +93,9 @@
             }
         }
         chart.setOption(option)
+
+
     </script>
 </body>
+
 </html>
