@@ -1,0 +1,79 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-07-22 09:37:48
+ * @LastEditTime: 2021-08-30 14:56:35
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \react-app\test\01start.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <div id="app"></div> -->
+  <div id="root"></div>
+
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script>
+    // const domContainer = document.querySelector('#app');
+    // const e = React.createElement;
+    // ReactDOM.render(
+    //   e('h1', null, 'sss'),
+    //   document.getElementById('app')
+    // );
+
+
+    function tick() {
+      let e = React.createElement
+      ReactDOM.render(e(
+        'div', null, [
+            e('h1', null, 'hello world!'),
+            e('h2', null, [new Date().toLocaleTimeString()])
+       ]), document.getElementById('root'));
+    }
+
+    setInterval(tick, 1000);
+  </script>
+  <!-- 加载我们的 React 组件。-->
+  <!-- <script src="like_button.js"></script> -->
+</body>
+
+</html>
+
+<!-- 
+纯函数：决不能修改自身的 props，props就是入参
+state的更新可能是异步的
+e.preventDefault() 阻止默认行为
+不需要使用addEventListener为DOM添加监听器
+方法中this需要在constructor中绑定，或者使用箭头函数
+<button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
+<button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
+阻止组件渲染：return null
+function WarningBanner(props) {
+  if (!props.warn) {
+    return null;
+  }
+
+  return (
+    <div className="warning">
+      Warning!
+    </div>
+  );
+}
+如果列表项目的顺序可能会变化，我们不建议使用索引来用作 key 值，因为这样做会导致性能变差，还可能引起组件状态的问题
+ 
+用 key 提取组件
+元素的 key 只有放在就近的数组上下文中才有意义。
+比方说，如果你提取出一个 ListItem 组件，你应该把 key 保留在数组中的这个 <ListItem /> 元素上，而不是放在 ListItem 组件中的 <li> 元素上。
+  
+
+-->

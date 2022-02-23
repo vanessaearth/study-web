@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @media print {
+      li {
+        display: none;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <li>1</li>
+  <li>2</li>
+  <div>3</div>
+</body>
+<script>
+  messageShown=false
+  var beforePrint = function (ev) {
+    if (!messageShown) {
+      // var result = confirm('Are you sure?');
+      // if (!result) {
+      //   // TODO: Cancel 
+      // }
+      console.log('11')
+    }
+  };
+  var afterPrint = function (ev) {
+    // TODO 
+  };
+
+  if (window.matchMedia) {
+    var mediaQueryList = window.matchMedia('print');
+    mediaQueryList.addListener(function (mql) {
+      if (mql.matches) {
+        beforePrint();
+      } else {
+        afterPrint();
+      }
+    });
+  }
+
+  window.onbeforeprint = beforePrint;
+  window.onafterprint = afterPrint; 
+</script>
+
+</html>

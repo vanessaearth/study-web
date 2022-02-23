@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+  .red{
+    color:red;
+  }
+  .font24{
+    font-size: 24px;
+  }</style>
 </head>
+
 <body>
   <div>$开头 公有api</div>
   <div>_开头 私有api</div>
   <div>{{}}文本插值</div>
-  <div id="app">{{msg}}</div>
-  <div :id="msg">{{msg}}</div>
-  <script src="../node_modules/vue/dist/vue.js"></script>
+  <div id="app">
+    {{msg}}
+    <div :id="msg">{{msg}}</div>
+    {{count}}
+    <button @click="handleClick">click</button>
+    <ul>
+      <li v-for="(item,key) in user">{{item}},{{key}}</li>
+    </ul>
+    <div :class="{red:currentColor==='red'}">red-obj</div>
+    <div :class="classes">red-computed</div>
+    <div :class="classesArr">red-arrar</div>
+  </div>
+
+  <script src="../vue2/node_modules/vue/dist/vue.js"></script>
   <script>
-    console.log(Vue)
-    let app=new Vue({
-      el:'#app',
-      data(){
+    // console.log(Vue)
+    let app = new Vue({
+      el: '#app',
+      data() {
         return {
-          msg:'hello'
+          msg: 'hello',
+          count: 0,
+          user: {
+            name: 'tom',
+            age: 1
+          },
+          currentColor:'red'
+        }
+      },
+      computed: {
+        classes() {
+          return {red:this.currentColor==='red' }
+        },
+        classesArr(){
+          return [{red:this.currentColor==='red' },'font24']
+        }
+      },
+      methods: {
+        handleClick() {
+          this.count++
+          console.log(this.count);
+        }
+      },
+      watch: {
+        count:{
+          handler(newVal, oldVal) {
+            console.log('count:',newVal, oldVal)
+          },
+          immediate:true
+        },
+        user: {
+          handler(newVal, oldVal) {
+            console.log('user',newVal, oldVal)
+          },
+          deep: true
+        },
+        'user.age'(){
+          console.log('age')
         }
       }
     })
 
   </script>
 </body>
+
 </html>

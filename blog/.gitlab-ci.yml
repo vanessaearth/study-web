@@ -1,0 +1,22 @@
+# /*
+#  * @Autor: yangjin
+#  * @Date: 2021-09-16 09:59:14
+#  * @LastEditors: Please set LastEditors
+#  * @LastEditTime: 2021-09-16 09:59:19
+#  * @Description: 自动部署gitlab
+#  */
+image: node:9.11.1
+
+pages:
+ cache:
+   paths:
+   - node_modules/
+
+ script:
+ - yarn install # npm install
+ - yarn docs:build # npm run docs:build
+ artifacts:
+   paths:
+   - public
+ only:
+ - master
