@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    模块化
+    独立命名空间，不会造成变量污染，使用的严格模式
+    <script type="module">
+        import './a.js'
+        import myfn,{a as c,b} from './a.js' //myfn是defult内容，
+        import * as obj from './a.js' //导入全部包含default和其他变量
+        console.log('import {a}',c);
+        //按需要加载
+        document.onclick=function(){
+            // import myfn from './a.js' 直接报错
+            import('./a.js').then(res=>{
+                console.log('res:',res);
+            })
+        }
+    </script>
+</body>
+</html>

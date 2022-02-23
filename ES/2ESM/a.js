@@ -4,11 +4,12 @@ const b = function () {
   console.log('b')
 }
 export { a as c }
-export { b }
+export { a, b }
 const f = function () {
   console.log('f')
 }
-export default f
+// export default f
+export { f as default }
 
 // export default 只能有一个，名称不需要一样
 // import obj from a.js

@@ -62,10 +62,11 @@
         // ctx.stroke() //描边
         // // ctx.fill() //填充
         // // 圆弧
-        // ctx.arc(100, 100, 50, 0, Math.PI)
-        // ctx.moveTo(150, 300)
+        // r=50
+        // ctx.arc(0+50, 0+50, 50,  Math.PI, Math.PI*3/2)
+        // ctx.moveTo(r, r)
         // ctx.arc(100, 300, 50, 0, 2 * Math.PI)
-        // ctx.stroke()
+        // ctx.fill()
 
         // ctx.moveTo(100,100)
         // ctx.lineTo(400,100)
@@ -78,18 +79,25 @@
         // )
         // 矩形
         // ctx.rect(100,100,50,50)
-        ctx.moveTo(100, 100)
+        // ctx.moveTo(100, 100)
         // 二次贝塞尔曲线，
-        // ctx.quadraticCurveTo(
-        //     400, 100, //控制点
-        //     400, 400);//结束点
-        // 三次贝塞尔曲线
-        ctx.bezierCurveTo(
-            400, 100, //第一个控制点
-            400, 400,//第2个控制点
-            700, 400); //结束点
+        ctx.moveTo(50,0)
 
-        ctx.stroke()
+        // ctx.quadraticCurveTo(
+        //     400, 0, //控制点
+        //     400, 400);//结束点
+        // ctx.moveTo(100,100)
+      ctx.quadraticCurveTo(
+            0, 0, //控制点
+            50, 50);//结束点
+            ctx.fill()
+        // 三次贝塞尔曲线
+        // ctx.bezierCurveTo(
+        //     400, 100, //第一个控制点
+        //     400, 400,//第2个控制点
+        //     700, 400); //结束点
+
+        // ctx.stroke()
 
 
 

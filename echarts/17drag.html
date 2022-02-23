@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        height: 400px;
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js"></script>
+
+    <script>
+        let main = document.getElementById('main')
+        let chart = echarts.init(main)
+        const data = [[10, 10], [20, 20], [40, 40]]
+        const symbolSize = 30
+        let option = {
+            tooltip: {
+                triggerOn: 'none',
+                formatter: ({ data }) => {
+                    console.log(data);
+                    const [x, y] = data
+                    return `${Math.round(x)},${Math.round(y)}`
+                }
+            },
+            xAxis: {
+                min: 0,
+                max: 50
+            },
+            yAxis: {
+                min: 0,
+                max: 50
+            },
+            series: [
+                {
+                    id: 1,
+                    type: 'line',
+                    data: data,
+                    symbolSize,
+                    draggable: true
+
+                },
+
+            ]
+        }
+        chart.setOption(option)
+        const { curry } = echarts.util
+        const circle = data.map((pos, index) => {
+            const [x, y] = chart.convertToPixel('grid', pos)
+            console.log('px', x, y);
+            return {
+                type: 'circle',
+                x, y,
+                shape: {
+                    r: symbolSize / 2,
+                },
+                z: 10,
+                draggable: true,
+                // invisible: true,//隐藏原生图形
+                ondrag: curry(onPointDrag, index),
+                onmouseover: curry(showTooltip, index),
+                onmousemove: curry(showTooltip, index),
+                onmouseout: curry(hideTooltip, index),
+            }
+        })
+        chart.setOption({
+            graphic: circle
+        })
+        function onPointDrag(index) {
+            const { x, y } = this
+            const pos = chart.convertFromPixel('grid', [x, y])
+            console.log('pos:', x, y, pos);
+            data[index] = pos
+            chart.setOption({
+                series: [{
+                    id: 1,
+                    data
+                }]
+            })
+        }
+        function showTooltip(index) {
+            chart.dispatchAction({
+                type: 'showTip',
+                seriesIndex: 0,
+                dataIndex: index
+            })
+        }
+        function hideTooltip(index) {
+            chart.dispatchAction({
+                type: 'hideTip',
+                seriesIndex: 0,
+                dataIndex: index
+            })
+        }
+
+    </script>
+</body>
+
+</html>
