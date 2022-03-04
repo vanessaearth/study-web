@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    changedTouches:[]  触发当前事件的手指列表
+    targetTouches:[]   当前元素身上的手指列表
+    tTouches:[]        触发屏幕中的手指列表
+  </div>
+  <div class="box"></div>
+  <script>
+    let box=document.querySelector('.box')
+    let startX=startY=oldX=oldY=0
+    box.ontouchstart=function(e){
+
+      let info=box.getBoundingClientRect()
+      console.log(info, startX,startY,oldX,oldY)
+
+      startX=info.left
+      startY=info.top
+      let touch=e.changedTouches[0]
+      oldX=touch.pageX
+      oldY=touch.pageY
+
+    }
+    box.ontouchmove=function(e){
+      let touch=e.changedTouches[0]
+      let nowX=touch.pageX-oldX+startX
+      let nowY=touch.pageY-oldX+startY
+      box.style.transform=`translate(${nowX}px,${nowY}px)`
+      e.preventDefault()
+    }
+  </script>
+</body>
+</html>

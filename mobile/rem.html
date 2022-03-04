@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +23,11 @@
       height: 3rem;
       background: lightcoral;
     }
+    .percent-50{
+      width:5rem;
+      height:3rem;
+      background:lightcoral;
+    }
   </style>
 </head>
 
@@ -37,6 +41,15 @@
       rem单位元素参照根
     </div>
   </div>
-</body>
 
+  <div class="percent-50">
+
+  </div>
+  <script>
+    let rootEl=document.documentElement
+    console.log(rootEl)
+    let viewWidth=window.innerWidth
+    rootEl.style.fontSize=viewWidth/10+'px'
+  </script>
+</body>
 </html>
