@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    msg
+    <Foo v-model="msg" />
+  </div>
+
+    <script src="../vue2/node_modules/vue/dist/vue.js"></script>
+
+    <script>
+      let Foo={
+        props:['value'],
+        render(h){
+          // v-model
+          let _this=this
+          return h('input',{
+            on:{
+              input(e){
+                _this.$emit('change',e.target.value)
+              }
+            }
+          },this.$props)
+        }
+      }
+      let app=new Vue({
+        el:'#app',
+        components: {
+          Foo,
+        },
+        data() {
+          return {
+            msg: 'he'
+          }
+        },
+        
+      })
+
+    </script>
+</body>
+
+</html>
