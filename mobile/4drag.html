@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background: rgba(242, 170, 173, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" ></div>
+  <script>
+    let box = document.querySelector('.box')
+    box.onmousedown=function(e){
+      let oldX=e.offsetX
+      let oldY=e.offsetY
+      document.onmousemove=function(e){
+        let nowX=e.clientX-oldX
+        let nowY=e.clientY-oldY
+        box.style.transform=`translate(${nowX}px,${nowY}px)`
+        e.preventDefault()
+      }
+      box.onmouseup=function(){
+        document.onmousemove=null
+      }
+    }
+  </script>
+</body>
+
+</html>

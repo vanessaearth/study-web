@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 400px;
+      height: 400px;
+      background: rgba(100, 27, 30, 0.6);
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" data-open="true" data-hide="true"></div>
+  <script>
+    let box = document.querySelector('.box')
+    class propEvent {
+      constructor(option) {
+        this.eventObj = option.obj
+        this.target = option.target
+        this.eventType = option.eventType || 'click'
+        this.bindEvent()
+      }
+      bindEvent() {
+        let _this = this
+        this.target.addEventListener(this.eventType, function (e) {
+          let target = e.target
+          let dataset = target.dataset
+          console.log('dataset',dataset)
+          for (let a in dataset) {
+            if (_this.eventObj.__proto__[a]) {
+              let data = {
+                target,
+                e,
+                prop: dataset[a]
+              }
+              _this.eventObj.__proto__[a].call(_this)
+            }
+          }
+
+        })
+      }
+    }
+
+    class handleElement {
+      constructor(option) {
+        this.target=document.querySelector(option)
+        this.event = new propEvent({
+          obj:this,
+          target:this.target
+        })
+      }
+      open() {
+        console.log('打开一个窗口')
+      }
+      hide() {
+        console.log('隐藏开一个窗口')
+      }
+    }
+    let test = new handleElement('.box')
+    console.log(test)
+  </script>
+</body>
+
+</html>
