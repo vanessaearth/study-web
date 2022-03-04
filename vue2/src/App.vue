@@ -3,17 +3,14 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <router-link to="/drag2">drag2</router-link>
     </div>
     <router-view/>
-    <!-- <drag2 /> -->
   </div>
 </template>
 <script>
-import drag2 from '@/views/drag/drag2.vue'
 export default {
-  components: {
-    drag2
-  }
+
 }
 </script>
 
