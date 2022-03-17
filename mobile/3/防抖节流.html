@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 200px;
+      height: 200px;
+      background: lightblue;
+    }
+    .box2 {
+      width: 200px;
+      height: 200px;
+      background: lightcoral;
+
+    }
+  </style>
+</head>
+
+<body>
+<div class="box">box</div>
+<div class="box2">box2</div>
+  <script>
+    let box=document.querySelector('.box')
+    box.onmousemove= debounce(say,500)
+    let box2=document.querySelector('.box2')
+    box2.onmousemove=throttle(say,500)
+    // 防抖
+    function debounce(fn, delay) {
+      let timer = null //借助闭包
+      return function (...arg) {
+        console.log('debounce',timer)
+        if (timer) {
+          clearTimeout(timer)
+          // return
+        }
+        timer = setTimeout(()=>{
+          fn.apply(this,arg);
+        }, delay) // 简化写法
+      }
+    }
+    // 节流
+    function throttle(fn,delay=500){
+        let timer = null;
+        return function(...arg){
+          console.log('throttle',timer)
+            if(timer){
+              clearTimeout(timer)
+                // return
+            }
+            timer = setTimeout(()=>{
+                fn.apply(this,arg);
+                timer = null;
+            },delay);
+        }
+    }
+     function say(){
+      console.log('hi...')
+    }
+  </script>
+</body>
+
+</html>

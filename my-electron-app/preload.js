@@ -1,11 +1,4 @@
-/*
- * @Author: your name
- * @Date: 2021-08-16 10:04:56
- * @LastEditTime: 2021-08-18 10:09:19
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \my-electron-app\perload.js
- */
+
 // All of the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
 window.addEventListener('DOMContentLoaded', () => {
@@ -29,3 +22,9 @@ window.addEventListener('DOMContentLoaded', () => {
 //   desktop: true
 // })
 // console.log('2',window.myAPI)
+const { contextBridge, ipcRenderer } = require('electron')
+
+contextBridge.exposeInMainWorld('darkMode', {
+  toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
+  system: () => ipcRenderer.invoke('dark-mode:system')
+})

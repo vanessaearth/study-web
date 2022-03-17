@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 10.6666666667vw 58.4vw 63.7333333333vw 38.6666666667vw;
+}
+.box .menu {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 16.6666666667vw 1fr 16.6666666667vw;
+  background: #000;
+}
+.box .menu .backBtn {
+  height: 100%;
+  width: 10.4vw;
+  background: url("../img/back.png") no-repeat center/5.0666666667vw;
+}
+.box .menu .logo {
+  height: 6.6666666667vw;
+  text-align: center;
+  align-self: center;
+}
+.box .menu .logo img {
+  height: 100%;
+}
+.box .menu .signOut {
+  background: url("../img/signOut.png") no-repeat 8.5333333333vw center/5.4666666667vw;
+  font: 3.4666666667vw/11.7333333333vw "FZLTXHK";
+  color: #fff;
+}
+.box .info {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box .info .header {
+  width: 24vw;
+  height: 24vw;
+  border: 0.4vw solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 8.8vw;
+}
+.box .info .header img {
+  width: 100%;
+}
+.box .info .username {
+  margin-top: 6.1333333333vw;
+  height: 4.8vw;
+  text-align: center;
+  font: 4.8vw/4.8vw "FZLTXHK";
+  color: #fff;
+}
+.box .info .username span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.box .info .username img {
+  height: 100%;
+  vertical-align: middle;
+}
+.box .info .time {
+  margin-top: 3.2vw;
+  font: 2.9333333333vw/3.2vw "FZLTXHK";
+  color: #fff;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*# sourceMappingURL=index.css.map */

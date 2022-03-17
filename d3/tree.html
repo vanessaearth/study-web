@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.node circle {
+fill:#FFF;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+</style>
+
+<body>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script>
+
+    var width = 1000;  //画布的宽度
+    var height = 1000;   //画布的高度
+
+    var svg = d3.select("body")     //选择文档中的body元素
+      .append("svg")          //添加一个svg元素
+      .attr("width", width)       //设定宽度
+      .attr("height", height);    //设定高度
+
+    let data = {
+      "name": "中国",
+      "children":
+        [
+          {
+            "name": "浙江",
+            "children":
+              [
+                { "name": "杭州" },
+                { "name": "宁波" },
+                { "name": "温州" },
+                { "name": "绍兴" }
+              ]
+          },
+
+          {
+            "name": "广西",
+            "children":
+              [
+                {
+                  "name": "桂林",
+                  "children":
+                    [
+                      { "name": "秀峰区" },
+                      { "name": "叠彩区" },
+                      { "name": "象山区" },
+                      { "name": "七星区" }
+                    ]
+                },
+                { "name": "南宁" },
+                { "name": "柳州" },
+                { "name": "防城港" }
+              ]
+          },
+
+          {
+            "name": "黑龙江",
+            "children":
+              [
+                { "name": "哈尔滨" },
+                { "name": "齐齐哈尔" },
+                { "name": "牡丹江" },
+                { "name": "大庆" }
+              ]
+          },
+
+          {
+            "name": "新疆",
+            "children":
+              [
+                { "name": "乌鲁木齐" },
+                { "name": "克拉玛依" },
+                { "name": "吐鲁番" },
+                { "name": "哈密" }
+              ]
+          }
+        ]
+    }
+    var tree = d3.layout.tree()
+      .size([width, height - 200])
+      .separation(function (a, b) { return (a.parent == b.parent ? 1 : 2); });
+    // d3.json(data, function (error, root) {
+
+    // }
+    var nodes = tree.nodes(data);
+    var links = tree.links(nodes);
+
+    var diagonal = d3.svg.diagonal()
+      .projection(function (d) { return [d.y, d.x]; });
+
+    var link = svg.selectAll(".link")
+      .data(links)
+      .enter()
+      .append("path")
+      .attr("class", "link")
+      .attr("d", diagonal);   //使用对角线生成器
+    svg.append("text")
+      .data(data)
+      .enter()
+      .append("text")
+      .style("fill", "black")
+      .attr("dx", -14)
+      .attr("dy", 8)
+      .text(function (d) {
+        return d.name;
+      });
+  </script>
+</body>
+
+</html>

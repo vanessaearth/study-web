@@ -16,8 +16,6 @@
             z-index: 100;
             display: block;
         }
-
-        
     </style>
 </head>
 <div id="info">Description</div>
@@ -32,12 +30,22 @@
 
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 0, 100)
+        camera.lookAt(0, 0, 0)
 
+        // 文字属性
+        let css = {
+            font: "helvetiker",
+            size: 80,
+            height: 5,
+            curveSegments: 12,
+            bevelEnabled: true,
+            bevelThickness: 10,
+            bevelSize: 8,
+            bevelSegments: 5
+        }
 
-        // 立方体
-       
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const line = new THREE.TextGeometry(geometry, material)
+        const line = new THREE.TextGeometry('hello world', css)
         scene.add(line);
         renderer.render(scene, camera);
     </script>

@@ -1,0 +1,81 @@
+body{
+  margin:0;
+
+}
+@mixin font($size:26vw/$vw,$height:88vw/$vw){
+  font: #{$size}/#{$height} 'FZLTXHK';
+  color: #fff;
+}
+$vw:7.5;
+.box{
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 80vw/$vw 438vw/$vw 478vw/$vw 290vw/$vw;
+  .menu{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 125vw/$vw 1fr 125vw/$vw;
+    background: #000;
+
+    .backBtn{
+      height: 100%;
+      width:78vw/$vw;
+      background: url('../img/back.png') no-repeat center/(38vw/$vw) ;
+    }
+
+    .logo{
+      // background: #f0a238;
+      height: 50vw/$vw;
+      text-align: center;
+      align-self: center;
+      img{
+        height: 100%;
+      }
+    }
+    .signOut{
+      background: url('../img/signOut.png') no-repeat 64vw/$vw center/(41vw/$vw) ;
+      @include font();
+
+    }
+  }
+  .info{
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header{
+      width:180vw/$vw;
+      height: 180vw/$vw;
+      border: 3vw/$vw solid #fff;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-top: 66vw/$vw;
+      img{
+        width: 100%;
+      }
+    }
+
+  
+  .username{
+    margin-top: 46vw/$vw;
+    height: 36vw/$vw;
+    text-align: center;
+    @include font(36vw/$vw,36vw/$vw);
+    span{
+      display:inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    img{
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .time{
+    margin-top: 24vw/$vw;
+    @include font(22vw/$vw,24vw/$vw);
+    color: rgba(255,255,255,.6);
+  }
+}
+
+}

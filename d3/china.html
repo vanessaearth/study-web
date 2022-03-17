@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script>
+
+    var width = 1000;  //画布的宽度
+    var height = 1000;   //画布的高度
+
+    var svg = d3.select("body")     //选择文档中的body元素
+      .append("svg")          //添加一个svg元素
+      .attr("width", width)       //设定宽度
+      .attr("height", height);    //设定高度
+    // 投影函数
+    var projection = d3.geo.mercator()
+      .center([107, 31])
+      .scale(850)
+      .translate([width / 2, height / 2]);
+    // 地理路径生成器
+    var path = d3.geo.path()
+      .projection(projection);
+    d3.json("./json/china.json", function (error, root) {
+
+      if (error)
+        return console.error(error);
+      console.log(root.features);
+      var color = d3.scale.category10();   //有十种颜色的颜色比例尺
+      svg.selectAll("path")
+        .data(root.features)
+        .enter()
+        .append("path")
+        .attr("stroke", "#000")
+        .attr("stroke-width", 1)
+        .attr("fill", function (d, i) {
+          return color(i);
+        })
+        .attr("d", path)   //使用地理路径生成器
+        // .on("mouseover", function (d, i) {
+        //   d3.select(this)
+        //     .attr("fill", "yellow");
+        // })
+        // .on("mouseout", function (d, i) {
+        //   d3.select(this)
+        //     .attr("fill", color(i));
+        // });
+    })
+
+  </script>
+</body>
+
+</html>

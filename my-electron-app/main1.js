@@ -1,11 +1,4 @@
-/*
- * @Author: your name
- * @Date: 2021-08-16 09:50:21
- * @LastEditTime: 2021-08-18 10:19:25
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \my-electron-app\main.js
- */
+
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
