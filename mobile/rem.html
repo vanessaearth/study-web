@@ -6,6 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    html{
+      font-size: 20px;
+    }
+    .main {
+      font-size: 40px;
+    }
+    .box{
+      font-size: 2rem;
+      width:20rem;
+      height: 3rem;
+      background: lightblue;
+    }
+    .box2{
+      width:20rem;
+      height: 3rem;
+      background: lightcoral;
+    }
     .percent-50{
       width:1rem;
       height:1rem;
@@ -13,7 +30,18 @@
     }
   </style>
 </head>
+
 <body>
+  <div class="main">
+    rem是相对于根root的font-size大小计算
+    <div class="box">
+      rem单位元素参照根
+    </div>
+    <div class="box2">
+      rem单位元素参照根
+    </div>
+  </div>
+
   <div class="percent-50">
 
   </div>

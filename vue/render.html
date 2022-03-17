@@ -9,42 +9,57 @@
 </head>
 
 <body>
+
   <div id="app">
-    msg
-    <Foo v-model="msg" />
+    {{msg}}
+    <Foo :show="true" v-model="msg"/>
   </div>
-
-    <script src="../vue2/node_modules/vue/dist/vue.js"></script>
-
-    <script>
-      let Foo={
-        props:['value'],
-        render(h){
-          // v-model
-          let _this=this
-          return h('input',{
-            on:{
-              input(e){
-                _this.$emit('change',e.target.value)
-              }
+  <!-- <script src="../vue/node_modules/vue/dist/vue.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script>
+    let Foo = {
+      props: ['show','value'],
+      render(h) {
+        // // v-if v-for
+        // if (this.$props.show) {
+        //   // return h('div',true)
+        //   let names = ['tom', 'jerry', 'lily']
+        //   return h('div', names.map(v => {
+        //     return h('p', v)
+        //   }))
+        // } else {
+        //   return h('div', false)
+        // }
+        // v-model
+        let _this=this
+        return h('div',[h('input',{
+          domProps:{'value':_this.value},
+          on:{
+            input(e){
+              _this.$emit('input',e.target.value)
             }
-          },this.$props)
-        }
-      }
-      let app=new Vue({
-        el:'#app',
-        components: {
-          Foo,
-        },
-        data() {
-          return {
-            msg: 'he'
           }
-        },
-        
-      })
+        })])
 
-    </script>
+
+      }
+    }
+    let app = new Vue({
+      el: '#app',
+      components: {
+        Foo,
+      },
+      data() {
+        return {
+          msg: 'msg'
+        }
+      },
+
+
+    })
+
+  </script>
 </body>
 
 </html>
