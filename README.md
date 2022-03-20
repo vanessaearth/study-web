@@ -1,8 +1,8 @@
 # study-web
 
-## Project setup
+## Project setup v4
 ```
-npm install
+npm install 
 ```
 
 ### Compiles and hot-reloads for development
