@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .box {
+      width: 90vw;
+      height: 80vh;
+      background: lightcoral;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    /* 大于1000px的宽度显示珊瑚色 */
+    @media all and (min-width:1000px) {
+      .box {
+        background-color: lightgreen;
+      }
+    }
+
+    /* landscape */
+    @media all and (orientation:landscape) {
+      .box {
+        background-color: lightgreen;
+      }
+    }
+
+    .active {
+      background: #0a0a0a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box" > </div>
+  <!-- devicemotion监听手机加速度变化 -->
+  <!-- 重力加速度 -->
+  <script>
+    let box = document.querySelector('.box')
+
+    window.addEventListener('devicemotion', function (e) {
+      let motion = e.acceleration //当前手机的加速度
+      let gravity = e.accelerationIncludingGravity;//重力加速度
+      let { x, y, z } = motion
+      let { x: a, y: b, z: c } = gravity
+      box.innerText = `
+      x轴：${x.toFixed(2)},
+      y轴：${y.toFixed(2)},
+      z轴：${z.toFixed(2)},
+      
+      x轴：${a.toFixed(2)},
+      y轴：${b.toFixed(2)},
+      z轴：${c.toFixed(2)}`
+    })
+  </script>
+</body>
+
+</html>

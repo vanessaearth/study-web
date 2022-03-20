@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      background: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    let box = document.querySelector('.box')
+    // box.onmousemove=function(){
+    //   move()
+    // }
+    // box.onmousemove = debounce(move, 500, true)
+    box.onmousemove = throttle(move, 500)
+    function move() {
+      console.log('move', )
+    }
+    function debounce(fn, delay = 200, isStart = false) {
+      let timer = null
+      let isEnd = true
+      return function (...args) {
+        clearTimeout(timer)
+        if (isStart) {
+          console.log('isEnd',isEnd)
+          isEnd && fn.apply(this, args)
+          isEnd = false
+        }
+        timer = setTimeout(() => {
+          (!isStart) && fn.apply(this, args)
+          isEnd = true
+        }, delay)
+
+      }
+    }
+    function throttle(fn,delay){
+      let timer=null
+      return function(...args){
+        console.log(new Date().now,timer)
+        if(timer){
+          return
+        }
+        timer=setTimeout(()=>{
+          fn.apply(this,args)
+          timer=null
+        },delay)
+      }
+    }
+  </script>
+</body>
+
+</html>

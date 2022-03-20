@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Document</title>
+  <style>
+    body{
+      /* ios端微信h5页面上下滚动卡顿，页面缺失 */
+      -webkit-overflow-scrolling: touch;
+      overflow-scrolling: touch;
+    }
+    Element{
+      appearance: none;
+    }
+    a{
+      -webkit-tap-highlight-color: rgba(255,255,255,0);
+    }
+    .box{
+      border: 1px solid #ccc;
+      border-width: thin;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    iphone和ipad输入框的默认内阴影
+    Element{
+      appearance: none;
+    }
+  </div>
+  <div>ios和andriod在触摸元素时候有透明的遮罩
+    a{
+      -webkit-tap-highlight-color: rgba(255,255,255,0);
+    }
+  </div>
+  <div>
+    Retina屏的1px的边框
+    element{
+      border-width: thin;
+    }
+    <div class="box">box</div>
+  </div>
+  <div>
+    页面有滚动区域建议引入better-scroll：swiper
+  </div>
+  <div>
+    css3中border-radius画的圆角有毛边
+    1.给元素添加overoverflow：hidden
+    2.background-clip:padding-box
+  </div>
+  <div>
+    旋转屏幕时，字体大小调整的问题
+    html,body,fieldset,form,p,div,h1,h2,h3,h4,h5,h6{
+      -webkit-text-size-adjust:100%
+    }
+  </div>
+  <div>
+       在元素不能给高度的情况下，移动时文字突然变大
+       给原图加上：max-height：1000px
+  </div>
+</body>
+</html>

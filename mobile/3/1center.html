@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .part {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .one {
+      flex: 1;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #ccc;
+    }
+
+    .grid {
+      display: grid;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .child {
+      background: lightblue;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .translate {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .after {
+      text-align: center;
+      /* 代码换行会有一个空格 */
+      font-size: 0;
+    }
+
+    .after::after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+      width: 3px;
+      background: lawngreen;
+    }
+
+    .after-child {
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .margin {
+      width: 60px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -25px;
+      margin-left: -30px;
+    }
+
+    .margin-auto {
+      width: 60px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .table-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .tabel-cell-child {
+      width: 60px;
+      height: 50px;
+      margin: auto;
+    }
+
+    .line-height {
+      line-height: 100px;
+      text-align: center;
+
+    }
+
+    .line-height-child {
+      display: inline-block;
+      width: 60px;
+      height: 50px;
+      line-height: 50px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="part">
+    <div class="one">
+      1.grid:
+      <div class="box grid">
+        <div class="child">child</div>
+      </div>
+    </div>
+    <div class="one">
+
+      2.flex:
+      <div class="box flex">
+        <div class="child">child</div>
+      </div>
+    </div>
+    <div class="one">
+      3.translate:
+      <div class="box relative">
+        <div class="child translate">child</div>
+      </div>
+    </div>
+    <div class="one">
+      4.:after
+      <div class="box after">
+        <div class="child after-child">child</div>
+      </div>
+    </div>
+  </div>
+  <div class="part">
+
+    <div class="one">
+      5.margin 负值:
+      <div class="box relative">
+        <div class="child margin">child</div>
+      </div>
+    </div>
+    <div class="one">
+      6.margin auto:
+      <div class="box relative">
+        <div class="child margin-auto">child</div>
+      </div>
+    </div>
+    <div class="one">
+      7.table-cell:
+      <div class="box table-cell">
+        <div class="child tabel-cell-child">child</div>
+      </div>
+    </div>
+    <div class="one">
+      8.line-height:
+      <div class="box line-height">
+        <div class="child line-height-child">child</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

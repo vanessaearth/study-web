@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .box {
+      width: 90vw;
+      height: 80vh;
+      background: lightcoral;
+      position: absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      margin:auto;
+    }
+
+    /* 大于1000px的宽度显示珊瑚色 */
+    @media all and (min-width:1000px) {
+      .box {
+        background-color: lightgreen;
+      }
+    }
+
+    /* landscape */
+    @media all and (orientation:landscape) {
+      .box {
+        background-color: lightgreen;
+      }
+    }
+    .active{
+      background: #0a0a0a;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div>手机横竖屏</div>
+  portrait：竖屏
+  landscape:横屏 -->
+  <!-- 当移动端唤起键盘的时候可能被判定为横屏 -->
+  <div class="box" id="box"> 123</div>
+  <!-- devicemotion监听手机加速度变化 -->
+  <script>
+    let box=document.querySelector('.box')
+    window.addEventListener('orientationchange',function(){
+      console.log(window.orientation)
+      handleScreen(window.orientation)
+    })
+    handleScreen(window.orientation)
+    function handleScreen(deg){
+      switch(deg){
+        case 90:
+        case-90:
+          box.classList.add('active');break;
+        default: box.classList.remove('active')
+      }
+    }
+
+    window.addEventListener('devicemotion',function(e){
+      let motion=e.acceleration //当前手机的加速度
+      let {x,y,z}=motion
+      alert(x,y,z)
+      box.innerHTML=`x轴：${x},y轴：${y},z轴：${z}`
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100vw;
+      border: 2px solid #f0a238;
+      background: lightcoral;
+      overflow: hidden;
+    }
+
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      float: left;
+      transition: 0.5s all ease;
+    }
+
+    img {
+      width: 100vw;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul class="list">
+      <li><img src="../img/img01.png" alt=""></li>
+      <li><img src="../img/img02.png" alt=""></li>
+      <li><img src="../img/img03.png" alt=""></li>
+      <li><img src="../img/img04.png" alt=""></li>
+      <li><img src="../img/img05.png" alt=""></li>
+
+    </ul>
+  </div>
+  <script>
+    let list = document.querySelector('.list')
+    let startPoint = 0 //手指按下的手指位置
+    let transX = 0//手指移动的距离
+    let startX = 0//手指按下时元素的位置
+    let lastX = 0//移动过后，元素的位置
+    let viewWidth = window.innerWidth
+    let prop = 0.25
+    let now = 0
+    list.ontouchstart = function (e) {
+      let touch = e.changedTouches[0]
+      startPoint = touch.pageX
+      startX = lastX
+
+    }
+    list.ontouchmove = function (e) {
+      let touch = e.changedTouches[0]
+      transX = touch.pageX - startPoint
+      lastX = startX + transX
+      list.style.transition= 'none'
+
+      list.style.transform = `translate(${lastX}px)`
+      e.preventDefault()
+    }
+    list.ontouchend = function () {
+      if (Math.abs(transX) > viewWidth * prop) {
+        now -= transX / Math.abs(transX)
+      }
+      lastX = -now * viewWidth
+      list.style.transition= '0.5s'
+      list.style.transform = `translate(${lastX}px)`
+
+    }
+  </script>
+</body>
+
+</html>
