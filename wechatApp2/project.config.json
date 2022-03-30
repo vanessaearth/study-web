@@ -1,21 +1,14 @@
 {
-  "description": "项目配置文件",
-  "packOptions": {
-    "ignore": [
-      {
-        "type": "file",
-        "value": ".eslintrc.js"
-      }
-    ]
-  },
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
-    "newFeature": false,
+    "newFeature": true,
     "coverView": true,
     "nodeModules": false,
     "autoAudits": false,
@@ -25,7 +18,7 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
-    "compileHotReLoad": true,
+    "compileHotReLoad": false,
     "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
@@ -46,22 +39,10 @@
     "useCompilerPlugins": false,
     "ignoreUploadUnusedFiles": true
   },
-  "compileType": "miniprogram",
-  "libVersion": "2.19.4",
   "appid": "wxc823061692681416",
-  "appsecret":"de7b25f16fb5f2f8ed15042608b086ca",
-  "projectname": "wechatApp",
-  "debugOptions": {
-    "hidedInDevtools": []
-  },
-  "scripts": {},
-  "staticServerOptions": {
-    "baseURL": "",
-    "servePath": ""
-  },
-  "isGameTourist": false,
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
+  "projectname": "wechatApp2",
+  "libVersion": "2.14.1",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []
@@ -69,17 +50,20 @@
     "conversation": {
       "list": []
     },
-    "game": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
-    "gamePlugin": {
+    "game": {
       "list": []
     },
     "miniprogram": {
-      "list": []
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide"
+        }
+      ]
     }
   }
 }

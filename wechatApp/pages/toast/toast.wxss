@@ -1,0 +1,7 @@
+/* pages/toast/toast.wxss */
+.btn{
+  background-color: lightcoral;
+}
+.active{
+  background-color: lightpink;
+}

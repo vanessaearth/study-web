@@ -1,0 +1,30 @@
+<text>pages/about/about.wxml</text>
+<match-media min-width="300" max-width="600">
+  <view>当页面宽度在 300 ~ 500 px 之间时展示这里</view>
+</match-media>
+
+<match-media min-height="400" orientation="landscape">
+  <view>当页面高度不小于 400 px 且屏幕方向为纵向时展示这里</view>
+</match-media>
+<view>movable-view:
+
+</view>
+<movable-area scale-area class="move-area">
+<movable-view class="move-view" direction="all" inertia scale scale-value="2"	bindchange="changeMoveable"></movable-view>
+</movable-area>
+<button bindtap="handlePageContainer" type="primary">弹出底层</button>
+<page-container show="{{pageContainerShow}}" position="left">
+</page-container>
+
+<scroll-view class="scroll-view" scroll-y scroll-left="10">
+  <view id="demo1" class="scroll-view-item demo-text-1"></view>
+  <view id="demo2"  class="scroll-view-item demo-text-2"></view>
+  <view id="demo3" class="scroll-view-item demo-text-3"></view>
+</scroll-view>
+
+<scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+  <view class="scroll-view-item_H demo-text-1"></view>
+  <view class="scroll-view-item_H demo-text-2"></view>
+  <view class="scroll-view-item_H demo-text-3"></view>
+</scroll-view>
+

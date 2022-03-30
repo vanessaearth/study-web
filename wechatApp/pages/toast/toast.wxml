@@ -1,0 +1,8 @@
+<!--pages/toast/toast.wxml-->
+<text>pages/toast/toast.wxml</text>
+<view>
+  <button type="primary" disabled="{{disabled}}" bindtap="handlePay">pay</button>
+  <button type="primary" disabled="{{disabled}}" bindtap="actionSheet">click</button>
+  <button type="primary"  bindtap="handleClose">close</button>
+  <button  class="btn" hover-class="active" hover-stay-time="2000">close</button>
+</view>

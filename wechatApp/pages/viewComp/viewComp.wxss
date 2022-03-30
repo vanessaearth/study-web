@@ -1,0 +1,35 @@
+/* pages/viewComp/viewComp.wxss */
+.move-area{
+  width:200rpx;
+  height: 200rpx;
+  background: gray;
+}
+.move-view{
+  width:20px;
+  height: 20px;
+  background: lightcoral;
+}
+.scroll-view{
+  height: 200px;
+  border: 1px solid #ccc;
+}
+.scroll-view-item{
+  height: 200px;
+}
+.demo-text-1{
+  background:lightcoral;
+}
+.demo-text-2{
+  background:lightgreen;
+}
+.demo-text-3{
+  background:lightblue;
+}
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view-item_H{
+  display: inline-block;
+  width: 100%;
+  height: 300rpx;
+}

@@ -1,0 +1,3 @@
+<!--pages/scan/scan.wxml-->
+<text>pages/scan/scan.wxml</text>
+<button type="primary" bindtap="handleScan">扫码</button>

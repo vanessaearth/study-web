@@ -1,0 +1,22 @@
+/* pages/viewSwiper/viewSwiper.wxss */
+
+.swiper-item{
+  height: 200px;
+}
+.demo-text-1{
+  background: lightsalmon;
+}
+.demo-text-2{
+  background: lightgreen;
+}
+.demo-text-3{
+  background: lightblue;
+}
+.header{
+
+}
+.header image{
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+}

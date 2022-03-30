@@ -18,6 +18,7 @@ Page({
     })
   },
   onLoad() {
+  
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
@@ -43,6 +44,17 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  onShow(){
+    wx.getStorage({
+      key:'userInfo',
+      success:res=>{
+        console.log(res)
+        this.setData({
+          header:res.data.avatarUrl
+        })
+      }
     })
   }
 })
