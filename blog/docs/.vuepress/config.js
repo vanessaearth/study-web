@@ -2,7 +2,7 @@
  * @Autor: yangjin
  * @Date: 2021-09-16 09:32:10
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-09-18 10:15:17
+ * @LastEditTime: 2022-03-30 15:42:03
  * @Description: 
  */
 module.exports = {
@@ -35,7 +35,10 @@ module.exports = {
                     title: 'first',
                     collapsable: false,
                     children: [
-                        ['one','接口'], 'two'
+                        ['','快速'],
+                        'js',
+                        'vue'
+                       
                     ]
                 }
 
