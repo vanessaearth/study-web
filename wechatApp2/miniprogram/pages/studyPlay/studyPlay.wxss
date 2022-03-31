@@ -1,0 +1,4 @@
+/* pages/studyPlay/studyPlay.wxss */
+.video-box{
+  width: 100%;
+}

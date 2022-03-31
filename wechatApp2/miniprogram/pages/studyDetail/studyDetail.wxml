@@ -1,0 +1,15 @@
+<view class="page">
+  <view class="title">{{data.name}}</view>
+  <view class="box-one">
+    <view wx:for="{{data.detail}}">
+      <view>
+        {{item.name}}
+      </view>
+      <view class="flex-box">
+        <view class="link" wx:for="{{item.links}}" data-link="{{item}}" bindtap="handleOpen">
+          {{index}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

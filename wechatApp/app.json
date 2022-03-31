@@ -1,11 +1,12 @@
 {
   "pages":[
+    "pages/form/form",
+    "pages/view/view",
     "pages/scan/scan",
     "pages/viewSwiper/viewSwiper",
     "pages/login/login",
     "pages/request/request",
     "pages/toast/toast",
-    "pages/view/view",
     "pages/shareElement/index",
     "pages/viewComp/viewComp",
     "pages/index/index",

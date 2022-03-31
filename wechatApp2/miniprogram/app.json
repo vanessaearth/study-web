@@ -1,9 +1,11 @@
 {
   "pages": [
-    "pages/map/map",
+    "pages/study/study",
+    "pages/studyDetail/studyDetail",
+    "pages/studyPlay/studyPlay",
+    "pages/index/index",
     "pages/form/form",
     "pages/database/database",
-    "pages/index/index",
     "pages/getOpenId/index",
     "pages/getMiniProgramCode/index",
     "pages/deployService/index",

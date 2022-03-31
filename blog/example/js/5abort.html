@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>标题</h1>
+    <button class="requestBtn" >请求</button>
+    <button class="stopBtn">停止</button>
+    <script>
+        let xhr=new XMLHttpRequest()
+        let requestBtn=document.querySelector('.requestBtn')
+        requestBtn.onclick=function(){
+            xhr.open('get','/api',true)
+            xhr.onload=function(){
+                console.log(xhr.responseText)
+            }
+            xhr.send()
+        }
+        let stopBtn=document.querySelector('.stopBtn')
+        stopBtn.onclick=function(){
+            console.log('停止请求')
+            xhr.abort()
+        }
+    </script>
+</body>
+</html>
