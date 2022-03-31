@@ -1,0 +1,5 @@
+<!--pages/login/login.wxml-->
+<view class="bg ">
+    <view class="center logo">Hi</view>
+    <button class="center pos btn-red" bindtap="handleLogin">login</button>
+</view>

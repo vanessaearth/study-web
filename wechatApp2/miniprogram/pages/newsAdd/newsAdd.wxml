@@ -1,0 +1,23 @@
+<!--pages/newsAdd/newsAdd.wxml-->
+<view>  
+  <view class="img-box" >
+    <image class="img" src="{{imgSrc}}"></image>
+  </view>
+  <view bindtap="addImg" >
+    <mp-icon icon="camera" color="black" size="{{25}}"></mp-icon>
+    <text>添加图片</text>
+  </view>
+  <view>
+<view class="desc">
+  <textarea class="textarea-box" placeholder="请描述此刻的心情" id="" cols="30" rows="10" bindinput="bindKeyInput"></textarea>
+</view>
+<view class="flex-box">
+  <view class="flex">{{currentDay}}</view>
+  <view class="flex right">{{nickName}}</view>
+</view>
+<view>  
+  <button type="primary" bindtap="sendData">发送</button>
+</view>
+  </view>
+
+</view>

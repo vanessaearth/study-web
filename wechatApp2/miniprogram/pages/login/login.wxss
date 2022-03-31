@@ -1,0 +1,29 @@
+/* pages/login/login.wxss */
+.bg {
+  width: 100vw;
+  height: 1334rpx;
+  background: url(https://img-blog.csdnimg.cn/1323c4b825e04a68b799080e7408f508.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.logo {
+  top: 110px;
+  font-size: 30px;
+}
+
+.pos {
+  top: 350px;
+}
+
+.btn-red {
+  background-color: #ff625b;
+  color: #fff;
+  width: 80% !important;
+}

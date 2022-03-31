@@ -1,0 +1,15 @@
+<!--pages/newsList/newsList.wxml-->
+<view>
+  <view wx:for="{{newsList}}" wx:key="{{item._id}}">
+    <image class="{{item.className}}" mode="aspectFill" src="{{item.imgSrc}}"></image>
+    <view class="{{item.className==='card-img active'?'active':''}}">
+      <view class="desc">
+        {{item.desc}}
+      </view>
+      <view class="time"></view>
+      <view class="remove">
+        <view  class="btn remove" data-index="{{index}}" data-id="{{item._id}}" bindtap="removeNews">remove</view>
+      </view>
+    </view>
+  </view>
+</view>

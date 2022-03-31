@@ -1,0 +1,14 @@
+/**app.wxss**/
+.red{
+  color:#ff625b;
+}
+.blue{
+  color:#a5d8df;
+}
+.btn{
+  width: 200rpx;
+  padding: 5rpx 10rpx;
+  background: #50ccd2;
+  color:#fff;
+  text-align:center;
+}

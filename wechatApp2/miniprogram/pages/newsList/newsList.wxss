@@ -1,0 +1,17 @@
+/* pages/newsList/newsList.wxss */
+.card-img{
+  position: relative;
+  background: #f9f99f;
+  overflow: hidden;
+  padding-top: 20rpx;
+  left:0;
+  max-height: 1200rpx;
+  transition: left 0.5s,max-height 0.5s 0.5s,padding-top 0.1s 1s;
+  text-align: center;
+}
+.active{
+  left: -100vw;
+  max-height: 0;
+  padding-top: 0;
+  overflow: hidden;
+}
