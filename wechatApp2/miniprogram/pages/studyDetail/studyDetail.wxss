@@ -1,0 +1,23 @@
+/* pages/studyDetail/studyDetail.wxss */
+.page{
+  padding: 20rpx;
+}
+.box-one{
+  border-bottom: 1rpx solid #ccc;
+}
+.title{
+  
+
+}
+.flex-box{
+  display: flex;
+}
+.link{
+  width:100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin:20rpx;
+  color: #fff;
+  text-align: center;
+  background: limegreen;
+}

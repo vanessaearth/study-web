@@ -1,0 +1,4 @@
+<!--pages/study/study.wxml-->
+<view class="flex-box">
+<view class="flex" wx:for="{{courses}}" data-name-id="{{item.id}}"  bindtap="handleClick">{{item.name}}</view>
+</view>

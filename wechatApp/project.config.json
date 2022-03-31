@@ -9,7 +9,7 @@
     ]
   },
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": true,
     "postcss": true,
@@ -49,6 +49,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
   "appid": "wxc823061692681416",
+  "appsecret":"de7b25f16fb5f2f8ed15042608b086ca",
   "projectname": "wechatApp",
   "debugOptions": {
     "hidedInDevtools": []

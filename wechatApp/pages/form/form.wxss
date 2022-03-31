@@ -1,0 +1,17 @@
+/* pages/form/form.wxss */
+.editor{
+  border:1rpx solid green;
+  height: 60rpx;
+}
+.flex-box{
+  display: flex;
+
+}
+.left-label{
+  width:130rpx;
+  text-align: right;
+}
+.right-content{
+  flex:1;
+  border-bottom: 1rpx solid #ccc;
+}

@@ -1,4 +1,4 @@
-// pages/about/about.js
+// pages/request/request.js
 Page({
 
   /**
@@ -7,7 +7,14 @@ Page({
   data: {
 
   },
-
+  handleData(){
+    wx.request({
+      url: 'http://localhost:8000/',
+      success(res){
+        console.log(res)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

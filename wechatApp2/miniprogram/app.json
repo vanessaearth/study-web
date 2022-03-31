@@ -2,7 +2,24 @@
   "pages": [
     "pages/newsAdd/newsAdd",
     "pages/newsList/newsList",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/study/study",
+    "pages/studyDetail/studyDetail",
+    "pages/studyPlay/studyPlay",
+    "pages/index/index",
+    "pages/form/form",
+    "pages/database/database",
+    "pages/getOpenId/index",
+    "pages/getMiniProgramCode/index",
+    "pages/deployService/index",
+    "pages/createCollection/index",
+    "pages/uploadFile/index",
+    "pages/selectRecord/index",
+    "pages/updateRecord/index",
+    "pages/updateRecordResult/index",
+    "pages/updateRecordSuccess/index",
+    "pages/sumRecord/index",
+    "pages/sumRecordResult/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

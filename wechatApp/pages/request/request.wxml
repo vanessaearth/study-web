@@ -1,0 +1,5 @@
+<!--pages/request/request.wxml-->
+<text>pages/request/request.wxml</text>
+<view>
+<button type="primary" bindtap="handleData" >请求数据</button>
+</view>

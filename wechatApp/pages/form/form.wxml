@@ -1,0 +1,64 @@
+<!--pages/form/form.wxml-->
+<view>
+  <view>form</view>
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <switch name="switch" />
+    <radio-group bindchange="radioChange" name="radio">
+      <label wx:for="{{checkboxItems}}" wx:key="{{item.value}}">
+        <radio value="{{item.value}}" checked="true" />
+        {{item.name}}
+      </label>
+    </radio-group>
+
+    <view>button</view>
+    <view>size=default的是block的btn,size=mini是inline-block的btn</view>
+    <button type="primary" open-type="contact" session-from="" send-message-title="session-title" send-message-img="" bindcontact="bindcontact">打开客服会话</button>
+    <button size="mini" type="default" open-type="share">share</button>
+    <button size="mini" type="primary" open-type="getPhoneNumber" bindgetphonenumber="bindgetphonenumber">getPhoneNumber</button>
+    <button size="mini" type="warn" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">getUserInfo</button>
+    <button size="mini" type="primary" open-type="launchApp" bindlaunchapp="bindlaunchapp" app-parameter="">launchApp</button>
+    <button size="mini" type="primary" open-type="openSetting" bindopensetting="bindopensetting">openSetting</button>
+    <button size="mini" type="primary" open-type="feedback">feedback</button>
+    <button size="mini" type="primary" open-type="chooseAvatar" bindchooseavatar="bindchooseavatar">chooseAvatar</button>
+    <view>tips:此处按钮样式受app.json中"style": "v2"影响</view>
+    <view>checkbox</view>
+    <checkbox-group bindchange="checkboxChange">
+      <label wx:for="{{checkboxItems}}" wx:key="{{item.value}}">
+        <checkbox color="#f00" value="{{item.value}}" checked="{{item.checked}}" />
+        {{item.name}}
+      </label>
+    </checkbox-group>
+    <editor class="editor" placeholder="editor" show-img-size></editor>
+    <view class="flex-box">
+      <view class="left-label"> 姓名：</view>
+      <view class="right-content">
+        <input type="text" auto-focus confirm-type="done" />
+      </view>
+    </view>
+    <view class="flex-box">
+      <view class="left-label"> 身份证：</view>
+      <view class="right-content">
+        <input type="idcard" />
+      </view>
+    </view>
+    <view class="flex-box">
+      <view class="left-label"> 密码：</view>
+      <view class="right-content">
+        <input password placeholder="请输入" />
+      </view>
+    </view>
+    <view class="flex-box">
+      <view class="left-label">介绍：</view>
+      <view class="right-content">
+        <textarea hold-keyboard="{{true}}">
+      <keyboard-accessory class="container" style="height: 50px;">
+        <cover-view bindtap="tap" style="flex: 1; background: green;">1</cover-view>
+        <cover-view bindtap="tap" style="flex: 1; background: red;">2</cover-view>
+      </keyboard-accessory>
+    </textarea>
+      </view>
+    </view>
+ 
+
+  </form>
+</view>

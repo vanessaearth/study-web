@@ -2,7 +2,7 @@
  * @Autor: yangjin
  * @Date: 2021-09-16 09:31:49
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-09-16 10:01:04
+ * @LastEditTime: 2022-03-30 17:17:20
  * @Description: 
 -->
 # readme
@@ -48,3 +48,9 @@ export default {
 }
 ```
 ### Badge <Badge text="beta" type="warning"/> <Badge text="默认主题"/>
+
+webpack版本需要4开头的
+npm install webpack@4.44.1 -D
+node-sass必须4开头配合webpack
+sass-loader需要7开头的版本
+npm install sass-loader@7.1.0 --save

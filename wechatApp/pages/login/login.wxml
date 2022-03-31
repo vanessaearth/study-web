@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<text>pages/login/login.wxml</text>
+<view>
+<button type="primary" bindtap="hangleLogin">login</button>
+<view> openid:{{openid}}</view>
+  <view>
+<button type="primary" bindtap="getUserInfo">获取用户信息</button>
+  <ul>
+    <li>头像：{{userInfo.nickName}}</li>
+    <li>昵称：<image src="{{userInfo.avatarUrl}}" alt=""/></li>
+  <li></li>
+  </ul>
+  </view>
+</view>

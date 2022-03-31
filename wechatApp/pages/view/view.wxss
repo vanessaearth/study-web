@@ -1,0 +1,34 @@
+/* pages/view/view.wxss */
+.box {
+  color: lightcoral;
+}
+
+.progress-box {
+  display: flex;
+  height: 25px;
+  margin-bottom: 10rpx;
+}
+
+wx-progress {
+  width: 100%;
+}
+
+.progress-cancel {
+  margin-left: 20px;
+}
+.btn{
+  display: inline-block;
+  width: auto!important;
+  background: rgb(26, 179, 64);
+  padding:8rpx 20rpx;
+  border-radius: 10rpx;
+  color:#fff;
+}
+.scroll-view {
+  height: 300rpx;
+  border: 1px solid #1AAD19;
+  white-space: pre;
+  padding: 5px;
+  box-sizing: border-box;
+
+}

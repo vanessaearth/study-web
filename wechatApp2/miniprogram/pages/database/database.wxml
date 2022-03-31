@@ -1,0 +1,13 @@
+<!--pages/database/database.wxml-->
+<text>pages/database/database.wxml</text>
+dataId:{{dataId}}
+<view>
+<view wx:for="{{detail}}" wx:key="index">
+  {{index}}: {{item}}
+</view>
+</view>
+<button class="mb-10" type="primary" bindtap="addData">增加数据</button>
+<button class="mb-10" type="primary" bindtap="updateData">修改数据</button>
+<button class="mb-10" type="primary" bindtap="deleteData">删除数据</button>
+<button class="mb-10" type="primary" bindtap="selectData">查找数据</button>
+<button class="mb-10" type="primary" bindtap="coludSelectData">云函数查找数据</button>

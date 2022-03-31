@@ -1,0 +1,49 @@
+<!--pages/view/view.wxml-->
+<view>
+  <icon type="success" size="30" color="lightcoral" />
+  <icon type="success" />
+  <icon type="success_no_circle" />
+  <icon type="info" />
+  <icon type="info_circle" />
+
+  <icon type="warn" />
+  <icon type="warn_circle" />
+
+  <icon type="waiting" />
+  <icon type="cancel" />
+  <icon type="download" />
+  <icon type="search" />
+  <icon type="clear" />
+</view>
+<view class="progress-box">
+  <progress percent="20" show-info stroke-width="3" />
+</view>
+<view class="progress-box">
+  <progress percent="40" active stroke-width="3" />
+  <icon class="progress-cancel" type="cancel"></icon>
+</view>
+<view class="progress-box">
+  <progress percent="60" active stroke-width="3" />
+</view>
+<view class="progress-box">
+  <progress percent="80" color="#10AEFF" active stroke-width="3" />
+</view>
+
+<view>rich-text富文班
+  <button class="btn" bindtap="renderHtml">渲染HTML</button>
+</view>
+<scroll-view scroll-y class="scroll-view">{{htmlSnip}}</scroll-view>
+<block wx:if="{{renderedByHtml}}">
+  <view>渲染HTML结果：</view>
+  <rich-text nodes="{{htmlSnip}}"></rich-text>
+</block>
+<view>node内容：
+  <button class="btn" bindtap="renderNode">渲染Node</button>
+</view>
+<scroll-view scroll-y class="scroll-view">{{nodeSnip}}</scroll-view>
+<block wx:if="{{renderedByNode}}">
+  <view>node内容渲染结果：</view>
+  <rich-text nodes="{{nodes}}"></rich-text>
+</block>
+<view>text节点：</view>
+<text>wahaha </text>

@@ -1,0 +1,17 @@
+/* pages/study/study.wxss */
+.flex-box{
+  display: flex;
+  flex-wrap: wrap;
+ align-items: center;
+  justify-content: center;
+}
+.flex{
+  width: 200rpx;
+  height:200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  color:#fff;
+  margin:10rpx;
+  padding:10rpx;
+  background: lightcoral;
+}
