@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/study/study",
+    "pages/studyPlay/studyPlay",
+    "pages/studyDetail/studyDetail",
     "pages/newsAdd/newsAdd",
     "pages/newsList/newsList",
     "pages/login/login",
-    "pages/study/study",
-    "pages/studyDetail/studyDetail",
-    "pages/studyPlay/studyPlay",
     "pages/index/index",
     "pages/form/form",
     "pages/database/database",
@@ -25,7 +25,7 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "初知念",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

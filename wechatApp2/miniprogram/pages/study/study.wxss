@@ -2,7 +2,9 @@
 .flex-box{
   display: flex;
   flex-wrap: wrap;
- align-items: center;
+  align-content: center;
+  height: 90vh;
+  align-items: center;
   justify-content: center;
 }
 .flex{
@@ -13,5 +15,32 @@
   color:#fff;
   margin:10rpx;
   padding:10rpx;
-  background: lightcoral;
+}
+
+.flex:nth-child(1) {
+  background: rgb(252, 151, 175);
+}
+.flex:nth-child(2) {
+  background: rgb(104, 236, 190);
+}
+.flex:nth-child(3) {
+  background: rgb(242, 179, 201);
+}
+.flex:nth-child(4) {
+  background: rgb(114, 204, 255);
+}
+.flex:nth-child(5)  {
+  background: rgb(254, 132, 99);
+}
+.flex:nth-child(6)  {
+  background: rgb(158, 207, 98);
+}
+.flex:nth-child(7) {
+  background: rgb(212, 164, 235);
+}
+.flex:nth-child(8)  {
+  background: rgb(91, 218, 218);
+}
+.flex:nth-child(9)  {
+  background: rgb(247, 197, 160);
 }

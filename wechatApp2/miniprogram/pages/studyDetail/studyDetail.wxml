@@ -1,15 +1,20 @@
-<view class="page">
-  <view class="title">{{data.name}}</view>
-  <view class="box-one">
-    <view wx:for="{{data.detail}}">
-      <view>
-        {{item.name}}
+<loading wx:if="{{!hidden}}" hidden="{{hidden}}">
+  加载中...
+</loading>
+<view class="page" wx:else>
+  <view wx:if="{{data.length>0}}">
+    <view bindtap="handleCollapse" data-id="{{index}}" class="box-one" wx:for="{{data}}" wx:key="index" wx:for-item="outerItem">
+      <view class="box-title">
+        {{index+1}}. {{outerItem.name}}
       </view>
-      <view class="flex-box">
-        <view class="link" wx:for="{{item.links}}" data-link="{{item}}" bindtap="handleOpen">
-          {{index}}
+      <view class="box-list  {{currentIndex===index?'active':''}}" wx:if="{{currentIndex===index}}">
+        <view class="box-link" wx:for="{{outerItem.list}}" wx:key="index" data-link="{{item.link}}" bindtap="handleOpen">
+          {{item.name}}
         </view>
       </view>
     </view>
+  </view>
+  <view wx:else class="empty-box">
+    暂无数据
   </view>
 </view>

@@ -5,23 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list: [
-      {
-        id: 1,
-        name: '语文',
-        detail: [
-          {
-            name: 'UNIT ONE HELLO, I AM MAOMAO',
-            links: [
-              'https://video.cache.bdschool.cn/vd/e8c9de59c6fc656334119c49c7942af4.mp4',
-              'https://video.cache.bdschool.cn/vd/e476ea9d8a525c48d601a1d7ceb6b622.mp4',
-              'https://video.cache.bdschool.cn/vd/a011bd24eac11b1502ddd3ea22f964ef.mp4']
-          }
-        ]
-
-      }
-    ],
-    data:{}
+    hidden:false,
+    data:{},
+    currentIndex:0
+  },
+  handleCollapse(e){
+    let index= e.currentTarget.dataset.id
+    console.log(e,index,'==')
+    this.setData({
+      currentIndex:index
+    })
+    
   },
   handleOpen(e){
     let link = e.target.dataset.link
@@ -29,15 +23,28 @@ Page({
       url: '/pages/studyPlay/studyPlay?link=' + link
     })
   },
+  getData(subjectId) {
+    wx.cloud.callFunction({
+      name: 'study2',
+      config: { },
+      data: {
+        type: 'getStudyData',
+        subjectId:subjectId
+      }
+    }).then(res => {
+      console.log('===',res)
+      this.setData({
+        data:res.result,
+        hidden:true
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     let id=options.nameId
-    let data=this.data.list.find(v=>v.id===+id)
-    this.setData({
-      data:data
-    })
+    this.getData(id)
   },
 
   /**

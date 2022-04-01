@@ -5,17 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    courses: [
-      { name: '语文', id: 1 },
-      { name: '数学', id: 2 },
-      { name: '英语', id: 3 },
-      { name: '美术', id: 4 },
-      { name: '音乐', id: 5 },
-      { name: '道德与法治', id: 6 },
-      { name: '科学', id: 7 },
-      { name: '劳动与技术', id: 8 },
-      { name: '体育与健康', id: 9 },
-    ]
+    hidden:false,
+    courses: []
   },
   handleClick(e) {
     let nameId = e.target.dataset.nameId
@@ -23,12 +14,27 @@ Page({
       url: '/pages/studyDetail/studyDetail?nameId=' + nameId
     })
   },
-
+  getData() {
+    wx.cloud.callFunction({
+      name: 'study2',
+      config: {
+        // env:this.data.envId
+      },
+      data: {
+        type: 'getStudySubject'
+      }
+    }).then(res => {
+      this.setData({
+        courses:res.result.data,
+        hidden:true
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData()
   },
 
   /**

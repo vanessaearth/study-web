@@ -1,23 +1,62 @@
 /* pages/studyDetail/studyDetail.wxss */
-.page{
+.page {
   padding: 20rpx;
 }
-.box-one{
-  border-bottom: 1rpx solid #ccc;
-}
-.title{
-  
 
+.box-one {
+  padding: 20rpx;
+  border: 1rpx solid #ccc;
+  margin: 20rpx 10rpx;
+  border-radius: 8rpx;
+  background: #fff;
+  position: relative;
 }
-.flex-box{
+
+.box-title {
+  font-weight: 700;
+}
+
+.box-list {
+  max-height: 0;
+  transition: max-height 0.5s;
+}
+
+.active {
+  height: auto;
+  max-height: 400rpx;
+  overflow: auto;
+}
+
+.box-link {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  vertical-align: top;
+  padding: 20rpx;
+  text-align: left;
+  position: relative;
+}
+
+.box-link:nth-child(1)::before {
+  display: none;
+}
+
+.box-link::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.1);
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+  left: 16rpx;
+  z-index: 2;
+}
+.empty-box{
+  height: 100vh;
   display: flex;
-}
-.link{
-  width:100rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  margin:20rpx;
-  color: #fff;
-  text-align: center;
-  background: limegreen;
+  align-items: center;
+  justify-content: center;
 }

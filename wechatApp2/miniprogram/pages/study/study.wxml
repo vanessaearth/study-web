@@ -1,4 +1,7 @@
 <!--pages/study/study.wxml-->
+<loading hidden="{{hidden}}">
+    加载中...
+</loading>
 <view class="flex-box">
-<view class="flex" wx:for="{{courses}}" data-name-id="{{item.id}}"  bindtap="handleClick">{{item.name}}</view>
+<view class="flex" wx:for="{{courses}}" wx:key="index" data-name-id="{{item.id}}"  bindtap="handleClick">{{item.name}}</view>
 </view>
