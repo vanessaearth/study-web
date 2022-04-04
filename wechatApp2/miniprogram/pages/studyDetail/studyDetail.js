@@ -5,28 +5,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-    data:[]
+    hidden:false,
+    data:{},
+    currentIndex:0
   },
-  getData(subjectId) {
-    wx.cloud.callFunction({
-      name:'study',
-      config:{},
-      data:{
-        type: 'getStudyData',
-        subjectId:subjectId,
-      }
-    }).then(res=>{
-      console.log('jie==',res)
-      this.setData({
-        data: res.result
-      })
-  
+  handleCollapse(e){
+    let index= e.currentTarget.dataset.id
+    console.log(e,index,'==')
+    this.setData({
+      currentIndex:index
     })
+    
   },
   handleOpen(e){
     let link = e.target.dataset.link
     wx.navigateTo({
       url: '/pages/studyPlay/studyPlay?link=' + link
+    })
+  },
+  getData(subjectId) {
+    wx.cloud.callFunction({
+      name: 'study2',
+      config: { },
+      data: {
+        type: 'getStudyData',
+        subjectId:subjectId
+      }
+    }).then(res => {
+      console.log('===',res)
+      this.setData({
+        data:res.result,
+        hidden:true
+      })
     })
   },
   /**
@@ -35,7 +45,6 @@ Page({
   onLoad: function (options) {
     let id=options.nameId
     this.getData(id)
- 
   },
 
   /**

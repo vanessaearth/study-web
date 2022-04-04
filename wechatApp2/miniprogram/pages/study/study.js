@@ -5,21 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hidden:false,
     courses: []
-  },
-  getData() {
-    wx.cloud.callFunction({
-      name:'study',
-      config:{},
-      data:{
-        type: 'getSubject'
-      }
-    }).then(res=>{
-      console.log('colud res:',res)
-      this.setData({
-        courses: res.result.data
-      })
-    })
   },
   handleClick(e) {
     let nameId = e.target.dataset.nameId
@@ -27,13 +14,27 @@ Page({
       url: '/pages/studyDetail/studyDetail?nameId=' + nameId
     })
   },
-
+  getData() {
+    wx.cloud.callFunction({
+      name: 'study2',
+      config: {
+        // env:this.data.envId
+      },
+      data: {
+        type: 'getStudySubject'
+      }
+    }).then(res => {
+      this.setData({
+        courses:res.result.data,
+        hidden:true
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.getData()
-
   },
 
   /**
