@@ -8,13 +8,32 @@ Page({
     link: ''
 
   },
+  setBolbVideo() {
+    var video = wx.createSelectorQuery().select('video');
+    var mediaSource = new MediaSource;
+    video.src = URL.createObjectURL(mediaSource);
+    mediaSource.addEventListener('sourceopen', sourceOpen)
 
+    function sourceOpen() {
+      var mediaSource = this;
+      var sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+      sourceBuffer.addEventListener('updateend', function () {
+        mediaSource.endOfStream();
+        video.play();
+      });
+      sourceBuffer.appendBuffer(buf); // buf is the arraybuffer to store the video data
+    };
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let link=options.link
+    if(link.startsWith('blob:')){
+      this.setBolbVideo()
+    }
     this.setData({
-      link: options.link
+      link: link
     })
   },
 
