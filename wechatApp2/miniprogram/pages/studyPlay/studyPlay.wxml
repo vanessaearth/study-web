@@ -1,5 +1,4 @@
 <!--pages/studyPlay/studyPlay.wxml-->
-
 <view class="page-body">
     <video 
     class="video-box"

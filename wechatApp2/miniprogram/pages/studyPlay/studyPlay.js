@@ -7,7 +7,6 @@ Page({
    */
   data: {
     link: ''
-
   },
 
   /**
@@ -15,8 +14,12 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      link: options.link
+      link: options.link,
     })
+    wx.setNavigationBarTitle({
+      title: options.name
+    })
+
   },
 
   /**
