@@ -2,8 +2,8 @@
   "pages": [
     "pages/api/api",
     "pages/study/study",
-    "pages/studyPlay/studyPlay",
     "pages/studyDetail/studyDetail",
+    "pages/studyPlay/studyPlay",
     "pages/newsAdd/newsAdd",
     "pages/newsList/newsList",
     "pages/login/login",
