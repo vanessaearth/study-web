@@ -66,3 +66,11 @@
 function fn():never{
   throw new Error('error')
 }
+
+// 类型断言
+let img=document.querySelector('img')
+if(img){
+  // (<HTMLImageElement>img).src
+  (img as HTMLImageElement).src
+  img.src
+}

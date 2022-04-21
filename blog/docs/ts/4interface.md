@@ -7,6 +7,3 @@
 var val:string|number 
 var arr:number[]|string[]; 
 ```
-## 接口 interface
-
-

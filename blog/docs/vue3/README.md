@@ -1,7 +1,7 @@
 
-# vue
+# vue3
 
-### 1.v-for 中的 Ref 数组
+## 1.v-for 中的 Ref 数组
 ```vue
 <div v-for="item in list" :ref="setItemRef"></div>
 import { onBeforeUpdate, onUpdated } from 'vue'
@@ -27,14 +27,15 @@ export default {
 }
 ```
 
-### 2.移除枚举 attribute 的内部概念，并将这些 attribute 视为普通的非布尔 attribute
+## 2.移除枚举 attribute 的内部概念
+并将这些 attribute 视为普通的非布尔 attribute
 非兼容：如果值为布尔值 false，则不再移除 attribute。取而代之的是，它将被设置为 attr="false"。若要移除 attribute，应该使用 null 或者 undefined。
 
-### 3.$attrs中包含class和style
+## 3.$attrs中包含class和style
   $attrs中包含所有传递给组件的attribute,包含style和class
-### 4.$children被移除
+## 4.$children被移除
  $children 实例 property 已从 Vue 3.0 中移除，不再支持
-### 5.自定义指令
+## 5.自定义指令
 指令的钩子函数已经被重命名，以更好地与组件的生命周期保持一致。
 
 额外地，expression 字符串不再作为 binding 对象的一部分被传入
@@ -66,9 +67,7 @@ app.directive('highlight', {
   }
 })
 ```
-
-
-### 6.非兼容：is只能用在component 标签中
+## 6.is只能用在component 标签中
 非兼容：检测并确定哪些标签应该被视为自定义元素的过程，现在会在模板编译期间执行，且应该通过编译器选项而不是运行时配置来配置。
 新增：为了支持 2.x 在原生元素上使用 is 的用例来处理原生 HTML 解析限制，我们用 vue: 前缀来解析一个 Vue 组件
 ```js
@@ -83,7 +82,7 @@ app.directive('highlight', {
 
 ```
 
-### 7.data选项
+## 7.data选项
 非兼容：组件选项 data 的声明不再接收纯 JavaScript object，而是接收一个 function。
 
 非兼容：当合并来自 mixin 或 extend 的多个 data 返回值时，合并操作现在是浅层次的而非深层次的 (只合并根级属性)
@@ -125,7 +124,7 @@ const CompA = {
 }
 ```
 
-### 8.emits选项
+## 8.emits选项
 Vue 3 现在提供一个 emits 选项，和现有的 props 选项类似。这个选项可以用来定义一个组件可以向其父组件触发的事件。
 
 强烈建议使用 emits 记录每个组件所触发的所有事件。
@@ -162,18 +161,18 @@ export default {
 正确地声明 click 事件。当你真的在"my-button" 的事件处理器上加入了一些逻辑时，这会很有用。
 移除透传的事件，因为现在父组件可以很容易地监听原生事件，而不需要添加 .native。适用于你只想透传这个事件。
 
-### 9.事件 API
+## 9.事件 API
 $on，$off 和 $once 实例方法已被移除，组件实例不再实现事件触发接口。
 
-### 10.过滤器
+## 10.过滤器
 从 Vue 3.0 开始，过滤器已移除，且不再支持。
 
-### 11.片段
+## 11.片段
 Vue 3 现在正式支持了多根节点的组件，也就是片段！
 
-### 12.函数式组件
+## 12.函数式组件
 
-### 13.全局api
+## 13.全局api
 ```js
 import { createApp } from 'vue'
 
@@ -196,7 +195,7 @@ app.directive('focus', {
 app.mount('#app')
 ```
 
-### 14.全局api,tree-shaking
+## 14.全局api,tree-shaking
 打包插件过程中,不需要打包vue,需要在externals中配置
 ```js
 // webpack.config.js
@@ -207,7 +206,7 @@ module.exports = {
   }
 }
 ```
-### 15.内联模板
+## 15.内联模板
 对内联模板特性的支持已被移除
 ```js
 //2.0
@@ -228,7 +227,7 @@ const MyComp = {
 }
 
 ```
-### 16.节点的key，
+## 16.节点的key，
 在 Vue 2.x 中，建议在 v-if/v-else/v-else-if 的分支中使用 key。
 在vue3中，自动生成唯一的 key。
 ```js
@@ -244,7 +243,7 @@ const MyComp = {
 <div v-if="condition" key="a">Yes</div>
 <div v-else key="b">No</div>
 ```
-#### 结合 template v-for
+### 结合 template v-for
 在 Vue 2.x 中，template 标签不能拥有 key。不过，你可以为其每个子节点分别设置 key。
 在 Vue 3.x 中，key 则应该被设置在 template 标签上。
 ```html
@@ -259,7 +258,7 @@ const MyComp = {
     <span>...</span>
   </template>
 ```
-### 17.按键修饰符
+## 17.按键修饰符
 非兼容：不再支持使用数字 (即键码) 作为 v-on 修饰符
 非兼容：不再支持 config.keyCodes
 ```html
@@ -273,11 +272,11 @@ Vue.config.keyCodes = {
 
 ```
 
-### 18.移除$listeners
+## 18.移除$listeners
 $listener放在$attr属性中
-### 19.挂载api变化，
+## 19.挂载api变化，
 app.mount之前是替换挂载的元素，vue3中是作为子元素
-### 20.propsData被移除
+## 20.propsData被移除
 ```js
 //vue2
 const Comp = Vue.extend({
@@ -299,7 +298,7 @@ const app = createApp(
   { username: 'Evan' }
 )
 ```
-### 21.插槽统一
+## 21.插槽统一
 - this.$slots 现在将插槽作为函数公开
 - 非兼容：移除 this.$scopedSlots
   ```js
@@ -316,11 +315,11 @@ const app = createApp(
     })
     this.$slots.header()
   ```
-### 22.过渡类名修改
+## 22.过渡类名修改
 过渡类名 v-enter 修改为 v-enter-from、过渡类名 v-leave 修改为 v-leave-from
 
-### 23.Transition 作为根节点
-当使用 <transition> 作为根结点的组件从外部被切换时将不再触发过渡效果
+## 23.Transition 作为根节点
+当使用 transition 作为根结点的组件从外部被切换时将不再触发过渡效果
 ```vue
 // v2
 <!-- 模态组件 -->
@@ -345,8 +344,8 @@ const app = createApp(
   <!-- 用法 -->
   <modal :show="showModal">hello</modal>
 ```
-### 24.Transition Group 根元素
-<transition-group> 不再默认渲染根元素，但仍然可以用 tag attribute 创建根元素。
+## 24.Transition Group 根元素
+transition-group 不再默认渲染根元素，但仍然可以用 tag attribute 创建根元素。
 ```html
 <!-- v2 -->
 <transition-group tag="ul">
@@ -359,8 +358,8 @@ const app = createApp(
   <!-- -->
 </transition-group>
 ```
-### 25.v-on 的 .native 修饰符已被移除
-### 26.v-model
+## 25.v-on 的 .native 修饰符已被移除
+## 26.v-model
 非兼容：用于自定义组件时，v-model prop 和事件默认名称已更改：
 prop：value -> modelValue；
 事件：input -> update:modelValue；
@@ -382,11 +381,11 @@ prop：value -> modelValue；
 <ChildComponent :title="pageTitle" @update:title="pageTitle = $event" />
 
 ```
-### 27.v-if和v-for
+## 27.v-if和v-for
 非兼容：两者作用于同一个元素上时，v-if 会拥有比 v-for 更高的优先级
 v2中v-for优先级高
 v3中v-if优先级高
-### 28.v-bind 合并行为
+## 28.v-bind 合并行为
 不兼容：v-bind 的绑定顺序会影响渲染结果
 ```js
 // v2，独立属性优先级高
@@ -406,7 +405,7 @@ v3中v-if优先级高
 <div id="red"></div>
 ```
 
-### 29.VNode 生命周期事件
+## 29.VNode 生命周期事件
 在 Vue 2 中，我们可以通过事件来监听组件生命周期中的关键阶段。这些事件名都是以 hook: 前缀开头，并跟随相应的生命周期钩子的名字。
 
 在 Vue 3 中，这个前缀已被更改为 vnode-。额外地，这些事件现在也可用于 HTML 元素，和在组件上的用法一样。
@@ -425,7 +424,7 @@ v3中v-if优先级高
 </template>
 ```
 
-### 30.侦听数组
+## 30.侦听数组
 非兼容: 当侦听一个数组时，只有当数组被替换时才会触发回调。如果你需要在数组被改变时触发回调，必须指定 deep 选项。
 
 ```js

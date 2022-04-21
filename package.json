@@ -1,0 +1,21 @@
+{
+  "name": "study-web",
+  "version": "1.0.0",
+  "description": "```\r npm install\r ```",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "gitHooks": {
+    "pre-commit": "noded ./preCommit.js"
+  },
+  "devDependencies": {
+    "yorkie": "^2.0.0"
+  }
+}

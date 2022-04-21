@@ -2,7 +2,7 @@
  * @Autor: yangjin
  * @Date: 2021-09-16 09:32:10
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-04-15 19:07:35
+ * @LastEditTime: 2022-04-18 09:57:35
  * @Description: 
  */
 const path = require('path')
@@ -73,12 +73,14 @@ module.exports = {
           ]
         }
       ],
-      'vue3':[
-        title: 'first',
-        collapsable: false,
-        children: [
-          ['', '快速']
-      ]
+      '/vue3/': [
+        {
+          collapsable: false,
+          children: [
+            ['', 'vue3变化'],
+          ]
+        }
+      ],
       // fallback
       '/': [
         ''        /* / */

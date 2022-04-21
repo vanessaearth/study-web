@@ -45,9 +45,13 @@ var newPoint2 = addPoints({x:1},{x:4,y:3})
 
 ## 接口
 是一系列抽象方法的声明，是一些方法特征的集合，这些方法都应该是抽象的，需要由具体的类去实现，然后第三方就可以通过这组抽象方法调用，让具体的类执行具体的方法。
+* 只读属性，只能初始化的时候赋值，不能修改
+* 任意属性：[]方括号声明，key是固定的写法可以指定key的类型，和值的类型
+* 数字索引是字符串索引的子类
 ```js
 interface IPerson { 
-    firstName:string, 
+    readonly firstName:string, 
+    [key:string]:number,
     lastName:string, 
     sayHi: ()=>string,
 }

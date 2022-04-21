@@ -59,3 +59,10 @@
 function fn() {
     throw new Error('error');
 }
+// 类型断言
+let img = document.querySelector('img');
+if (img) {
+    // (<HTMLImageElement>img).src
+    img.src;
+    img.src;
+}
