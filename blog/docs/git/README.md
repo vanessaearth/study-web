@@ -40,10 +40,40 @@ gitignore文件，让git忽略某些文件的变化
 dist
 node_modules
 ```
+git hooks
+ yorkie/husky，yarn add yorkie -D 安装yorkie,为了使用git hooks
+ pre-commit 提交前执行
+ commit-msg 获取commit信息
+pr(pull request) 主要用于协助第三方开发
 
-
-yarn add yorkie -D 安装yorkie,为了使用git hooks
-
+git 工作流程
+ - git workFlow
+ - github workflow
+   - pull request
+   - code review 代码复查
+ - gitlab workflow
+ - 
+自动化：
+CI持续集成
+  - 持续集成 主要用于测试代码格式化检查或者格式化操作
+  - github action 
+    - workfow使用yaml格式，.yml文件
+    - 在根目录下新建.github文件夹->workflows->main.yml
+    - yaml文件通过缩进表示层级关系，只能使用空格，不是使用tab
+    - YAML: 
+      - name工作流名称,
+      - on控制action在何时执行
+        - push 
+          - branches:[master] 
+      - job action 需要执行的工作 
+        - 声明对应的工作 自行起名
+          - runs on action执行时候的一个虚拟机环境，ubuntu-laster
+          - steps action执行的步骤
+            - uses 对应action执行的预设代码
+            - name 对应当前操作名字
+            - run 真实执行的操作如：yarn build
+    - 
+CD持续交付
 
 #### 1. 工作区：当前工作目录(初始化git仓库后）
 git add <file>  //文件推送到暂存区
