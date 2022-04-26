@@ -18,5 +18,8 @@
   },
   "devDependencies": {
     "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.2.33"
   }
 }

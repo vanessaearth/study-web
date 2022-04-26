@@ -74,6 +74,9 @@ CI持续集成
             - run 真实执行的操作如：yarn build
     - 
 CD持续交付
+ settings->pages设置
+ npm i -D webpack webpack-cli html-webpack-plugin 
+
 
 #### 1. 工作区：当前工作目录(初始化git仓库后）
 git add <file>  //文件推送到暂存区
