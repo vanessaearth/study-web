@@ -1,5 +1,13 @@
 #! /usr/bin/env node
-
+// $ node -v
+// v12.20.1
+// import {program} from 'commander'
+// import download from 'download-git-repo'
+// import inquirer from 'inquirer'
+// import chalk from 'chalk'
+// import ora from 'ora'
+// import fs from 'fs'
+const figlet =require('figlet')
 const program = require('commander')
 const download = require('download-git-repo')
 const inquirer = require('inquirer')
@@ -23,7 +31,7 @@ function setPackage (projectName, answers) {
 
 // 修改项目名称配置文件
 function setProjectName (projectName, fullName, shortName) {
-  const configPath = `${projectName}/src/conf/index.js`
+  const configPath = `${projectName}/README.md`
   const str =
     `// 项目全称
 const FullName = '${fullName}'
@@ -54,7 +62,7 @@ function validateName (val) {
   if (/^[\u4e00-\u9fa5]+$/.test(val)) {
     return true
   } else {
-    return 'name must be chinaese'
+    return 'name must be chinese'
   }
 }
 
@@ -94,7 +102,7 @@ program.version(Version, '-v, --version')
       promptList
     ).then(answers => {
       spinner.start()
-      download('github:tianzhu1992/blocks-admin-vue', projectName, (err) => {
+      download('https://gitee.com/summer0606/vue2-template.git', projectName, (err) => {
         spinner.succeed()
         const { fullName, shortName, router } = answers
 

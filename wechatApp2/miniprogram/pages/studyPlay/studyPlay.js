@@ -7,7 +7,6 @@ Page({
    */
   data: {
     link: ''
-
   },
   setBolbVideo() {
     var video = wx.createSelectorQuery().select('video');
@@ -36,6 +35,10 @@ Page({
     this.setData({
       link: link
     })
+    wx.setNavigationBarTitle({
+      title: options.name
+    })
+
   },
 
   /**

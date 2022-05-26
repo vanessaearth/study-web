@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background: lightcoral;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        function move(el, target, direction, cb) {
+            let start = parseInt(getComputedStyle(el, null)[direction])
+            let step = 50
+            let speed = step * (target - start > 0 ? 1 : -1)
+            console.log(start, direction, speed)
+            setTimeout(() => {
+                start += speed
+                el.style[direction] = start + 'px'
+                if (Math.abs(target - start) < step) {
+                    cb && cb()
+                } else {
+                    move(el, target, direction, cb)
+                }
+            }, 1000)
+        }
+        let el = document.querySelector('.box')
+        // move(el, 100, 'left', function () {
+        //     move(el, 100, 'top', function () {
+        //         move(el, 0, 'left', function () {
+        //             move(el, 0, 'top', function () {
+        //                 console.log('运动完毕！！！')
+        //             })
+        //         })
+        //     })
+        // })
+
+        function movePromise(el, target, direction) {
+            return new Promise((resolve) => {
+                function fn() {
+                    let start = parseInt(getComputedStyle(el, null)[direction])
+                    let step = 50
+                    let speed = step * (target - start > 0 ? 1 : -1)
+                    console.log(start, direction, speed)
+                    setTimeout(() => {
+                        start += speed
+                        el.style[direction] = start + 'px'
+                        if (Math.abs(target - start) < step) {
+                            resolve()
+                        } else {
+                            fn()
+                        }
+                    }, 1000)
+                }
+                fn()
+            })
+        }
+        async function  moveFn(){
+            await movePromise(el, 100, 'left')
+            await movePromise(el, 100, 'top')
+            await movePromise(el, 0, 'left')
+            await movePromise(el, 0, 'top')
+        }
+        moveFn()
+    </script>
+</body>
+
+</html>

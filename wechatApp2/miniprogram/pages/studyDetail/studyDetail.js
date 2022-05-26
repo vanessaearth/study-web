@@ -1,4 +1,5 @@
 // pages/studyDetail/studyDetail.js
+const app = getApp()
 Page({
 
   /**
@@ -19,8 +20,9 @@ Page({
   },
   handleOpen(e){
     let link = e.target.dataset.link
+    let name = e.target.dataset.name
     wx.navigateTo({
-      url: '/pages/studyPlay/studyPlay?link=' + link
+      url: `/pages/studyPlay/studyPlay?link=${link}&name=${name}`
     })
   },
   getData(subjectId) {
@@ -45,6 +47,11 @@ Page({
   onLoad: function (options) {
     let id=options.nameId
     this.getData(id)
+    let nbTitle=app.globalData.find(v=>v.id===+id).name
+    wx.setNavigationBarTitle({
+      title: nbTitle
+    })
+   
   },
 
   /**
@@ -79,7 +86,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
   },
 
   /**

@@ -1,4 +1,5 @@
 // pages/study/study.js
+const app=getApp()
 Page({
 
   /**
@@ -24,10 +25,12 @@ Page({
         type: 'getStudySubject'
       }
     }).then(res => {
+      let course=res.result.data
       this.setData({
-        courses:res.result.data,
+        courses:course,
         hidden:true
       })
+      app.globalData=course
     })
   },
   /**

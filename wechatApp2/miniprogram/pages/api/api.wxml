@@ -1,0 +1,6 @@
+<!--pages/api/api.wxml-->
+<text>pages/api/api.wxml</text>
+<button type="primary" bindtap="toPage">page</button>
+<button type="primary" bindtap="getCon">getCon</button>
+<button type="primary" bindtap="copy">copy</button>
+<button type="primary" bindtap="paste">paste</button>

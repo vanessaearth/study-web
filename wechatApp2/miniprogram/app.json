@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/map/map",
+    "pages/api/api",
     "pages/study/study",
     "pages/studyDetail/studyDetail",
     "pages/studyPlay/studyPlay",

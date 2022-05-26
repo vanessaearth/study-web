@@ -8,7 +8,7 @@
         {{index+1}}. {{outerItem.name}}
       </view>
       <view class="box-list  {{currentIndex===index?'active':''}}" wx:if="{{currentIndex===index}}">
-        <view class="box-link" wx:for="{{outerItem.list}}" wx:key="index" data-link="{{item.link}}" bindtap="handleOpen">
+        <view class="box-link" wx:for="{{outerItem.list}}" wx:key="index" data-link="{{item.link}}" data-name="{{item.name}}" bindtap="handleOpen">
           {{item.name}}
         </view>
       </view>
