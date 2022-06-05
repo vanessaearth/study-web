@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: teal;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"> 111</div>
+  <div class="box"> 2222</div>
+  <script src="./jq.js"></script>
+  <script>
+    // $('.box').click(function(){
+    //   console.log('click...')
+    // })
+    // $(function(){
+    //   console.log('加载完毕。。。')
+    // })
+    // $(document.querySelector('div')).click(()=>{
+    //   console.log(111)
+    // })
+    // $('.box').on('mouseover mousedown',function(){
+    //   console.log('on...')
+    // })
+    // $('.box').on('mouseover',function(){
+    //   console.log('mouseover...')
+    // }).on('mousedown',function(){
+    //   console.log('mousedown...')
+    // })
+
+    $('.box').eq(0).on('click',function(){
+      console.log('on')
+    })
+  </script>
+</body>
+</html>
