@@ -1,9 +1,2 @@
 <!--pages/form/form.wxml-->
-<button	open-type="contact" bindcontact="bindcontact">打开客服会话</button>
-<button	open-type="share">share</button>
-<button	open-type="getPhoneNumber" bindgetphonenumber="handlePhone">getPhoneNumber</button>
-<button	open-type="getUserInfo" bindgetuserinfo="handleUserInfo">getUserInfo</button>
-<button	open-type="launchApp">launchApp</button>
-<button	open-type="openSetting">openSetting</button>
-<button	open-type="feedback">feedback</button>
-<button	open-type="chooseAvatar">chooseAvatar</button>
+<text>pages/form/form.wxml</text>
