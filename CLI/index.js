@@ -102,8 +102,10 @@ program.version(Version, '-v, --version')
       promptList
     ).then(answers => {
       spinner.start()
-      download('https://gitee.com/summer0606/vue2-template.git', projectName, (err) => {
+      //此处必须是gitlab和github项目
+      download('github:tianzhu1992/blocks-admin-vue', projectName, (err) => {
         spinner.succeed()
+        console.log('下载完成。。。')
         const { fullName, shortName, router } = answers
 
         // 设置package.json的名称与版本号
