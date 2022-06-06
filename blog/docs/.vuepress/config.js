@@ -1,10 +1,3 @@
-/*
- * @Autor: yangjin
- * @Date: 2021-09-16 09:32:10
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-04-18 09:57:35
- * @Description: 
- */
 const path = require('path')
 const webpack = require('webpack')
 // const { slugify } = require('./utils')
@@ -34,28 +27,74 @@ module.exports = {
     displayAllHeaders: true,
     nav: [
       {
-        text: 'Home', link: '/',
+        text: 'study', link: '/'
+      },
+      {
+        text: 'study', link: '/study/',
         items: [
-          { text: 'one', link: '/first/' }
+          { text: 'es6', link: '/study/es6/' },
+          { text: 'ts', link: '/study/ts/' },
+          { text: 'vue3', link: '/study/vue3/' }
         ]
       },
-      { text: 'ts', link: '/ts/' },
-      { text: 'vue3', link: '/vue3/' }
+      {
+        text: 'Home', link: '/interview/',
+        items: [
+          { text: 'js', link: '/interview/js/' },
+          { text: 'vue2', link: '/interview/vue2/' },
+          { text: 'node', link: '/interview/node/' }
+
+        ]
+      },
+      { text: 'tools', link: '/tools/' }
     ],
     sidebar: {
-      '/first/': [
+      '/interview/js/': [
         {
-          title: 'first',
           collapsable: false,
           children: [
-            ['', '快速'],
             'js',
-            'autoArticle',
-            'autoOption'
           ]
         }
       ],
-      '/ts/': [
+      '/interview/vue2/': [
+        {
+          title:'VUE2',
+          collapsable: false,
+          children: [
+            '01comp',
+            '02ifFor',
+            '03keepalive',
+            '04lifeCycle',
+            '05computedWatch',
+            '06SPA_MPA',
+            '07v-model',
+            '08mixin',
+            '09ArrayChange',
+          ]
+        }
+      ], 
+      '/interview/node/': [
+        {
+          collapsable: false,
+          children: [
+            ['', 'node'],
+            '01',
+          
+          ]
+        }
+      ],
+      '/study/es6/': [
+        {
+          title: 'ES6',
+          collapsable: false,
+          children: [
+            ['', '介绍'],
+            '01base',
+          ]
+        }
+      ],
+      '/study/ts/': [
         {
           title: 'Typescript',
           collapsable: false,
@@ -73,17 +112,25 @@ module.exports = {
           ]
         }
       ],
-      '/vue3/': [
+      '/study/vue3/': [
         {
           collapsable: false,
           children: [
-            ['', 'vue3变化'],
+            '01init',
+            '02change'
           ]
         }
-      ],
-      // fallback
-      '/': [
-        ''        /* / */
+      ], 
+      '/tools/': [
+        {
+          collapsable: false,
+          children: [
+            'git',
+            'regRex',
+            'autoArticle',
+            'autoOption'
+          ]
+        }
       ]
     }
   },

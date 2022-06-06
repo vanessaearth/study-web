@@ -1,0 +1,16 @@
+@mixin horVerCenter($direction: initial) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin horCenter {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin verCenter {
+  display: flex;
+  align-items: center;
+}

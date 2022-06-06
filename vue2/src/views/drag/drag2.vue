@@ -1,10 +1,4 @@
-<!--
- * @Autor: yangjin
- * @Date: 2021-09-07 11:35:06
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-02-21 09:49:39
- * @Description:拖拽
--->
+
 <template>
   <div class="wrapper">
     <div>
@@ -12,7 +6,7 @@
 
       <div class="leader">
         班长:
-        <vuedraggable  @start="start2"
+        <Draggable  @start="start2"
             @add="add2"
             @update="update2"
             @end="end2"
@@ -23,13 +17,13 @@
             :list="arr2" :sort="false" :group="{ name: 'child',pull:false, put:classLeaderPut(arr2) }">
           <div class="item leverSecond" v-for="it in arr2" :key="it.id">
             {{ it.id }}
-            <el-button @click="deleteLeader(arr2)">delete</el-button>
+            <ElButton @click="deleteLeader(arr2)">delete</ElButton>
           </div>
-        </vuedraggable>
+        </Draggable>
       </div>
         <div class="leaderSub">
        副班长：
-        <vuedraggable
+        <Draggable
           @start="start2"
             @add="add2"
             @update="update2"
@@ -42,7 +36,7 @@
           <div class="item leverSecond" v-for="it in arr3" :key="it.id">
             {{ it.id }}delete
           </div>
-        </vuedraggable>
+        </Draggable>
       </div>
 
       <div>
@@ -58,7 +52,7 @@
         </div>
         <div>
           组长：
-          <vuedraggable
+          <Draggable
            @start="start"
            @unchoose="unchoose"
             :list="item.leader"
@@ -72,11 +66,11 @@
               :key="it.id"            >
               {{ it.id }}
             </div>
-          </vuedraggable>
+          </Draggable>
         </div>
          <div>
           副组长：
-          <vuedraggable
+          <Draggable
            @start="start"
            @unchoose="unchoose"
             :list="item.leaderSub"
@@ -90,11 +84,11 @@
               :key="it.id"            >
               {{ it.id }}
             </div>
-          </vuedraggable>
+          </Draggable>
         </div>
         <div>
           组员;
-          <vuedraggable
+          <Draggable
             @start="start"
             @add="add"
             @update="update"
@@ -114,7 +108,7 @@
               :key="it.id" >
               {{ it.id }}
             </div>
-          </vuedraggable>
+          </Draggable>
         </div>
       </div>
     </div>
@@ -122,11 +116,11 @@
 </template>
 
 <script>
-import vuedraggable from 'vuedraggable'
+import Draggable from 'vuedraggable'
 import _ from 'lodash'
 export default {
   components: {
-    vuedraggable
+    Draggable
   },
   data () {
     return {

@@ -1,17 +1,12 @@
-<!--
- * @Autor: yangjin
- * @Date: 2021-09-16 09:31:49
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-03-30 17:17:20
- * @Description: 
--->
 # readme
+<!-- toc是目录 -->
+
 [[toc]]
 ---
-title: Blogging Like a Hacker
-lang: en-US
+文字加上下横线
 ---
 https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json
+
 :tada: :100:
 ::: tip
 这是一个提示

@@ -19,6 +19,11 @@ const routes = [
     path: '/drag2',
     name: 'drag2',
     component: () => import(/* webpackChunkName: "drag2" */ '../views/drag/drag2.vue')
+  },
+  {
+    path: '/slot',
+    name: 'slot',
+    component: () => import(/* webpackChunkName: "slot" */ '../views/slot/parent.vue')
   }
 ]
 

@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "element-ui": "^2.15.6",
+    "element-ui": "^2.15.8",
+    "heic2any": "0.0.3",
+    "heic2any_ags": "0.0.4",
+    "normalize.css": "^8.0.1",
+    "nprogress": "^0.2.0",
+    "scss": "^0.2.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuedraggable": "^2.24.3",
@@ -33,11 +38,13 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
     "postcss-import": "^12.0.1",
     "postcss-pxtorem": "^4.0.1",
     "postcss-url": "^8.0.0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^10.2.1",
+    "style-resources-loader": "^1.5.0",
+    "stylelint-scss": "^4.2.0",
     "vue-template-compiler": "^2.6.11"
   }
 }

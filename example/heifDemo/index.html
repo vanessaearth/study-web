@@ -1,0 +1,36 @@
+<!--
+ * @Autor: yangjin
+ * @Date: 2022-04-28 10:10:06
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-04-28 15:36:03
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/libde265-selector.js"></script>
+  <script src="js/heif-api.js"></script>
+  <script src="js/heif-extension.js"></script>
+  <script src="js/hevc-decoder.js"></script>
+  <script src="js/image-provider.js"></script>
+  <script src="js/libde265-ie.js"></script>
+  <script src="js/libde265.min.js"></script>
+</head>
+<body>
+  <img src="./img/1.heic" alt="" style="width:100px;height:100px">
+  <!-- <img src="./img/meal2_16510373628460.heic" alt="" style="width:100px;height:100px" >
+  <img src="./img/meal3_16510553009880.heic" alt="" style="width:100px;height:100px" >
+  <img src="./img/meal9_16510374250820.heic" alt="" style="width:100px;height:100px" > -->
+  <script>
+    let img=new Image()
+    img.src='./img/1.heic'
+    img.onload=function(e){
+      console.log(e)
+    }
+  </script>
+</body>
+</html>

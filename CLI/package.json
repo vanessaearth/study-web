@@ -21,6 +21,7 @@
     "validate-npm-package-name": "^4.0.0"
   },
   "bin": {
-    "cli": "index-cli"
+    "cli": "index-cli",
+    "cli-build": "cli-build"
   }
 }

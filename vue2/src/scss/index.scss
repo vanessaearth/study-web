@@ -1,0 +1,66 @@
+@import './function';
+@import './mixin';
+@import './normal';
+
+@import '~nprogress/nprogress.css';
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+// 居中样式
+.hor-ver-venter {
+  @include horVerCenter;
+}
+
+.column-hor-ver-venter {
+  @include horVerCenter(column);
+}
+
+.hor-center {
+  @include horCenter;
+}
+
+.ver-center {
+  @include verCenter;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.txt-blue {
+  color: #409eff;
+}
+
+.txt-orange {
+  color: #E6A23C
+}
+
+.txt-red {
+  color: #F56C6C
+}
+
+.txt-green {
+  color: #67C23A
+}
+
+.txt-blue {
+  color: #409eff
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.action-col {
+  .el-button {
+    margin: 3px;
+  }
+}
