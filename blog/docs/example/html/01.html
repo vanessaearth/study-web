@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #333;
+      padding: 0.5rem 0.75rem;
+      vertical-align: middle;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="box">我的猫咪</p>
+  <table>
+    <caption>表格标题,caption</caption>
+    <colgroup>
+      <col>
+      <col style="background-color: yellow;border:1px solid red">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Data 1</th>
+        <th>Data 2</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>Calcutta</td>
+        <td rowspan="2">Orange</td>
+      </tr>
+      <tr>
+        <td>Robots</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="2">table-footer</td>
+      </tr>
+
+    </tfoot>
+  </table>
+  <div draggable="true" class="box" ondrag="drag1" ondragstart="dragStart">drag</div>
+  <div draggable class="box">drag2</div>
+  <textarea cols="5"></textarea>
+  <div id="drop_zone" ondrop="dropHandler(event);">
+    <p>Drag one or more files to this Drop Zone ...</p>
+  </div>
+  <div ondragover="return false">111111111111</div>
+    <div ondragover="event.preventDefault()">22222222222</div>
+  <script>
+    function drag1() {
+      console.log('drag1')
+    }
+    function dragOverHandler(ev) {
+      console.log('File(s) in drop zone');
+
+      // Prevent default behavior (Prevent file from being opened)
+      ev.preventDefault();
+    }
+    function dragStart(){
+      console.log('dragStart')
+
+    }
+    function test(){
+      console.log('test1..')
+    }
+    function test2(){
+      console.log('test222..')
+    }
+    test()
+  </script>
+</body>
+
+</html>

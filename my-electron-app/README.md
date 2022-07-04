@@ -24,3 +24,6 @@ npm start
  1.将 Electron Forge 添加到您应用的开发依赖中，并使用其"import"命令设置 Forge 的脚手架：
  npm install --save-dev @electron-forge/cli
 npx electron-forge import
+
+
+html写元素，render中获取元素，调用preload中方法，main监听preload方法

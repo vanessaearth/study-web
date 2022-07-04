@@ -28,3 +28,9 @@ contextBridge.exposeInMainWorld('darkMode', {
   toggle: () => ipcRenderer.invoke('dark-mode:toggle'),
   system: () => ipcRenderer.invoke('dark-mode:system')
 })
+contextBridge.exposeInMainWorld('electorAPI',{
+  setTitle:(title)=>ipcRenderer.send('set-title',title),
+  openFile: ()=>ipcRenderer.invoke('dialog:openFile'),
+  onUpdateCounter:(cb)=>ipcRenderer.on('update-counter',cb)
+})
+

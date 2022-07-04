@@ -71,6 +71,18 @@ module.exports = {
             '07v-model',
             '08mixin',
             '09ArrayChange',
+            '10extend',
+            '11stream',
+            '12Auth',
+            '13VDom',
+            '14mvvm',
+            '15diff',
+            '16vue3new',
+            '17route',
+            '18key',
+            '19nexttick',
+            '20vuex',
+            '21project',
           ]
         }
       ], 

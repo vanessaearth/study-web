@@ -24,6 +24,10 @@ const routes = [
     path: '/slot',
     name: 'slot',
     component: () => import(/* webpackChunkName: "slot" */ '../views/slot/parent.vue')
+  }, {
+    path: '/diff',
+    name: 'diff',
+    component: () => import(/* webpackChunkName: "diff" */ '../views/diff/diff.vue')
   }
 ]
 

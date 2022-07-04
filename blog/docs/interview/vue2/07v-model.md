@@ -39,7 +39,7 @@ v-model用在组件上：
 </script>
 ```
 
-2. v-model和sync修饰符有什么区别
+**2. v-model和sync修饰符有什么区别**
 sync的监听属性更新方法时固定的@update:var
 ```html
 <!-- 父组件 -->
@@ -59,4 +59,5 @@ sync的监听属性更新方法时固定的@update:var
  </script>
  ```
 
- 
+
+

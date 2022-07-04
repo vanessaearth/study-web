@@ -17,6 +17,8 @@
     "commit-msg": "node ./verifyCommit.js"
   },
   "devDependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "node-fetch": "^3.2.6",
     "yorkie": "^2.0.0"
   },
   "dependencies": {

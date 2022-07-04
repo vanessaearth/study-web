@@ -1,0 +1,185 @@
+{
+  "courseName": "react ssr",
+  "section": [
+    {
+      "name": "react ssr-1-1-01-训练营开始",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842881916108800/lud/a536625bafa34259b00e05549755a4c2.m3u8?MtsHlsUriToken=1989413f5bfd4f19ac153643d39b8f00d0e75ef9305945fc980c69a95669aef8"
+    },
+    {
+      "name": "react ssr-1-2-ssr-camp.zip",
+      "url": "https://res.kaikeba.com/other/123/20200804161047-72471/FiK6YNAGMsZ_gr6xALYpgaFzfKhZ.zip",
+      "type": "download"
+    },
+    {
+      "name": "react ssr-2-1-02-同构应用架构讲解",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842881917419520/lud/656870e3a7864e188f4b61819bfce5ef.m3u8?MtsHlsUriToken=705fb98575354fdd9ba638e258d8c089459a9b17ea904e7ca382c6c7bb5cfdca"
+    },
+    {
+      "name": "react ssr-3-1-03-ssr环境搭建",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842881919516672/lud/66c3374e9fb647ada333ebc7e625bbf2.m3u8?MtsHlsUriToken=69f02089ddad433fa569b74e131029d09f179e6d59b5479892e7dd8c1e13665a"
+    },
+    {
+      "name": "react ssr-4-1-04-renderToString实现服务端渲染",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842881914535937/lud/06178a3c46a442d9926898e879535d60.m3u8?MtsHlsUriToken=f1c99308d7db46ee9172c10d8fb668878fea4ad6b9cc4e17b94f8ce4e92463e0"
+    },
+    {
+      "name": "react ssr-5-1-05-实现hooks累加器的同构应用",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842881914503171/lud/6b6ebdf4989d48b8971b851d67047146.m3u8?MtsHlsUriToken=ab6096c3c0ed4bf8ad37ea882264e262c428ffb2880543139d5212c28b8febba"
+    },
+    {
+      "name": "react ssr-6-1-06-使用concurrent提升开发体验",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884453629953/lud/6eb483f3e1f540879bcda90f7e4a3b3b.m3u8?MtsHlsUriToken=3f5e420ec4fd498f8fb043a014db52de1f3e2179e9894b2c8e532fe4d564e9c7"
+    },
+    {
+      "name": "react ssr-7-1-07-ssr支持路由",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884453990400/lud/b40d4e4e508d46b09fa589434c221bc0.m3u8?MtsHlsUriToken=688a6c5e45eb4e41bbf223a6c8bc7fbe311edd6e920d433b902e25fce080e302"
+    },
+    {
+      "name": "react ssr-8-1-08-使用StaticRouter支持多页面ssr",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884453629956/lud/46f9ffa975c441f490f07a5c2e94b6f4.m3u8?MtsHlsUriToken=16c9325cbff2495d9dd908009a9b7726e23376e21c5947efa880ae45f05b45ed"
+    },
+    {
+      "name": "react ssr-9-1-09-ssr支持数据流",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884454449152/lud/8bbfaa2c4dd244278fc84dcd10e3970c.m3u8?MtsHlsUriToken=19c34c676b024aeab451046b39bd26337762cd2740e64d2d9b6df28cb986d8f1"
+    },
+    {
+      "name": "react ssr-10-1-10-redux同构支持",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884454187008/lud/ff616cb0283f45c4bc3ea7c847241869.m3u8?MtsHlsUriToken=e1d5c52737bb432dafa65f39341207ca01366f0c32e14dcab0ae3f0e54cd495d"
+    },
+    {
+      "name": "react ssr-11-1-11-异步获取数据思路",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884523917313/lud/628d68af11544a7c9ead19f37341d881.m3u8?MtsHlsUriToken=bb1c9f6fb1734ae395071be0a3d31d89f6126010df6e48ad9c78ca2a3f722b03"
+    },
+    {
+      "name": "react ssr-12-1-12-server层实现数据获取",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884524408835/lud/56abdc8e7c1841ac950acdb2e5fff66d.m3u8?MtsHlsUriToken=8b6d24417bff4f87b9c4e5ea1a8b81c6ba76f977726444b1978ba5d938dfc25b"
+    },
+    {
+      "name": "react ssr-13-1-13-客户端获取context数据渲染",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884524965888/lud/c0bafa4c71df4730a44e2206937e5f7c.m3u8?MtsHlsUriToken=1688db09878e462da1ae47f2b0370d19cbd0312d06ed4a6ab0856b6aaf888122"
+    },
+    {
+      "name": "react ssr-14-1-14-前后端统一数据请求",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884525457409/lud/14d87883d94b4d2e9ca0ecb276eb1cc9.m3u8?MtsHlsUriToken=1e91816769014365aa3826cbe0bf18b842c5ee2adccc45efb82a3c722b1f623d"
+    },
+    {
+      "name": "react ssr-15-1-15-User页面多个数据获取报错处理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884525752321/lud/dc8c5fa98d844ab18aa7f2d292b90773.m3u8?MtsHlsUriToken=097d81eccf7b45bcaece5fe9b9e593b9e2166d6acc194b4a86bfccebb5a9ce58"
+    },
+    {
+      "name": "react ssr-16-1-16-作业",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884525490178/lud/7e33ddee0f58452ca51ba7865164416c.m3u8?MtsHlsUriToken=a3df2c06dd2340b58a269031c182a6a9462a8e5185cf44c6b312c639bb4874f3"
+    },
+    {
+      "name": "react ssr-17-1-17-promise处理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884644995074/lud/7d874f1b3ede4b60b91fa941042c68e7.m3u8?MtsHlsUriToken=5fbf629e96bc453984d2e8fde054da8d6fa89f41907d4201bb06d94c6f3aa9ba"
+    },
+    {
+      "name": "react ssr-17-2-ssr-camp.zip",
+      "url": "https://res.kaikeba.com/other/123/20191218153131-78963/FiKhyHYXj-vnglW7_ytZJYeqCanJ.zip",
+      "type": "download"
+    },
+    {
+      "name": "react ssr-18-1-18-axios代理实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884645814273/lud/9f1ae1cbcf9742dcb973813ee767a9d7.m3u8?MtsHlsUriToken=8c2cfd0d751e4290b036bcfc395b254a435b7d0ac4ee44ef9333c0b43801dc4a"
+    },
+    {
+      "name": "react ssr-19-1-19-图标处理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884645552130/lud/3927c19fb229440aa49f986b445b7448.m3u8?MtsHlsUriToken=2f28585ca1fe49db9059f5edd4d7867effe51b036d1147268ab29bfbfe8047f4"
+    },
+    {
+      "name": "react ssr-20-1-20-css支持",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884646043649/lud/6e44fef977cd4cdeb0d3fe1b887778bb.m3u8?MtsHlsUriToken=4f5b37581c57442a854566f0d9e6bb2f85c42ffcc6af4d17997e9e084608bf62"
+    },
+    {
+      "name": "react ssr-21-1-21-错误页面状态吗支持",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884646338561/lud/06279c8d113c4746819c56b85ab932de.m3u8?MtsHlsUriToken=5cecb57aa3484092ac96e776e49523c662aa2e9dad9140fcb7eaf2a7431a9b54"
+    },
+    {
+      "name": "react ssr-22-1-22-服务层面性能优化",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884690116609/lud/a01c93f10f644bf3b75195bf6cec24ba.m3u8?MtsHlsUriToken=511788d8503d4b669d76c523195f9e888249a28b1cdf44faa0db6aaf98920444"
+    },
+    {
+      "name": "react ssr-23-1-23-放弃seo的降级渲染实现优化",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884690083842/lud/a607c645151c40669198cd8c5578f405.m3u8?MtsHlsUriToken=7f9ded191f2c4bab88cfb1cb17931590bb3919e9bfd74cdfb4ad4088d5d88cc7"
+    },
+    {
+      "name": "react ssr-24-1-24-降级渲染实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884690083843/lud/e3944d24b3a24ec7bc4fd20b3ad7d456.m3u8?MtsHlsUriToken=010a38d00b574ed0ae6d6b53b81d714efd2f1c74faf34ebebd838bae237cf6ef"
+    },
+    {
+      "name": "react ssr-25-1-25-css细节优化",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884690083844/lud/ac8533789ca945409300645e6c73188d.m3u8?MtsHlsUriToken=398cfa822c284f04811f4a21ebbd20fbce6a8a9cde1446b6a6c9b1662fe2365d"
+    },
+    {
+      "name": "react ssr-26-1-26-高阶组件优化css",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842884690968577/lud/c3be0c50e82048169171b24c6e2a4c75.m3u8?MtsHlsUriToken=c5838332b25f45ae90de5cb253713520dcd68a998b4e4d0381bf91614b9b0168"
+    },
+    {
+      "name": "react ssr-27-1-27-withStyle问题修正",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885023039491/lud/38cf5eff733d41a0b2020278be45bcd7.m3u8?MtsHlsUriToken=c82c0464ed6e44fd9eb88276fc764616d50d74d6ef864002afa8ea422d379846"
+    },
+    {
+      "name": "react ssr-28-1-28-ssr其他实现思路介绍",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885022777349/lud/a5ffcf35a53546da8da374275155306a.m3u8?MtsHlsUriToken=89756f8ddd5c4d1ea1b452b1624598d5488f2146a5b14e9f9d1922025c7c10b9"
+    },
+    {
+      "name": "react ssr-29-1-29-01puppeteer实现ssr",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885023367168/lud/7b3ed9e398e849b4bd84fe3d1bd958e0.m3u8?MtsHlsUriToken=e81f159fc6d74c4fb3a03ab5c4dfea399b40fb1d4eb3497da61b8a404ab55704"
+    },
+    {
+      "name": "react ssr-29-2-29-02",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885023891456/lud/b890d63856774a6591ba08bf460167ae.m3u8?MtsHlsUriToken=86c85f04657c472991c31b1bf98f048639929f4fe8f64bf9b91114006a30b580"
+    },
+    {
+      "name": "react ssr-29-3-29-3 puppeteer实现ssr",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885023531010/lud/8d0f41fd75d94a3ea8450c3ce9a065da.m3u8?MtsHlsUriToken=0a5e8a69b42341078d40443bff8612c79ee06726fb964fc48061e26795e8bb19"
+    },
+    {
+      "name": "react ssr-30-1-30-作业布置",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885023301632/lud/08ad459b2d824b88959376f296c0aa73.m3u8?MtsHlsUriToken=75de64b9e4af474d9cf788bd001dfd3ff58e84a8adfa4c2089119025db8b23b9"
+    },
+    {
+      "name": "react ssr-31-1-总结",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842895671066624/lud/256970bbf0ac4d3b9dcefdf9c21dcafb.m3u8?MtsHlsUriToken=012c6fc64d7c454a88e08a2b357f36bb07639068deb64fe4b763195a60a777ed"
+    },
+    {
+      "name": "react ssr-32-1-ssr总结",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885244026880/lud/486d3e7a1b7045fe839da7de46410577.m3u8?MtsHlsUriToken=e7f63553b5e344b8825100da2cc8a818bae44354354e483191f93cb511953424"
+    }
+  ]
+}

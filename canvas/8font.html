@@ -28,52 +28,110 @@
         ctx.lineTo(600, 150)
         ctx.stroke()
         ctx.font = 'bold 20px serif'
-        // 文字对齐方式left左边 start起始位置 right end center
-        // 对应从右边往左边写的文档，start和left不一样
-        ctx.textAlign = 'left'
-        ctx.fillText('好好学习', 300, 50)
-
-        ctx.textAlign = 'start'
-        ctx.fillText('好好学习', 300, 70)
-
-        ctx.textAlign = 'right'
-        ctx.fillText('好好学习', 300, 90)
-
-        ctx.textAlign = 'end'
-        ctx.fillText('好好学习', 300, 110)
-
-        ctx.textAlign = 'center'
-        ctx.fillText('好好学习', 300, 130)
-      /**
-       * textBaseLine，
-        top上对齐，
-        middle垂直对齐，
-        bottom下对其 
-        hanging悬挂基线对齐，
-        alphabetic标准字母极限对齐，默认，
-        ideigraphic表易文字基线
-      */
-        ctx.textAlign = 'left'
-
-        ctx.textBaseline = 'top'
-        ctx.fillText('top', 50, 150)
         ctx.textBaseline = 'middle'
-        ctx.fillText('middle', 100, 150)
-        ctx.textBaseline = 'bottom'
-        ctx.fillText('bottom', 160, 150)
-        ctx.textBaseline = 'alphabetic'
-        ctx.fillText('hanging', 240, 150)
-        ctx.textBaseline = 'hanging'
-        ctx.fillText('alphabetic', 350, 150)
-        ctx.textBaseline = 'ideigraphic'
-        ctx.fillText('ideigraphic', 500, 150) 
 
-        const text='好好学习'
-        ctx.fillText(text, 50, 200, 80)
-        let measure=ctx.measureText(text)
-console.log(measure);
+        // // 文字对齐方式left左边 start起始位置 right end center
+        // // 对应从右边往左边写的文档，start和left不一样
+        // ctx.textAlign = 'left'
+        // ctx.fillText('好好学习', 300, 50)
 
+        // ctx.textAlign = 'start'
+        // ctx.fillText('好好学习', 300, 70)
 
+        // ctx.textAlign = 'right'
+        // ctx.fillText('好好学习', 300, 90)
+
+        // ctx.textAlign = 'end'
+        // ctx.fillText('好好学习', 300, 110)
+
+        // ctx.textAlign = 'center'
+        // ctx.fillText('好好学习', 300, 130)
+        /**
+         * textBaseLine，
+          top上对齐，
+          middle垂直对齐，
+          bottom下对其 
+          hanging悬挂基线对齐，
+          alphabetic标准字母极限对齐，默认，
+          ideigraphic表易文字基线
+        */
+        // ctx.textAlign = 'left'
+
+        // ctx.textBaseline = 'top'
+        // ctx.fillText('top', 50, 150)
+        // ctx.textBaseline = 'middle'
+        // ctx.fillText('middle', 100, 150)
+        // ctx.textBaseline = 'bottom'
+        // ctx.fillText('bottom', 160, 150)
+        // ctx.textBaseline = 'alphabetic'
+        // ctx.fillText('hanging', 240, 150)
+        // ctx.textBaseline = 'hanging'
+        // ctx.fillText('alphabetic', 350, 150)
+        // ctx.textBaseline = 'ideigraphic'
+        // ctx.fillText('ideigraphic', 500, 150)
+
+        const text = '那天，表哥表姐打扮得很漂亮，听说他们准备到河边去对歌。到了河边，哇，人满为患！男男女女，数不胜数，这边唱来，对面又唱，彼此对歌。好不热闹！看完对歌，妈妈又带我去玩竹竿舞，居然有上千人玩，我一学就会。'
+        let measure = ctx.measureText(text)
+        console.log(measure);
+        textPrewrap(ctx, text, 20, 10, 20, 400, 50)
+        let drawY=240
+        let lastLine=0
+        wrapText2(ctx, text, 20, drawY, 20, 400)
+        //把文字全部画出来
+        function wrapText2(ctx, text, x, y, lineHeight, maxWidth,) {
+            var lineTxt = '';
+            for (var n = 0; n < text.length; n++) {
+                var drawTxt = lineTxt + text[n];
+                console.log(drawTxt)
+                if (ctx.measureText(drawTxt).width > maxWidth && n > 0) {
+                    ctx.fillText(lineTxt, x, y);
+                    lineTxt = text[n];
+                    y += lineHeight;
+                } else {
+                    lineTxt = drawTxt;
+                }
+            }
+            ctx.fillText(lineTxt, x, y);
+            lastLine=y
+        };
+       console.log(lastLine,'===')
+        const img = new Image()
+        img.src = './img/cat2.jpg'
+        img.onload = function(){
+            ctx.drawImage(img, 0, lastLine+20,100,100)
+        }
+      
+        // 文字最多显示多少行，最后一行省略显示
+        function textPrewrap(ctx, text, drawX, drawY, lineHeight, lineMaxWidth, lineNum) {
+            var drawTxt = ''; // 当前绘制的内容
+            var drawLine = 1; // 第几行开始绘制
+            var drawIndex = 0; // 当前绘制内容的索引
+
+            // 判断内容是否可以一行绘制完毕
+            if (ctx.measureText(text).width <= lineMaxWidth) {
+                ctx.fillText(text.substring(drawIndex, i), drawX, drawY);
+            } else {
+                for (var i = 0; i <= text.length; i++) {
+                    drawTxt += text[i];
+                    if (ctx.measureText(drawTxt).width > lineMaxWidth) {
+                        if (drawLine === lineNum) {
+                            // 最后一行添加省略号
+                            ctx.fillText(text.substring(drawIndex, i) + '...', drawX, drawY);
+                            break;
+                        } else {
+                            // 不是最后一行的情况
+                            ctx.fillText(text.substring(drawIndex, i + 1), drawX, drawY);
+                            drawIndex = i + 1;  // 记录当前行最后一个字符串的下一个idnex，用于绘制下行第一个字
+                            drawLine += 1;  // 行数+1
+                            drawY += lineHeight; // 绘制内容的y坐标对应增加行高
+                            drawTxt = ''; // 重置绘制的内容
+                        }
+                    }
+                }
+                ctx.fillText(text.substring(drawIndex, i), drawX, drawY);
+
+            }
+        }
     </script>
 </body>
 
