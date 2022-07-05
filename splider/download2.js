@@ -54,7 +54,7 @@ async function start(){
   if(data.section.length){
     const item = data.section.shift()
     const p1 = path.resolve(__dirname,name,String(i).padStart(3,'0')+item.name)
-    console.log('file-name', item.name)
+    console.log('file-name:', item.name)
 
     fs.access(p1 + '.mp4', fs.constants.F_OK,async (err) => {
       if (err) {
@@ -65,7 +65,9 @@ async function start(){
         }else if(item.type==="video"){
           let per = 0
           ffmpeg(item.url).outputOptions([])
-            .on('start',str=>console.log('start',str))
+            .on('start',str=>{
+              console.log('\x1B[31m开始：\x1B[0m',str)
+            })
             .on('progress',async (progress)=>{
               if(progress.percent-per>10){
                 console.log(progress.percent,'%')
@@ -74,7 +76,7 @@ async function start(){
 
             })
             .on('end',str=>{
-              console.log('结束',new Date().Format('yyyy-MM-dd HH:mm:ss'))
+              console.log('\x1B[33m%s\x1b[0m:', `结束: ${new Date().Format('yyyy-MM-dd HH:mm:ss')}`);
               start()
             })
             .on('error',(err, stdout, stderr)=>{
