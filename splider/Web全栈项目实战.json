@@ -1,0 +1,260 @@
+{
+  "courseName": "Web全栈项目实战",
+  "section": [
+    {
+      "name": "Web全栈项目实战-1-1-01-项目简介",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885495947265/lud/be353791c465465e83e4164c89339c39.m3u8?MtsHlsUriToken=ffae58196cc24be692f21a23afedfee4a928e902026746b19fff040e7dfe8749"
+    },
+    {
+      "name": "Web全栈项目实战-1-2-project-demo-master.zip",
+      "url": "https://res.kaikeba.com/other/123/20200803142238-97579/FiU9V-GjMgV7dh4sWP3uuQCyBTpU.zip",
+      "type": "download"
+    },
+    {
+      "name": "Web全栈项目实战-2-1-02-上传文件知识点",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885496471552/lud/9c59f3ddc85641d7918560781257a26d.m3u8?MtsHlsUriToken=9e3ed9afac984b73bf006d623bb833bad27a2e41a55e45059c03a23aaa452305"
+    },
+    {
+      "name": "Web全栈项目实战-3-1-03-断点续传",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885496733696/lud/c559283719444c6f9a30756b0f4de951.m3u8?MtsHlsUriToken=88ee7d50dac04916afc72f1c435248fcbc3fed0def574ab18d650fa33b564f69"
+    },
+    {
+      "name": "Web全栈项目实战-4-1-04-大文件指纹计算(参考react源码和web-worker)",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885496438784/lud/0f68c34697e043bf9cc483c562c18dfc.m3u8?MtsHlsUriToken=c9ffa35dd1234946a1da5344c460dd8815f6166dbd1e4085a7b8186e203ae075"
+    },
+    {
+      "name": "Web全栈项目实战-5-1-05-并发数控制逻辑",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842885496799232/lud/908147e03d20420b8bc287c23790e9a6.m3u8?MtsHlsUriToken=57b4e7f160cf4ff7a6fb8cfaf4716a800e662ee666da4eb28865368ba61f9170"
+    },
+    {
+      "name": "Web全栈项目实战-6-1-06-项目搭建",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886157860864/lud/07b85888b31141c4bb46734b089616fe.m3u8?MtsHlsUriToken=e276245a1ec74c829eeb6f69db00152e9628e2acb5514d9a8d0596161c2abf91"
+    },
+    {
+      "name": "Web全栈项目实战-7-1-07-代码规范+husky设置",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886157926405/lud/42bca8ce51aa459ba246f05d0da7ce8e.m3u8?MtsHlsUriToken=ad122aa81b624b2fadc7f42c394d9dc682e188da282f444b99260277f65b2480"
+    },
+    {
+      "name": "Web全栈项目实战-8-1-08-sessin和jwt架构介绍",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886158123008/lud/d5de865c72744daa8e6366b1b9e243db.m3u8?MtsHlsUriToken=e207bfa3e9f848f5a260e9f4f845344ca433bd87601e4928bb035313b6170254"
+    },
+    {
+      "name": "Web全栈项目实战-9-1-09-登录验证码功能",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886158123009/lud/8d72dbb4244f467fa0fb0bc483e33a36.m3u8?MtsHlsUriToken=cb7b89d8ab4049f78083b13db74898d0609ed9e07f1248ba8585f111aafd93e4"
+    },
+    {
+      "name": "Web全栈项目实战-10-1-10-图片验证码实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886158909442/lud/d9dc5f26745846d39488c43eaf2448cd.m3u8?MtsHlsUriToken=d68d7d05602c4374a90bf0c16d46e211779297c15aa142caa5307e35d7cf130f"
+    },
+    {
+      "name": "Web全栈项目实战-11-1-11-注册表单",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886159138818/lud/8fedbefca8b04bdcaf6da1112e98ba7b.m3u8?MtsHlsUriToken=df50d08d8ecd41bf85c5fb7f373f448b457e368e285c400b986d893e1349b0ee"
+    },
+    {
+      "name": "Web全栈项目实战-12-1-12-注册功能实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886159138819/lud/246a9baa44d84c468fef3deb61678c90.m3u8?MtsHlsUriToken=b92dc9d27ffb4495bd2341f4dc4bfad26d91bca94d124c838aa0c19d200619e7"
+    },
+    {
+      "name": "Web全栈项目实战-13-1-13-axios配置",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886159138816/lud/3106c197e27e4b189223e3705837a23a.m3u8?MtsHlsUriToken=eaea4e0a6f874a0a8697937b0cd50aff71552cc94c024f6c9f16d9aa350b1091"
+    },
+    {
+      "name": "Web全栈项目实战-14-1-14-eggjs规范指定",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886159695872/lud/8aa11962fe97433b84d24cea0d423038.m3u8?MtsHlsUriToken=fe7af447be484953ba5310aee8e5bc80f390ed04a5d84dcf8b6991cd6d221c30"
+    },
+    {
+      "name": "Web全栈项目实战-15-1-15-注册实现-01",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886160023553/lud/e973f75d62c54aaa888fa7125c41568b.m3u8?MtsHlsUriToken=b2e0ead3c6714a138651351c89a04ae56a1f57bb5b1b4646a79bfe6f1d7cc723"
+    },
+    {
+      "name": "Web全栈项目实战-16-1-16-数据入库+mongodb",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886160482304/lud/740cdcf131c243959e9397f25c487723.m3u8?MtsHlsUriToken=504eb7c8cad84fd79cfa533df8f095e794cf1ba524af40578179bf0448cec33f"
+    },
+    {
+      "name": "Web全栈项目实战-17-1-17-登录认证",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886162317313/lud/b1924189e1604b8f8bba200e8c8f85e6.m3u8?MtsHlsUriToken=fd619ac73bfd4674a9e577fa231ea92fcb1da49e72384d69b75eed96a72973bd"
+    },
+    {
+      "name": "Web全栈项目实战-18-1-18-发送邮件验证码",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886425313282/lud/c4180acba5934ad8b3f4dceee9bf5a5e.m3u8?MtsHlsUriToken=08744853189f4c8c9c841b6224b12d6c66cd25047c334461b5109c75626386c8"
+    },
+    {
+      "name": "Web全栈项目实战-19-1-19-登录验证码认证",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886424985603/lud/890cfb48f3a04f69a28ba02ff637d45e.m3u8?MtsHlsUriToken=d40f1d41a2c74b73b023eacd0e2cadd48546a83e55c94bd5a2627fb2e788dc0d"
+    },
+    {
+      "name": "Web全栈项目实战-20-1-20-axios管理token认证",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886425477120/lud/4986fa0340c84b1cb05aef7ddfcb2f55.m3u8?MtsHlsUriToken=41abcdd0541c4989b75683f14c2c684d506ef6412faa411da74b2fe03aaa7a93"
+    },
+    {
+      "name": "Web全栈项目实战-21-1-21-图片上传0.1版本实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886425772035/lud/23df1ed30dd04de9802932d9b4561757.m3u8?MtsHlsUriToken=8a0bace149b843388230e538db24c1e74808ee94eafe4a848979dc7d4137d711"
+    },
+    {
+      "name": "Web全栈项目实战-22-1-22-文件上传0.2版本，拖拽+进度条",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886426296320/lud/c3177a63a8bd4e65995eb72d40d27c13.m3u8?MtsHlsUriToken=38ef0138183946f3a14140271b85832d78a5d02666b9461a8eb84a49bd757818"
+    },
+    {
+      "name": "Web全栈项目实战-23-1-23-文件上传-二进制信息确认文件格式0.3",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886426296321/lud/73144174ca6f4ff6850738d67f743851.m3u8?MtsHlsUriToken=802a25e93810412e82a6e77c61386015bd84923442714145a1a02574bb3600c4"
+    },
+    {
+      "name": "Web全栈项目实战-24-1-24-文件上传-png和jpg文件类型限制",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886426034178/lud/b1543af782614d628a2df2bcb666ee4e.m3u8?MtsHlsUriToken=caac8559339b4e4194d87f171858a10f244ca3d805e24951b357e09734fd4bd2"
+    },
+    {
+      "name": "Web全栈项目实战-25-1-25-web-worker计算md5值",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886426886144/lud/064a8c7b6a204b5bb6d33a4bec2a3cf0.m3u8?MtsHlsUriToken=f8d2387e60d74ca89a00f18597eaa12c2868ab92a1244a1a8d045437386bcc23"
+    },
+    {
+      "name": "Web全栈项目实战-26-1-26-requestIdleCallback计算文件md5",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886426525696/lud/26685fd1bd3c46a788d4852cb74df15a.m3u8?MtsHlsUriToken=b4d77c26510347d9a5c96b813504433cb3e8dcc603114efdafc9a03f6832e176"
+    },
+    {
+      "name": "Web全栈项目实战-27-1-27-抽样hash计算",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886594854915/lud/2d0693915a7b4cb280c45a559574ab62.m3u8?MtsHlsUriToken=0442ad8be7c6495d93ca4e9143257ea8cea81e021c6b42b18f18b4cde641322b"
+    },
+    {
+      "name": "Web全栈项目实战-28-1-28-切片上传",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886594822145/lud/14bcdb716a874f3da80f154d2253ab1e.m3u8?MtsHlsUriToken=4a217bb304d74a2783e892c4ead32b847dadbfae88644f7a8c6d36169bfe7ce6"
+    },
+    {
+      "name": "Web全栈项目实战-29-1-29-网格进度条",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886596231168/lud/c6d7a7e361c44893b05902aee438e8df.m3u8?MtsHlsUriToken=02a5977f59bb43c8bb05cdcca2848ab76e9be130474d4f78b061279390f419a4"
+    },
+    {
+      "name": "Web全栈项目实战-30-1-30-切片上传后端实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886596165632/lud/2ea0f67559a34fe6b464f73956b39996.m3u8?MtsHlsUriToken=dc8ca3ac0a0c4a4d9f1cceaf05d6835e402b1757d6394e8aaf13bbe2824a0eac"
+    },
+    {
+      "name": "Web全栈项目实战-31-1-31-后端文件合并",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886596231169/lud/dbfc949e40cf4cefbfd32967a4146f2f.m3u8?MtsHlsUriToken=a0608f2f11df4ff48db50703a7b00dc34d342f5c09d942139de4842bf99eae37"
+    },
+    {
+      "name": "Web全栈项目实战-32-1-32-秒传功能实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886809092097/lud/9077cbdfdfdd4f4997fa80043634c7d0.m3u8?MtsHlsUriToken=aaace3fe03fe43f882bb50afd712531dd474da8a978e40018a510d10ef34f4e3"
+    },
+    {
+      "name": "Web全栈项目实战-33-1-33-断点续传",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886809026562/lud/f93420ca0ca74baab49fdad6cd96815e.m3u8?MtsHlsUriToken=89eb0ee1f7934d1fa3f78707d0b868ff53ea8d72968f4d06b70d6fb345b9f5ed"
+    },
+    {
+      "name": "Web全栈项目实战-34-1-34-异步任务控制",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886809092099/lud/7bc009e1f8ed47bbb2ce2cbc60b7c79e.m3u8?MtsHlsUriToken=da8e8586030046cb88242988d579211dc32d702cb04541268691f8d320ed99be"
+    },
+    {
+      "name": "Web全栈项目实战-35-1-35-并发数控制实现（头条藐视提）",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886809288704/lud/4cc038ca704a4c83a20284c20e0521ef.m3u8?MtsHlsUriToken=b56108e3b9664288ad9de3af0e291378923ca66ffcc14795b3fa14b19686f76f"
+    },
+    {
+      "name": "Web全栈项目实战-36-1-36-报错重试+报错次数限制实现",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886809288705/lud/e49c58fd6c3a43aa831dbf0ef648c6e6.m3u8?MtsHlsUriToken=d8c9659c9e2d46eaa283db5807ae8a0cf1413e6ab0184e558bbe10f12d2a8cfb"
+    },
+    {
+      "name": "Web全栈项目实战-37-1-37-新建文章markdown编辑器",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886887735297/lud/79326f0f9a24458ba3e84367bab0a911.m3u8?MtsHlsUriToken=6548e42d08384905b36712e3b99d9fd46ed43856a1a74d06b2d9008ec549fe29"
+    },
+    {
+      "name": "Web全栈项目实战-38-1-38-粘贴和拖拽图片",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886887931904/lud/113787f978b14cecb920b8b23ee032dd.m3u8?MtsHlsUriToken=90bd6727dbed4af689cf099d0623c72b0119665b049649408ee4eb9b802e2e2d"
+    },
+    {
+      "name": "Web全栈项目实战-39-1-39-mared编辑器扩展1-高亮",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886888259584/lud/764a072eb80445bf9b3b7a879552485d.m3u8?MtsHlsUriToken=5cd5601a140e41ecb910e15b936292dc2c5e28b98caf410fa56bf7460b68989a"
+    },
+    {
+      "name": "Web全栈项目实战-40-1-40-文章存储接口",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886888259586/lud/5a04b918ee734f29b2fb6f95d65ec433.m3u8?MtsHlsUriToken=e9123ea3942543f2bc8496201605674cc83fb506da894c5298890161099941cd"
+    },
+    {
+      "name": "Web全栈项目实战-41-1-41-富文本编辑器选型",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842886888259588/lud/722da789f15b460eb8e33c706029fd2c.m3u8?MtsHlsUriToken=0d2b59a9cfff47c7853f5f3985b33ffb4b0d7842c88047f5ab9bc93d85bc0961"
+    },
+    {
+      "name": "Web全栈项目实战-42-1-42-首页布局",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842889576218626/lud/d5395874a6304446b3b49699398df6ab.m3u8?MtsHlsUriToken=9d2a5943af3440a7b204c35e976741fdd7e86449e07e4b80801eeb7f80e8a53a"
+    },
+    {
+      "name": "Web全栈项目实战-43-1-43-虚拟列表实现文章列表",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842889576808449/lud/400dd34688e24deba8e86e04742a656f.m3u8?MtsHlsUriToken=4326912d73b841388ee0e00a85ed8f80ed965f156fe0479c8d1f463b57bad382"
+    },
+    {
+      "name": "Web全栈项目实战-44-1-44-点赞和关注",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842889576808450/lud/fbd45db0b3ab47ff8dbd32e8841e0177.m3u8?MtsHlsUriToken=d7f7b13c9f21493784daca681610b22004e26bc1e5ed4a2aae0b52bef9e6f75d"
+    },
+    {
+      "name": "Web全栈项目实战-45-1-45-文章列表",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842889577332736/lud/d57d510829ac4fcd8cb73820bb5dc457.m3u8?MtsHlsUriToken=15b6fee72080481a96740671127ae766d0934b7956354ab1832cff9b39666b0d"
+    },
+    {
+      "name": "Web全栈项目实战-46-1-彩蛋内容1",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842889583624193/lud/9302d280e56f4dfa933d834783c3e423.m3u8?MtsHlsUriToken=5f8ea180e900468abb29959250128d20eb1245272400424eaf2b79f74cbc939c"
+    },
+    {
+      "name": "Web全栈项目实战-47-1-彩蛋2",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842889585655809/lud/f3392d91246748c1a62f2db52408ea83.m3u8?MtsHlsUriToken=77950128c0fc407ca2caddaeba59c0625c14f725ac94433aa097de2e4c3d57e6"
+    },
+    {
+      "name": "Web全栈项目实战-48-1-彩蛋3-vue新开发工具vite",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842889585885187/lud/0ea98afd3666402bbe5468d179a880b7.m3u8?MtsHlsUriToken=cea66449c4ac4059bb4667fd41a4a8f4efb7ee237fe04a15ace2f9ab5b95ecd7"
+    },
+    {
+      "name": "Web全栈项目实战-49-1-部署-docker",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-852806306037760/lud/d9957dea36714bb8ae86cf7c7acaf871.m3u8?MtsHlsUriToken=4d9c015888e9402fa9f617300132ea2386556f632f9d4855b46dc9695b240e4a"
+    },
+    {
+      "name": "Web全栈项目实战-50-1-阿里云部署与持续集成",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-852806426066944/lud/3ad4222311054023b41a82e70465294d.m3u8?MtsHlsUriToken=7090b9bb73ab4db59dd1543ac74e9651c8d651326db14323b193ed611660e41b"
+    }
+  ]
+}

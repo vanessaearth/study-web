@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>默认回调没有返回值的时候，会返回一个resolved状态的新promise</div>
+  <div>then方法返回值都会包装成一个promise
+    return 1 return Promise.resolve(1)
+  </div>
+  <!-- <script>
+   let p=new Promise((resolve,reject)=>{
+    // resolve(1)
+    reject(3)
+   })
+   console.log('promise',p)
+  </script> -->
+  <script type="module">
+    import myPromise from './myPromise.js'
+    let myP = new myPromise((resolve, reject) => {
+      setTimeout(res => {
+        resolve(2)
+      }, 1000)
+      // reject(4)
+    })
+    console.log('mypromise', myP)
+    myP.then(resolve => {
+      console.log('res', resolve)
+    })
+    myP.then(resolve => {
+      console.log('2res', resolve)
+    })
+  </script>
+</body>
+
+</html>

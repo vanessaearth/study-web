@@ -1,0 +1,195 @@
+<!--
+ * @Autor: yangjin
+ * @Date: 2022-07-13 18:39:30
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-07-15 16:13:31
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>尺子(ruler)</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 220px;
+      margin: 0 auto;
+      border: 1px solid #82d61c;
+    }
+
+    .box {
+      width: 100%;
+      box-sizing: border-box;
+      height: 100%;
+      padding-bottom: 10px;
+      padding-top: 20px;
+      overflow-y: hidden;
+      overflow-x: auto;
+      font-size: 12px;
+    }
+
+    .box::-webkit-scrollbar {
+      display: none;
+    }
+
+    .scale {
+      height: 100%;
+      display: flex;
+      position: relative;
+      z-index: 2;
+    }
+
+    .scale>div {
+      width: 1px;
+      padding: 0 5px;
+      border-top: 2px solid #2aa549;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .scale>div:first-child {
+      padding-left: 109.5px;
+    }
+
+    .scale>div:last-child {
+      padding-right: 109.5px;
+    }
+
+    .scale>div>div {
+      width: 1px;
+      text-align: center;
+      height: 10px;
+      background: #2aa565;
+    }
+
+    .Pointer {
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      margin-left: -10px;
+      border: 10px solid #A52A2A;
+      border-color: #a52a2a transparent transparent transparent;
+    }
+
+    .mask {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .mask>div {
+      width: 100px;
+      background: rgba(200, 200, 200, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div style='text-align: center;'>
+      刻度:<span class='scroll_num'>{{weightVal}}</span>
+    </div>
+    <div class='container' :style="`height:${setting.height}px;width:${setting.width}px;`">
+      <div class='box' ref="box">
+        <div class='scale' ref="scale">
+          <div v-for="item in setting.maxscale" :key="item"
+            :style="`padding:0  ${setting.scaleSpace}px;border-top:${setting.bottomColor}`">
+            <div v-if="(setting.minScale+item-1)%5===0"
+              :style='`background:${setting.longScaleColor};height:${setting.longScaleLength}px`'></div>
+            <div v-else :style='`background:${setting.shortScaleColor};height:${setting.shortScaleLength}px`'></div>
+
+            <span>{{(setting.minScale+item-1)%5===0?item-1:''}}</span>
+          </div>
+        </div>
+        <div class='Pointer'>
+        </div>
+        <div class='mask'>
+          <div :style="`width:${(setting.width/2-10)}px;`">
+          </div>
+          <div :style="`width:${(setting.width/2-10)}px;`">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<!-- <script src="js/index.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  let app = new Vue({
+    data() {
+      return {
+        name: 'tom',
+        weightVal: '',
+        timer: null,
+        setting: {
+          width: 300,	//宽度
+          height: 90,	//高度
+          minScale: 0,	//最小刻度
+          maxscale: 40000,	//最大刻度
+          shortScaleLength: 5,	//短刻度长度
+          shortScaleColor: 'red',	//短刻度颜色
+          longScaleLength: 15,	//长刻度长度
+          longScaleColor: 'green',	//长刻度颜色
+          scaleSpace: 5,	//刻度间隔
+          bottomColor: '1px solid teal',	//下边框线颜色
+          // pointerColor	:						//指针颜色
+        }
+      }
+    },
+    mounted() {
+      this.insertOption()
+      this.$refs.box.addEventListener("scroll", this.myFunction);
+    },
+    methods: {
+      insertOption() {
+        /* 样式 */
+        let elementScale = this.$refs.scale.childNodes;
+        elementScale[0].style.paddingLeft = this.setting.width / 2 - 0.5 + 'px';
+        elementScale[elementScale.length - 1].style.paddingRight = this.setting.width / 2 - 0.5 + 'px';
+      },
+      myFunction(event) {
+        event.preventDefault();
+        clearTimeout(this.timer);
+        let t1 = event.target.scrollLeft;
+        this.timer = setTimeout(()=>{
+          this.isScrollEnd(t1)
+        }, 300);
+        /* 修改此处进行数值的精确 */
+        //个位
+        this.weightVal = Math.round(t1 / (this.setting.scaleSpace * 2 + 1));
+        console.log('t1', t1, this.weightVal)
+
+        //十分位
+        // this.weightVal= (t1 / (this.setting.scaleSpace*2+1)).toFixed(1);
+      },
+      /* 监听滚动停止 */
+      async isScrollEnd(t1) {
+        let t2 = this.$refs.box.scrollLeft;
+        console.log('t2:', t2, this.weightVal)
+        if (t2 === t1) {
+          await this.$nextTick()
+          this.$refs.box.scrollLeft = (this.weightVal * (this.setting.scaleSpace * 2 + 1));
+        }
+      },
+    
+    },
+  }).$mount('#app')
+
+
+</script>

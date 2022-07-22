@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .active {
+      color: teal;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="course" @keydown.enter="addCourse">
+    <button @click="addCourse">add</button>
+    <p v-if="courseList.length===0">暂无数据</p>
+    <ul v-else>
+      <li v-for="item in courseList" :key="item" :class="{active:selectedCourse===item}">
+        <input v-model="checkedList" type="checkbox" :value="item" :id="item" />
+        <label :for="item"> {{item}}</label>
+
+      </li>
+    </ul>
+    <p>{{checkedList}}</p>
+
+    <select name="" id="" v-model="selectedVal">
+      <option value="" :disabled="true">请选择</option>
+      <option value="bj">北京</option>
+      <option value="tj">天津</option>
+      <option value="sh">上海</option>
+      <option value="cq">重庆</option>
+    </select>
+    <div>生命周期</div>
+    {{reverseStr}}
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script>
+   let app= Vue.createApp({
+      data() {
+        return {
+          course: '',
+          courseList: [],
+          selectedCourse: '',
+          checkedList: [],
+          selectedVal: '',
+          reverseStr: 'hello,tom'
+        }
+      },
+      methods: {
+        addCourse() {
+          this.courseList.push(this.course)
+        }
+      },
+      mounted() {
+        let count = 0
+        setTimeout(() => {
+          this.courseList = ['语文', '数学']
+        }, 1000);
+        let timer = setInterval(() => {
+          count++
+          if (count === 5) {
+            clearTimeout(timer)
+            app.unmount()
+          }else{
+            this.reverseStr=this.reverseStr.split('').reverse().join('')
+          }
+
+        },1000)
+        // this.$nextTick(()=>{})
+      },
+      updated() {
+        console.log('update', this.reverseStr)
+      },
+      beforeUpdate() {
+        console.log('beforeUpdate', this.reverseStr)
+      },
+      unmounted() {
+        console.log('unmount')
+
+      },
+      beforeUnmount() {
+        console.log('beforeUnmount')
+      }
+    })
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

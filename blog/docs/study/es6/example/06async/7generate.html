@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function* generatorFn() {
+      yield 1;
+      yield 2;
+      yield 3;
+    }
+    let fn = generatorFn()
+    // console.log(fn.next())
+    // console.log(fn.next())
+    // console.log(fn.next())
+    // console.log(fn.next())
+
+    let fn1 = function () {
+      return new Promise(resolve => {
+        resolve(111)
+      })
+    }
+    let fn2 = function () {
+      return new Promise(resolve => {
+        resolve(222)
+      })
+    }
+    let fn3 = function () {
+      return new Promise(resolve => {
+        resolve(333)
+      })
+    }
+    function* myFn() {
+      yield fn1();
+      yield fn2();
+      yield fn3();
+    }
+    // let fn4 = myFn()
+    // fn4.next().value.then(res => {
+    //   console.log(res)
+    //   return fn4.next().value
+    // }).then(res => {
+    //   console.log(res)
+    //   return fn4.next().value
+    // }).then(res => {
+    //   console.log(res)
+    //   return fn4.next().value
+    // }).then(res => {
+    //   console.log(res)
+    // })
+    //async的底层实现是使用generate函数
+    function run(genFn) {
+      let g = genFn()
+      function next() {
+        let result = g.next()
+        if (result.done) {
+          //执行完毕
+          return result.value
+        } else {
+          result.value.then(res => {
+            console.log(res)
+            next()
+          })
+        }
+      }
+      next()
+    }
+    
+    // run(myFn)
+
+    async function asyncFn() {
+      await fn1();
+      await fn2();
+      await fn3();
+    }
+    function fn5() {
+      return generatorFn(function* () {
+        yield fn1()
+        yield fn2()
+        yield fn3()
+      })
+    }
+    function generateFn2(genFn) {
+      console.log(genFn)
+      let fn = genFn()
+      function step(nextFn) {
+        let next = nextFn()
+        if (next.done) {
+          return next.value
+        } else {
+          next.value.then(res => {
+            console.log('next-value-then', res)
+            step(function () {
+              return fn.next()
+            })
+          })
+        }
+
+      }
+      step(function () {
+        return fn.next()
+      })
+    }
+    generateFn2(myFn) 
+
+    function fn6(){
+      fn1().then(res1=>{
+        console.log(res1)
+        return fn2()
+      }).then(res2=>{
+        console.log(res2)
+        return fn3()
+      }).then(res3=>{
+        console.log(res3)
+      })
+    }
+    fn6()
+  
+  </script>
+</body>
+
+</html>

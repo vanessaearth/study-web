@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 10px;
+      height: 10px;
+      background-color: teal;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .pos {
+      top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="box1" class="box"></div>
+  <div id="box2" class="box pos"></div>
+  <script>
+    let el = document.querySelector('#box1')
+    let el2 = document.querySelector('#box2')
+
+    move(el, 'left', 100, function () {
+      move(el, 'top', 100, function () {
+        move(el, 'left', 0, function () {
+          move(el, 'top', 0)
+        })
+      })
+    })
+    function move(el, origin, target, cb) {
+      let start = parseInt(getComputedStyle(el, null)[origin])
+      let speed = 5 * (target > start ? 1 : -1)
+      start += speed
+      setTimeout(() => {
+        if (start === target) {
+          console.log('运动完成')
+          cb && cb()
+        } else {
+          el.style[origin] = start + 'px'
+          move(el, origin, target, cb)
+        }
+      }, 100)
+
+
+    }
+    function move2(el, origin, target, cb) {
+      return new Promise((resolve, reject) => {
+        function fn() {
+          let start = parseInt(getComputedStyle(el, null)[origin])
+          let speed = 5 * (target > start ? 1 : -1)
+          start += speed
+          setTimeout(() => {
+            if (start === target) {
+              resolve()
+              // console.log('运动完成')
+              // cb&&cb()
+            } else {
+              el.style[origin] = start + 'px'
+              fn()
+            }
+          }, 100)
+        }
+        fn()
+
+      })
+
+
+    }
+    // move2(el2, 'left', 100).then(res => {
+    //   return move2(el2, 'top', 100)
+    // }).then(res => {
+    //   return move2(el2, 'left', 0)
+    // }).then(res => {
+    //   return move2(el2, 'top', 0)
+    // }).then(res => {
+    //   console.log('move2', res)
+    // })
+
+    async function move3() {
+      try {
+        await move2(el2, 'left', 100)
+        await move2(el2, 'top', 100)
+        await move2(el2, 'left', 0)
+        await move2(el2, 'top', 0)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    move3()
+  </script>
+</body>
+
+</html>

@@ -36,7 +36,7 @@
       yield fn2();
       yield fn3();
     }
-    let fn = myFn()
+    // let fn = myFn()
     // fn.next().value.then(res=>{
     //   console.log('res',res)
     //   return fn.next().value
@@ -52,13 +52,16 @@
       function next() {
         let res = g.next()
         if (res.done) {
+          console.log('res.done',res)
           return res.value
         } else {
           return res.value.then(res=>{
+            console.log(res)
             next()
           })
         }
       }
+      next()
 
     }
   </script>

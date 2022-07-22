@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 10px;
+      height: 10px;
+      background-color: teal;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <script>
+    let el = document.querySelector('.box')
+    let num = 1
+    move(el, 'left', 100, function () {
+      move(el, 'top', 100, function () {
+        move(el, 'left', 0)
+      })
+    })
+    function move(el, origin, target, cb) {
+      let start = parseInt(getComputedStyle(el, null)[origin])
+      let speed = 5 * (target > start ? 1 : -1)
+      start += speed
+      setTimeout(() => {
+        if (start === target) {
+          console.log('运动完成')
+          el.dispatchEvent(new Event('Event' + num))
+          num++
+        } else {
+          el.style[origin] = start + 'px'
+          move(el, origin, target, cb)
+        }
+      }, 100)
+    }
+    //通过自定义事件解决回调问题
+    el.addEventListener('Event1',function(){
+      move(el, 'top', 100)
+    })
+    el.addEventListener('Event2',function(){
+      move(el, 'left', 0)
+    })
+    el.addEventListener('Event3',function(){
+      move(el, 'top', 0)
+    })
+  </script>
+</body>
+
+</html>

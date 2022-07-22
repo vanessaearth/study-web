@@ -1,0 +1,470 @@
+{
+  "courseName": "Vue3.0从入门到精通",
+  "section": [
+    {
+      "name": "导学-1-1-导学",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893256785922/lud/ebbda947adce4ebfa5e94f6ba16dec4f.m3u8?MtsHlsUriToken=4d682c8b6aab438090c7e4623fcc3875f75e84e5a2414150b207db79b57f151a"
+    },
+    {
+      "name": "导学-1-2-Vue3.0从入门到精通.txt",
+      "url": "https://res.kaikeba.com/other/123/20201026160033-42100/FiXMtHqs0d7_yxB6VW_1k_DizP5Q.txt",
+      "type": "download"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-1-hello,vue3",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842892844105729/lud/3615303f626f493e91f1950c0e805cbd.m3u8?MtsHlsUriToken=eb2d6a09ddeb46a3a957b573e8173e4dbfc7e338709149a094c1a850953aa074"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-2-模板语法",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842892845219840/lud/cca1f2373b3d491596ecd75dc452632e.m3u8?MtsHlsUriToken=980521d3b4dc4832b7910a71af76e69a70c81f7c141c4f8687682a41039ac5ff"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-3-计算属性和侦听器",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842892844892161/lud/a85b7edbbb204c708c6143470b1798f3.m3u8?MtsHlsUriToken=427435ecda64428ab8109e9dc900c6f83d1ed71106474b5eb592a096030fc9a1"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-4-动态样式绑定",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842892845154307/lud/b6fb4cc63acc4955996b44fd4599db6b.m3u8?MtsHlsUriToken=fd1ec18305024dde88547092f90baaf0f349c49708f7402aa1d4795750c6b21a"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-5-条件渲染和列表渲染",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842892845744129/lud/1b999804184840c88385c2fa66dfe524.m3u8?MtsHlsUriToken=d2cde9c2250845d5b449a0e933f2bfaef546e7ea239a4d34933f16f84a793dc1"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-6-事件处理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842892845678592/lud/d9ab3110a158491d82b5c5d25d9d9f27.m3u8?MtsHlsUriToken=e8ab3cc94bd642eb9eea02302bf5990415cd9b3c82ae4c12a638ebeb78d72968"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-7-表单输入",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842892845416449/lud/feeea487f5f542dbbedb05ea0b08f93c.m3u8?MtsHlsUriToken=fba4569311ba42d7a73e0df484291950dda3dde23f74413e88067cb378765846"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-8-生命周期",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893256949760/lud/de35ccc943064c47b8b19119ce745185.m3u8?MtsHlsUriToken=7ec4aa43d5994ffa96bcbc59ed1da881aa44e5b52b794a52bd768a52419eb44d"
+    },
+    {
+      "name": "Vue3.0零基础入门-1-9-1.1 核心API.pdf",
+      "url": "https://res.kaikeba.com/other/123/20201026160604-53951/FlgTpSfUNCjpl6KjfprTwko-AqVR.pdf",
+      "type": "download"
+    },
+    {
+      "name": "Vue3.0零基础入门-2-1-组件化基础",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893257310208/lud/8b30668a0a18439aa4fecdd4475d678b.m3u8?MtsHlsUriToken=92d5b5f1d4f2469196a95ed11c9b1492bdb0b2c8394d4cbf9e6040a61fb95750"
+    },
+    {
+      "name": "Vue3.0零基础入门-2-2-自定义事件",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893257244674/lud/89cd8489af734ec4a91c6e496e9c480c.m3u8?MtsHlsUriToken=0c56f26216b3477fa6283552137c95a176d5d100c9a34dcdb98eae8b02d077e0"
+    },
+    {
+      "name": "Vue3.0零基础入门-2-3-在组件上使用v-model",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893257834496/lud/191a6b8230a44920a59778c074f704f9.m3u8?MtsHlsUriToken=a12b4afff24e4505906286f7f0be402291d1112d78be44709929ac793d880d67"
+    },
+    {
+      "name": "Vue3.0零基础入门-2-4-通过插槽分发内容",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893257834497/lud/b8963280a46f49c59d8130749fea40ac.m3u8?MtsHlsUriToken=69a9ec0113564916be74eb5186ed11e2c3b525631ba44acea09e0c1f1c3d7758"
+    },
+    {
+      "name": "Vue3.0零基础入门-2-5-1.2 组件化开发.pdf",
+      "url": "https://res.kaikeba.com/other/123/20201026160635-73395/FuzLtaizgK8VJrUwP8Uev9OGA2J4.pdf",
+      "type": "download"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-1-composition api基本使用",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893550911488/lud/1a846d738a234524be143a4ea7f3590b.m3u8?MtsHlsUriToken=6e3a6866aa20425ba25bcc0b23aee94f677adc0e077c48a6bccde36a0fbcabff"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-2-setup详解",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893550845954/lud/3c4da55674b04352a138f16181098352.m3u8?MtsHlsUriToken=0c15fce868374c5e9794f3d2e035bb35e39a49797e074afbbb22a03e176337d5"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-3-Reactivity API",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893551632385/lud/de5c22cccfa7424489cb242e7983e224.m3u8?MtsHlsUriToken=39681aadc2ec4583ae3ac41afa07acfa57f1758dbdb54d7f9a9654332d54399d"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-4-Reactivity API 02",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893552123904/lud/9d3bbbf294364925b10d2e91376bf2cd.m3u8?MtsHlsUriToken=37f9c0cdf27e48a8854bc83ddfd705cf479984a2ea2f45c0a48c56fd7b589978"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-5-生命周期钩子",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893552418817/lud/c8e3b46561a943349810bfd491d5794b.m3u8?MtsHlsUriToken=1a1b3cb68db7472692dba03c426106d5721979789de34c35bcd24761910ab897"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-6-依赖注入",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893553008641/lud/824c4c860db145268f74dfd237ae0860.m3u8?MtsHlsUriToken=0015c49e34e9460c919ceef63169ad506bbd19eae1d347a48bc15f8063816398"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-7-模板引用",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842893552648193/lud/5c6b3c5b58d44558bb395fc2c38dd9ad.m3u8?MtsHlsUriToken=9374241c694040a282b83f135a7082a798d58b121a70426092e0a42e2d45022d"
+    },
+    {
+      "name": "Vue3.0零基础入门-3-8-1.3 Composition API.pdf",
+      "url": "https://res.kaikeba.com/other/123/20201030164239-65917/FhxBem-6D4fu4QqSdSqNwhcAZWZI.pdf",
+      "type": "download"
+    },
+    {
+      "name": "Vue3.0零基础入门-4-1-混入",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842894543388674/lud/7b3f085c942d431282307ee0f7e7722b.m3u8?MtsHlsUriToken=a89218053aa241139d41cd73d2ca6f3e30aad104824a4858b44d164edb90751d"
+    },
+    {
+      "name": "Vue3.0零基础入门-4-2-自定义指令",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842894543323136/lud/f8757f2e4dc54dd0a7b080dc1653afa1.m3u8?MtsHlsUriToken=8b9591aa45294d51a36e45af0bc11b6b0e33bc212cb445628ea29f3cba9ce636"
+    },
+    {
+      "name": "Vue3.0零基础入门-4-3-Teleport",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842894543060993/lud/98091accd2104a9ba66965d895583c9b.m3u8?MtsHlsUriToken=49e4415444384b45bc8ee8a150e7c818e641c51fec944d739fa4a3228e31bb84"
+    },
+    {
+      "name": "Vue3.0零基础入门-4-4-渲染函数",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842894543585280/lud/7f7e4ba7d4454889b2c1d4496ad6bb10.m3u8?MtsHlsUriToken=ec5dd10f81e147ea84c172e04e385ca673ce42d1983b4622aef1760adff7e4f6"
+    },
+    {
+      "name": "Vue3.0零基础入门-4-5-插件",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842894543585281/lud/0ee74aa08ca0459fb6f7154fdd74aa55.m3u8?MtsHlsUriToken=6fed3d609e214e54acefdb557156c59eac424cd3d99044dea999cf1f6ee1da13"
+    },
+    {
+      "name": "Vue3.0零基础入门-4-6-1.4 可复用性.pdf",
+      "url": "https://res.kaikeba.com/other/123/20201116175437-67094/Fua2vC-ReiE7wCNCtJGJN5oixDaJ.pdf",
+      "type": "download"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-1-全新开发构建工具 - vite",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842895042445312/lud/2e22c41fbaa946c8b8f6d380db2fabce.m3u8?MtsHlsUriToken=2794066f001b470782a6ddc5fe1a88927ccee7a057254e61933f95ebc5decb80"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-1-全新开发构建工具 - vite",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842895042183168/lud/d927e4a40cb14ba28ad9804e2c3c0266.m3u8?MtsHlsUriToken=70b67c58aba84667a4b35672fc8c332da90415ff8d7a4ba9898bbc3ab656709d"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-2-vite中的资源加载",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842895042445314/lud/3b4d187b191549c1a8852086f3f9e9d7.m3u8?MtsHlsUriToken=a7b063f892e4478a944c10ce927ea12663c7b55b977c4831aa354ad4de6849a7"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-3-代码规范和格式化eslint+prettier",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842895042707457/lud/5b1f72727b9f4ed9874157d3b65947f1.m3u8?MtsHlsUriToken=dfbcb3d7cd6e43feac1fd538865be99e0217ec12b9384e61baa12cf8626cb94a"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-4-测试",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842895042674690/lud/0acd677ff5fd4ae58cdad7b9c64d8834.m3u8?MtsHlsUriToken=91d17b81c411476eaae86283af90d90e7278fe1ad6d84d668dadb44ee396c3fa"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-5-在vite中使用ts",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-842895043559424/lud/fad2e5ae232044199311189fcac961e1.m3u8?MtsHlsUriToken=9373f8d507ba42a58423f5af6c397ef850368de488bf49678e10bf25d11eba67"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-6-项目配置",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846006470967300/lud/89787fa77fbf4ef6840c83c7bce144e1.m3u8?MtsHlsUriToken=d8fb930e2dde4bba9e421c31d94533e9cfe6786d913c40989c4a01af9e4c8c26"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-7-项目打包、部署",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846006471589891/lud/628f36e2a10d47bd9ac5533e39d0dc7b.m3u8?MtsHlsUriToken=a86a51ef8bee42b3a918a0bd46aebfdc73ec8af5c11340c0b98411dbd55eb9c0"
+    },
+    {
+      "name": "Vue3.0零基础入门-5-8-1.5 工程化.pdf.zip",
+      "url": "https://res.kaikeba.com/other/123/20201202141949-52240/Frr8wYb6q4U3-vTgKYvB0HnVTVjV.zip",
+      "type": "download"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-1-vue-router4快速起步",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846006472081408/lud/1bfc80b25d6d477d8b34f6acf4a8f4ef.m3u8?MtsHlsUriToken=6f77573dc347480590bebe7bf0e012004e4c13b9fd8e4816b60344285fbbd0a6"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-2-动态路由匹配",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846006472114176/lud/31ba3d942cc64c73851401f81e83a544.m3u8?MtsHlsUriToken=91724d1802ad4b4db9b22bf5c72bad740402051a1cc04342af9a627b053c3821"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-3-嵌套路由",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011540832258/lud/791dda8d2bf64a6daa9312d661f1612e.m3u8?MtsHlsUriToken=ea6f47cd2bc24556b724da192d06236de77d7f5e25404001baae711475c169a3"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-4-编程式导航",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011541880833/lud/0904979906274d9cb7b74f520b2b9cfb.m3u8?MtsHlsUriToken=ebf43e51201741718d414e70d72eae914a372ce0fcf64a8786d46788e9184f05"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-5-路由守卫",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011541979138/lud/fa9e7553ddef4ffca40b52b35b2e590a.m3u8?MtsHlsUriToken=fcae5c8631774994be266b7dab38c9dccb38e6a2d41e4346bc7d7395caac1b0c"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-5-路由守卫",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011541946370/lud/82649041cd674949aeb665fad79c58f7.m3u8?MtsHlsUriToken=93589d75ae7d40cda24ba31e0b2979ebf210190f1e5c4d57a959e29ab3a166f2"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-6-路由元数据",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011542503424/lud/23782b968c56475cb2a650c3c24edce5.m3u8?MtsHlsUriToken=0829e2b1d1854c0ea2dc60690b96dc99d11b6fbf342c4f46ada372e5b892e1b9"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-7-路由懒加载",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011543453696/lud/644b9947205d4009a215b773595fba00.m3u8?MtsHlsUriToken=1aff83de0e6c4bf68025cbc5a2ec66c7c1ba5a571649489a9b90c3d7fe946435"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-8-composition api",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011543519232/lud/846601a6440549108da24b4e31d43115.m3u8?MtsHlsUriToken=80cf24ce6a0e4ddd873899bd302d59c1012f87f5d65a4d2ea102f1773a04b55b"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-9-缓存和过度动画",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011543977984/lud/512e9849bb0e413f85c7efba92a2d2c5.m3u8?MtsHlsUriToken=b99bf3c8ea1d480da1e13dee3b008bbcf35a970d2a47438abf44964d4cf47bbd"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-10-动态路由添加、删除",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011543977986/lud/9945b78a9bf647d9af003fdc1c624f65.m3u8?MtsHlsUriToken=edad14cd8bd54320b4655192ccd7cfc962105175cf144b17aa3f61141b41734c"
+    },
+    {
+      "name": "Vue3.0零基础入门-6-11-1.6 路由.pdf.zip",
+      "url": "https://res.kaikeba.com/other/123/20201214145340-84559/FnTRH3caxbQBKhZKzvyNdPVl_w_-.zip",
+      "type": "download"
+    },
+    {
+      "name": "Vue3.0零基础入门-7-1-vuex快速起始",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011545124864/lud/4a10e7f0f6e2470d9ce6acf3a7516bd4.m3u8?MtsHlsUriToken=6022632c6430476591f71b4728d5b5a3fff06c82fee34969b233597efa50cced"
+    },
+    {
+      "name": "Vue3.0零基础入门-7-2-核心概念",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011545583616/lud/5661ab6c3b13435ca0a7a287a85aba44.m3u8?MtsHlsUriToken=92404c44e1534cecaabd89769495012406d53ec17f5b4c35ab85d6da7df9cf56"
+    },
+    {
+      "name": "Vue3.0零基础入门-7-2-核心概念",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011545550848/lud/0c0f82d798b8498e94478b3080647ac5.m3u8?MtsHlsUriToken=4321be684ea24658b20ef551b9d62a3a60833dd3a8934dc482f942bd506ecfc0"
+    },
+    {
+      "name": "Vue3.0零基础入门-7-2-核心概念",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011545550849/lud/b1e4461e6f5b4c5687f5ab620900cd92.m3u8?MtsHlsUriToken=7a55c62d1d5d4f8b8156d5a5cec0d985040526099f5d4b5b9e1fca0ee05168c1"
+    },
+    {
+      "name": "Vue3.0零基础入门-7-2-核心概念",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011545616387/lud/079dfda1928f47ea924809ed88ea3cc8.m3u8?MtsHlsUriToken=c9f10374b1a74e4bbda59269b298567e5fc2d2cfe77c442a970457c4b095a3d9"
+    },
+    {
+      "name": "Vue3.0零基础入门-7-3-模块化",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846011545583618/lud/a7c8f18edd0f4d149c9d15c31f4a5c65.m3u8?MtsHlsUriToken=e48d61105ccf4ad0a2ef0bf549af57795d92d42df4b7449595da8e73fc834c43"
+    },
+    {
+      "name": "Vue3.0零基础入门-7-4-1.7 状态管理 - Vuex.pdf.zip",
+      "url": "https://res.kaikeba.com/other/123/20201214151933-22650/FhzWOyphEr8yJ21A64xqbPAbhJ7x.zip",
+      "type": "download"
+    },
+    {
+      "name": "企业级项目实战-1-1-项目基础架构-样式组织、ui库和布局页",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-846096988274688/lud/d562f3cba14d47d88bf093c9063a4438.m3u8?MtsHlsUriToken=8c1257cd3ac24fec90485070b903e8c153892d051a994427bc1fbb07786bbeb5"
+    },
+    {
+      "name": "企业级项目实战-1-2-项目基础架构-动态导航",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329331519488/lud/7d1fa756c2c24ebb84dfd3d3a9498771.m3u8?MtsHlsUriToken=fad6237bef71407c990b98c0a411ae49e52d2b56606840fd8a007bbb0fc87349"
+    },
+    {
+      "name": "企业级项目实战-1-3-项目基础架构-请求封装",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329377198080/lud/187932afd8724b99a9272bda5f576503.m3u8?MtsHlsUriToken=f41be352f90f49ee849b1e78dbfc5d990d3da9091f6348228951ab81e8361282"
+    },
+    {
+      "name": "企业级项目实战-1-4-项目基础架构-权限控制",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329441095681/lud/c884d43440a649258d3ef00cbfa53536.m3u8?MtsHlsUriToken=7820f1d9172443458766a337d52882d710f85531c28e421390c06cd35f9c4dea"
+    },
+    {
+      "name": "企业级项目实战-1-5-表格数据",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329534943232/lud/c6cb0747063f45ba90936883734c4446.m3u8?MtsHlsUriToken=140882efd1dc4b8298914c683be18694ca91d55815a049b59e2630a25ca0ba22"
+    },
+    {
+      "name": "企业级项目实战-1-6-图表可视化展示",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329567547392/lud/ad70c48d86a740d59cf92d9f8b1b2961.m3u8?MtsHlsUriToken=9ffc76066ddc4af190f6c2bec2dfb26b8005724372484dd4b184a172fe26b767"
+    },
+    {
+      "name": "企业级项目实战-2-1-需求分析",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845381385027585/lud/18e7afc034c1472e9e9290f023a0eb6c.m3u8?MtsHlsUriToken=7d1ef7b65b2740e290d13debbf34a7fcf5c77ebf61fd4ae1843d754664189f44"
+    },
+    {
+      "name": "企业级项目实战-3-1-玩家信息查询",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330833080321/lud/5441482cbb904e7dad67ab2f3982fc54.m3u8?MtsHlsUriToken=81fbaa6f028949c29d8123cb0371205448fb4bb57bd6444c83c6f5e82e5dcad6"
+    },
+    {
+      "name": "企业级项目实战-3-2-分页和过滤查询",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330902351872/lud/58757dd476444fd0a7adfe59c7d0e213.m3u8?MtsHlsUriToken=ec01b019ec354e0da3bd875e2f5b4dbc598d939021e24ba7bca2dba8b120874a"
+    },
+    {
+      "name": "企业级项目实战-3-3-玩家信息管理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330933284865/lud/db16a547dc4b4942b3857d2ed1cf09f3.m3u8?MtsHlsUriToken=2bc75a5ebb17449aa7722ce9b4ad3e8f54738aa671fb45939fd7d1cb59981e7d"
+    },
+    {
+      "name": "企业级项目实战-3-4-玩家信息创建和修改",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330970542080/lud/2fc2b62aaac04619ba351cd99a801e5b.m3u8?MtsHlsUriToken=94bf37213b4a4d8e9705b9014686a6592ea01b4307b14abc8c5488630d70c41d"
+    },
+    {
+      "name": "企业级项目实战-3-5-头像上传",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845331084214272/lud/666c730df49c46d0afd57aa7d6c478a5.m3u8?MtsHlsUriToken=6c47f92d15324dfd833c4a5ff7de38ff86ec47df2046453badbe1e85a583836d"
+    },
+    {
+      "name": "企业级项目实战-3-6-数据类型编写",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845331144507392/lud/af8d2d0f00e2432385872926c18ec887.m3u8?MtsHlsUriToken=b9f798b098e44d47adeb3a7d252b86d1b782243dbe79453d822174fd63ed4081"
+    },
+    {
+      "name": "企业级项目实战-3-7-办选率折线图",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845331201720320/lud/0c109067ceb94dca9151976d09e27185.m3u8?MtsHlsUriToken=7d329a3ece34491597204642c2a9c4686f63c7850e9a458ab99ee43ebdd8c568"
+    },
+    {
+      "name": "企业级项目实战-3-8-根据时间区间显示数据",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845331319095296/lud/ebff7c186edb41859d6a6cc82e0df5f2.m3u8?MtsHlsUriToken=8c9f978665214ba7b27c6228ab3029bb566fcf1d2ef34d5c8631dff0ae1dc306"
+    },
+    {
+      "name": "企业级项目实战-4-1-第二阶段 Vue3项目实战.pdf",
+      "url": "https://res.kaikeba.com/other/123/20210203185030-73399/FlhX05KKEukaGCnmRDkQo1SZt1mP.pdf",
+      "type": "download"
+    },
+    {
+      "name": "企业级项目实战-5-1-vue3-in-action-vite-master.zip",
+      "url": "https://res.kaikeba.com/other/123/20210818160203-71382/Fn-dECLC9fwhZXHesE4qAbOEzyA1.zip",
+      "type": "download"
+    },
+    {
+      "name": "源码解析-1-1-调试环境搭建和初始化过程",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329372938240/lud/620602eb67284f8ea48ae127e4837491.m3u8?MtsHlsUriToken=ddd1050e79c44dedb9fead7f1895a81275c0d35b4ae242d999eba1a754fec8c3"
+    },
+    {
+      "name": "源码解析-1-2-调试环境搭建和初始化流程.pdf",
+      "url": "https://res.kaikeba.com/other/123/20210203154643-51680/Fi92xfAN3-Dpv_Wx9cRbK7hsq8GD.pdf",
+      "type": "download"
+    },
+    {
+      "name": "源码解析-2-1-数据响应式原理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329748328448/lud/1a1e68b9fadd4430839e449c8107b129.m3u8?MtsHlsUriToken=6d195868d3254c99b408c947db893921356b852d40834ae3bf18f2263f334c6c"
+    },
+    {
+      "name": "源码解析-2-2-数据响应式原理.pdf",
+      "url": "https://res.kaikeba.com/other/123/20210203160351-67030/FmcqyNK5rnmCTOtgW7priOYTACXR.pdf",
+      "type": "download"
+    },
+    {
+      "name": "源码解析-3-1-虚拟dom和patch算法",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330265374720/lud/9c65f3fb485c42e083f58b854583dc71.m3u8?MtsHlsUriToken=86e7f53b2a4841808ec74d174cf02ef3821669cb223f43619f17a79bf1a64a17"
+    },
+    {
+      "name": "源码解析-3-2-虚拟dom和patch算法.pdf",
+      "url": "https://res.kaikeba.com/other/123/20210203161849-90880/Fp653VzSEKBtdqP0M3XiBi08xSEQ.pdf",
+      "type": "download"
+    },
+    {
+      "name": "面试宝典-1-1-key的作用",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-847237318868992/lud/1daee39dc8b445c889dfa7a4bb946cda.m3u8?MtsHlsUriToken=f5e77fed428e4058a6585a155f909590d48159935c6c4be7b7bb9e9f9c50dbfa"
+    },
+    {
+      "name": "面试宝典-2-1-diff算法",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329767825408/lud/2933e88f9fa346a28a3077135190760e.m3u8?MtsHlsUriToken=b0e0eeab570d43349e2bb6e24edd1310954c82dbf8224af78e7fa3157ff15672"
+    },
+    {
+      "name": "面试宝典-3-1-vue3优化点",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329824907265/lud/1c8f42bbdfc84d8ca5a4e3ff2e947c43.m3u8?MtsHlsUriToken=afdcedab2dae45f5b080006edbc68e7f46049872324e497ea83fee5c7bd0598d"
+    },
+    {
+      "name": "面试宝典-4-1-computed和watch",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329857380352/lud/c8786b0db44c4c609e482110f1310554.m3u8?MtsHlsUriToken=fe57540aa2d245e7a165f61f84a25c7492e23d03fd364ee6b615624ce064bb16"
+    },
+    {
+      "name": "面试宝典-5-1-双绑原理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329935499264/lud/0aae3283ad924587bbc983e301438b48.m3u8?MtsHlsUriToken=c9a43e13d34a4c739aab42b65e272464f0d8586862624a019bc75374918e713c"
+    },
+    {
+      "name": "面试宝典-6-1-vuex理解",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845329968594944/lud/8de1a3309db64b48a904f26812fee3da.m3u8?MtsHlsUriToken=931bd47215c84fe0befcd8895846e318edfe4c7072e44e978c0387f13ab5e86a"
+    },
+    {
+      "name": "面试宝典-7-1-组件通信",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-847237370839040/lud/f69f562a49a84403882c9ce7a6bd1e32.m3u8?MtsHlsUriToken=23cefbc07f184daf96230980589e137590c0be50e14d4052bb050dd10defde8e"
+    },
+    {
+      "name": "面试宝典-8-1-路由保护",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330101796864/lud/b81152f60bc94547af1eaafac889fcfe.m3u8?MtsHlsUriToken=3f7b10980ce447c3b61ab452347245181163a7dabc64444fafc9909436965710"
+    },
+    {
+      "name": "面试宝典-9-1-nextTick原理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330419515392/lud/7862291eee4546c2b03fb523b7f8cd00.m3u8?MtsHlsUriToken=4c657c0415d9402283824ba96796177642acb637e7a84adf9530a1b5977a67dc"
+    },
+    {
+      "name": "面试宝典-10-1-响应式原理",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330464505856/lud/cd1c6d42b1a24b24a215e4de69a78613.m3u8?MtsHlsUriToken=c5770a3149fd4cd29854eceea6b9eb5d58418cdc0ea5490fb60627fcd3d04da6"
+    },
+    {
+      "name": "面试宝典-11-1-组件扩展",
+      "type": "video",
+      "url": "https://v.baoshiyun.com/resource/media-845330632343552/lud/3c0aaa4edba84c05be8303b72d677e34.m3u8?MtsHlsUriToken=1b91df964f1340379f2f8ac65f1a2b08fe2dbdc22ee24cdabaef00bc1ed1ffbf"
+    },
+    {
+      "name": "面试宝典-12-1-第四阶段 Vue面试题解析.pdf",
+      "url": "https://res.kaikeba.com/other/123/20210203161942-33347/FnUosETP8cdvicb3HdLdl8PPlIZL.pdf",
+      "type": "download"
+    }
+  ]
+}

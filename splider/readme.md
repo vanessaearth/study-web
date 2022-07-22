@@ -12,3 +12,5 @@ getM3u8.js中修改token和courseId
 download.js 修改name为json文件的文件名
  - node download.js 后会在当前目录新建一个课程名的目录放下载的文件
 
+76
+677 

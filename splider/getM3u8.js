@@ -7,13 +7,17 @@ let final = {
 }
 let n = 1
 // let token = '9be4a6a2aee6bf3641b7b54ed31fe878' // http请求的header中去取
-let token = '87a4e8349941a59557d8344f55ade34c'
+let token = 'fea16c081b878980feb257ab51cd957f'
 
 async function start(){
     let all = []
     // let courseid = 212061 // 课程详情的id
-    let courseid = 217579 // 课程详情的id
-    
+    let courseid = 210146 // 课程详情的id
+    // 224977 米堆 over
+    // 210700 Web全栈项目实战 over
+    // 211346 js深入浅出 over
+    // 210146 web全栈进阶 over-h
+    // 210673 vue面试训练营 
     console.log(courseid,' courseid')
 
     let courseInfo = await getCourse(courseid)
