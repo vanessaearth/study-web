@@ -36,7 +36,7 @@ async function sleep(n){
 let i = 0
 
 // const name = "XX课"
-const name="Web --《全栈工程师进阶课》"
+const name="小学一年级上语文(统编版)"
 const data = xRequire(path.resolve(__dirname, name+'.json'))
 start()
 
